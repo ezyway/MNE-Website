@@ -1,0 +1,304 @@
+/* Comment or Remove in Prod
+Colors are declared in styles/global.css
+This block is here for auto complete */
+:root {
+	/* Primary */
+	--primary-light: 255, 255, 255;
+	--primary: 224, 224, 224;
+	--primary-dark: 180, 180, 180;
+	--on-primary: 0, 0, 0;
+
+	/* Secondary */
+	--secondary-light: 39, 165, 136;
+	--secondary: 21, 92, 79;
+	--secondary-dark: 15, 65, 56;
+	--on-secondary: 255, 255, 255;
+
+	/* Tertiary */
+	--tertiary-light: 255, 255, 230;
+	--tertiary: 255, 242, 196;
+	--tertiary-dark: 200, 190, 120;
+	--on-tertiary: 0, 0, 0;
+}
+
+
+/* =======================================================
+   Focus Styles
+========================================================== */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus {
+	outline: none !important;
+	box-shadow: none !important;
+}
+
+
+/* =======================================================
+   Navbar Styles (White background with glass morphic effect)
+========================================================== */
+
+/* --------- Navbar Container --------- */
+.navbar_container {
+	position: fixed;
+	top: 10px;
+	left: 10px;
+	right: 10px;
+	background: rgba(var(--primary-light), 0.2);
+	backdrop-filter: blur(15px);
+	-webkit-backdrop-filter: blur(15px);
+	border-radius: 12px;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+	z-index: 1000;
+	transition: all 0.3s ease;
+	font-weight: bold;
+}
+
+.navbar_container__inner {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 10px;
+}
+
+/* --------- Logo Styles --------- */
+/* Desktop Logo */
+.navbar_logo {
+	cursor: pointer;
+	transition: transform 0.3s ease;
+	border-radius: 10px;
+	transition: 0.3s ease-in-out;
+	padding: 1em;
+	width: 17em;
+}
+
+.navbar_logo__image {
+	background: rgba(var(--primary-light), 1);
+	border-radius: 10px;
+	width: 15em;
+}
+
+.navbar_logo:hover {
+	transform: scale(1.05);
+	box-shadow: 0px 0px 20px grey;
+}
+
+/* Mobile Logo (hidden on desktop) */
+.navbar_logo--mobile {
+	display: none;
+}
+
+
+/* =======================================================
+   Navigation Links (Green text on white background)
+========================================================== */
+
+.navbar_nav {
+	list-style: none;
+	display: flex;
+	gap: 15px;
+	padding-right: 1em;
+}
+
+.navbar_nav__link {
+	display: block;
+	padding: 10px 20px;
+	color: rgb(var(--secondary-dark));
+	text-decoration: none;
+	transition: all 0.4s ease;
+	cursor: pointer;
+	border-radius: 10px;
+	background: rgba(255, 255, 255, 1);
+	border: 1px solid green;
+}
+
+.navbar_nav__link:hover {
+	/* subtle green tint on hover */
+	background: rgba(var(--secondary), 1);
+	color: rgba(var(--primary-light));
+}
+
+/* --------- Dropdown Menu (White with glass morphic effect) --------- */
+.navbar_dropdown {
+	position: absolute;
+	background: rgba(var(--primary), 0.5);
+	backdrop-filter: blur(8px);
+	-webkit-backdrop-filter: blur(8px);
+	border-radius: 10px;
+	list-style: none;
+	padding: 5px 0;
+	display: none;
+	z-index: 1000;
+}
+
+.navbar_dropdown__item {
+	padding: 2px 5px;
+}
+
+.navbar_dropdown__link {
+	display: block;
+	text-decoration: none;
+	background: rgba(var(--primary-light), 1);
+	color: rgb(var(--secondary));
+	transition: all 0.3s ease;
+	padding: 8px 15px;
+	border: 1px solid green;
+	border-radius: 10px;
+}
+
+.navbar_dropdown__link:hover {
+	/* change to a slightly darker green on hover */
+	color: rgb(var(--primary-light));
+	background: rgba(var(--secondary), 0.8);
+}
+
+/* Show dropdown on hover */
+.navbar_nav__item:hover>.navbar_dropdown,
+.navbar_nav__item--dropdown:hover .navbar_dropdown {
+	display: block;
+	animation: fadeIn 0.3s ease-in-out;
+}
+
+
+/* =======================================================
+   Hamburger Menu
+========================================================== */
+.navbar_hamburger {
+	display: none;
+	flex-direction: column;
+	cursor: pointer;
+	padding: 0.5em;
+	background-color: white;
+	border-radius: 10px;
+}
+
+.navbar_hamburger__bar {
+	height: 4px;
+	width: 30px;
+	/* using primary green for the hamburger bars */
+	background-color: rgb(var(--secondary));
+	margin: 3px 0;
+	transition: 0.4s;
+	border-radius: 5px;
+}
+
+.navbar_hamburger--active .navbar_hamburger__bar:nth-child(1) {
+	transform: rotate(45deg) translate(5px, 9px);
+}
+
+.navbar_hamburger--active .navbar_hamburger__bar:nth-child(2) {
+	opacity: 0;
+}
+
+.navbar_hamburger--active .navbar_hamburger__bar:nth-child(3) {
+	transform: rotate(-45deg) translate(5px, -9px);
+}
+
+
+/* =======================================================
+   Animations
+========================================================== */
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translateY(10px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+
+/* =======================================================
+   Mobile Styles
+========================================================== */
+@media (max-width: 768px) {
+
+	/* Mobile Navigation Sidebar */
+	.navbar_nav {
+		position: fixed;
+		top: 0;
+		left: -100%;
+		height: 90vh;
+		width: 70%;
+		flex-direction: column;
+		background: rgba(255, 255, 255, 0.95);
+		backdrop-filter: blur(12px);
+		-webkit-backdrop-filter: blur(12px);
+		overflow-y: auto;
+		transition: left 0.3s ease;
+		z-index: 999;
+		border-radius: 20px;
+		padding: 20px 0;
+		gap: 0px;
+	}
+
+	.navbar_nav--active {
+		left: 0;
+	}
+
+	.navbar_nav__item {
+		margin: 5px 30px;
+		text-align: center;
+	}
+
+	.navbar_nav__item .navbar_dropdown__item {
+		margin: auto;
+	}
+
+	/* Override the hover behavior for mobile */
+	.navbar_nav__item:hover>.navbar_dropdown,
+	.navbar_nav__item--dropdown:hover .navbar_dropdown {
+		display: none;
+		/* Don't show on hover for mobile */
+	}
+
+	/* Instead use JS to add this class */
+	.navbar_nav__item--dropdown.dropdown-active .navbar_dropdown {
+		display: block;
+		animation: fadeIn 0.3s ease-in-out;
+	}
+
+	/* Make the dropdown fill width better on mobile */
+	.navbar_dropdown {
+		position: relative;
+		width: 90%;
+		margin: 5px auto;
+	}
+
+	/* Add a visual indicator for expandable items */
+	.navbar_nav__item--dropdown .navbar_nav__link .navbar_nav__arrow {
+		display: inline-block;
+		transition: transform 0.3s ease;
+	}
+
+	.navbar_nav__item--dropdown.dropdown-active .navbar_nav__link .navbar_nav__arrow {
+		transform: rotate(180deg);
+	}
+
+	/* Display Hamburger Menu Icon */
+	.navbar_hamburger {
+		display: flex;
+		margin-right: 1.5em;
+	}
+
+	/* Mobile Logo */
+	.navbar_logo--mobile {
+		display: flex;
+		justify-content: center;
+		margin: 20px auto;
+		border-radius: 50%;
+	}
+
+	.navbar_logo--mobile img {
+		transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
+		width: 120px;
+		height: auto;
+	}
+
+	.navbar_logo--mobile:hover img {
+		transform: scale(1.1);
+	}
+}
