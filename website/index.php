@@ -28,7 +28,7 @@
 
 	<!-- Custom Styles -->
 	<link href="styles/global.css" rel="stylesheet">
-	<link href="styles/XXXXXXXX.css" rel="stylesheet">
+	<link href="styles/index.css" rel="stylesheet">
 
 	<!-- ===================================================
          Scripts
@@ -41,7 +41,7 @@
          Navigation Section
          - Included via PHP to allow reusability across pages.
          =================================================== -->
-	<?php include("nav.html"); ?>
+	<?php include("nav.php"); ?>
 
 	
 
