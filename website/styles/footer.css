@@ -1,0 +1,285 @@
+/* Comment or Remove in Prod
+Colors are declared in styles/global.css
+This block is here for auto complete */
+:root {
+	/* Primary */
+	--primary-light: 255, 255, 255;
+	--primary: 224, 224, 224;
+	--primary-dark: 180, 180, 180;
+	--on-primary: 0, 0, 0;
+
+	/* Secondary */
+	--secondary-light: 39, 165, 136;
+	--secondary: 21, 92, 79;
+	--secondary-dark: 15, 65, 56;
+	--on-secondary: 255, 255, 255;
+
+	/* Tertiary */
+	--tertiary-light: 255, 255, 230;
+	--tertiary: 255, 242, 196;
+	--tertiary-dark: 200, 190, 120;
+	--on-tertiary: 0, 0, 0;
+}
+
+
+.footer {
+    width: 100%;
+    background: rgba(var(--grey-light), 0.8);
+	backdrop-filter: blur(5px);
+	-webkit-backdrop-filter: blur(5px);
+    margin-top: 10em;
+}
+
+.footer__container {
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+    gap: 50px;
+    flex-wrap: wrap;
+    margin-bottom: 1em;
+}
+
+/* Shared styles for all footer columns */
+
+.footer__about p {
+    text-align: justify;   
+}
+.footer__contact, .footer__about h2, .footer__map h2, .footer__about p strong{
+    text-align: left;
+}
+
+.footer__contact,
+.footer__about,
+.footer__map {
+    background-color: white;
+    padding: 2em;
+    border-radius: 10px;
+}
+
+.footer__contact,
+.footer__map {
+    flex: 0 1 33%; /* Take up 33% of the width, don't grow */
+}
+
+.footer__about {
+    flex: 0 1 25%; /* Slightly smaller, 25% of the width */
+}
+
+.footer__about,
+.footer__map {
+    max-width: 400px;
+    width: fit-content;
+    text-align: center;
+}
+
+.footer a {
+    text-decoration: none;
+    color: black;
+    transition: 0.5s ease;
+}
+
+.footer a:hover {
+    color: rgb(var(--green-light));
+}
+
+
+.footer h2 {
+    position: relative;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #222;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
+
+.footer h2::after {
+    content: "";
+    display: block;
+    width: 24px;
+    height: 3px;
+    background-color: rgb(var(--secondary));
+    margin-top: 3px;
+    border-radius: 2px;
+    transition: width 0.3s ease-in-out;
+}
+.footer__contact:hover  h2::after,
+.footer__about:hover  h2::after,
+.footer__map:hover  h2::after {
+    width: 50px;
+}
+
+
+
+/* Footer column content for all columns */
+.footer__contact span,
+.footer__about span,
+.footer__map span {
+    width: 100%;
+    font-size: 1em;
+    line-height: 50px;
+    text-align: left;
+}
+
+
+.footer iframe {
+    border-radius: 10px;
+    text-align: center;
+    border: none;
+}
+
+
+.footer__contact a,
+.footer__about a,
+.footer__map a {
+    display: flex;
+    align-items: center;
+    font-size: 1.3em;
+}
+
+/* Address styling */
+.footer__contact .footer__address {
+    line-height: normal;
+    margin-top: 20px;
+}
+
+
+/* Footer images */
+.footer img {
+    height: 2em;
+    width: 2em;
+    margin: 0em 1em;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    padding: 10px;
+    transition: transform 0.5s;
+}
+.footer__social-icons img{
+    height: 2.5em;
+    width: 2.5em;
+}
+
+.footer img:hover {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+    transform: scale(1.1);
+}
+
+.footer__social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    align-items: center;
+}
+
+
+/* =====SLOGAN===== */
+.college_slogan {
+    text-align: center;
+    color: white;
+    position: relative;
+    font-weight: bold;
+    color: #222;
+    font-size: 1em;
+    width: fit-content;
+    margin: auto auto 1em auto;
+    padding-top: 1em
+}
+
+.college_slogan::after {
+    content: "";
+    display: block;
+    width: 2em;
+    height: 3px;
+    background-color: rgb(var(--green));
+    margin-top: 3px;
+    margin-left: 2em;
+    border-radius: 2px;
+}
+
+hr.customHR {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.75), rgba(0, 0, 0, 0));
+    margin-bottom: 1em;
+}
+
+
+/* Footer credits */
+.footer__credits {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em;
+    border-top: 1px double rgb(255, 255, 255, 0.1);
+    color: #000000;
+    font-size: 0.9rem;
+    flex-wrap: wrap;
+    background-color: white;
+}
+
+.footer__credits .footer__copyright,
+.footer__credits .footer__developed-by {
+    text-align: center;
+}
+
+.footer__credits a {
+    color: rgb(var(--green));
+    font-weight: 600;
+}
+
+
+@media (min-width: 769px) {
+    .footer__credits .footer__copyright {
+        text-align: left;
+    }
+    .footer__credits .footer__developed-by {
+        text-align: right;
+    }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .footer__credits {
+        flex-direction: column;
+    }
+    .footer__container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer h2{
+        text-align: center;
+        width: fit-content;
+    }
+    .footer__title{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer__contact,
+    .footer__about,
+    .footer__map {
+        width: 95%;
+        max-width: 95%;
+        box-sizing: border-box;
+    }
+
+    .footer__contact span,
+    .footer__about span,
+    .footer__map span {
+        text-align: center;
+    }
+    
+    .footer__contact a,
+    .footer__about a,
+    .footer__map a {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .socialWrapper {
+        margin-right: 0px;
+    }
+}

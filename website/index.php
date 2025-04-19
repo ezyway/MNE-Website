@@ -49,7 +49,7 @@
          Footer Section
          - Included via PHP for consistency across pages.
          =================================================== -->
-	<?php //include("footer.html"); ?>
+	<?php include("footer.html"); ?>
 
 </body>
 
