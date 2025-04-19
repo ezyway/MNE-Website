@@ -44,13 +44,14 @@
                 </ul>
             </li>
 
-            <li class="navbar_nav__item"><a href="contact.php" class="navbar_nav__link">Contact Us</a></li>
-
             <!-- Google Translate Dropdown -->
             <li class="navbar_nav__item navbar_nav__item--dropdown">
-                <a href="#" class="navbar_nav__link">G - Translate <span class="navbar_nav__arrow">&#9662;</span></a>
+                <a href="#" class="navbar_nav__link">Translate <span class="navbar_nav__arrow">&#9662;</span></a>
                 <?php include("lang_dropdown.html"); ?>
             </li>
+            
+            <li class="navbar_nav__item"><a href="contact.php" class="navbar_nav__link">Contact Us</a></li>
+
 
         </ul>
 
