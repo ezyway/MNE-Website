@@ -1,7 +1,8 @@
-Sreyas - 19 April
+Sreyas - 20 April
 
 Fix Footer
 Create Products
+Rename Footer Classes
 
 
 
