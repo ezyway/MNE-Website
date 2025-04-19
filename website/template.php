@@ -41,7 +41,7 @@
          Navigation Section
          - Included via PHP to allow reusability across pages.
          =================================================== -->
-	<?php include("nav.html"); ?>
+	<?php include("nav.php"); ?>
 
 	
 
