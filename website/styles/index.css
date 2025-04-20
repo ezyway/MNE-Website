@@ -36,8 +36,8 @@ body {
 .banner__nav {
     position: absolute;
     top: 50%;
-    height: 2em;
-    width: 2em;
+    height: 1.5em;
+    width: 1.5em;
     transform: translateY(-50%);
     background: rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(10px);
