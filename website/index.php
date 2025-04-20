@@ -41,8 +41,26 @@
          Navigation Section
          - Included via PHP to allow reusability across pages.
          =================================================== -->
-	<?php //include("nav.php"); 
+	<?php include("nav.php"); 
 	?>
+
+
+	<!-- Bruce Banner Section -->
+	<div class="banner">
+		<div class="banner__track">
+			<?php
+			$imageDir = "assets/images/home";
+			$images = glob($imageDir . "/*.{jpg,jpeg,png,gif,webp}", GLOB_BRACE);
+			foreach ($images as $img) {
+				echo "<div class='banner__slide'><img src='$img' alt='Banner Image' class='banner__image'></div>";
+			}
+			?>
+		</div>
+
+		<button class="banner__nav banner__nav--prev">&#10094;</button>
+		<button class="banner__nav banner__nav--next">&#10095;</button>
+	</div>
+
 
 	<!-- Licences Marquee -->
 	<section class="icon-scroll">

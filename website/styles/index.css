@@ -1,3 +1,70 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+/* Bruce Banner Section */
+.banner {
+    margin-top: 7em;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.banner__track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    will-change: transform;
+}
+
+.banner__slide {
+    min-width: 100%;
+    user-select: none;
+}
+
+.banner__image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.banner__nav {
+    position: absolute;
+    top: 50%;
+    height: 2em;
+    width: 2em;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+    color: black;
+    transition: background 0.3s ease-in-out;
+}
+
+.banner__nav:hover {
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.banner__nav--prev {
+    left: 10px;
+}
+
+.banner__nav--next {
+    right: 10px;
+}
+
+
+
+/* Icon Marquee */
 .icon-scroll {
     overflow: hidden;
     height: 5em;
