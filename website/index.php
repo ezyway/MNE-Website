@@ -41,8 +41,7 @@
          Navigation Section
          - Included via PHP to allow reusability across pages.
          =================================================== -->
-	<?php include("nav.php"); 
-	?>
+	<?php include("nav.php"); ?>
 
 
 	<!-- Bruce Banner Section -->
@@ -61,7 +60,7 @@
 		<button class="banner__nav banner__nav--next">&#10095;</button>
 	</div>
 
-
+	
 	<!-- Licences Marquee -->
 	<section class="icon-scroll">
 		<div class="icon-scroll__wrapper">
@@ -84,6 +83,24 @@
 			</div>
 		</div>
 	</section>
+
+
+	<!-- About Section -->
+	<section class="about">
+		<div class="about__content">
+			<h2 class="about__heading">About Us</h2>
+			<p class="about__text">
+				We are a globally recognized export company, committed to delivering top-quality products across international markets.
+				Our core values of reliability, innovation, and sustainability drive every part of our business.
+				With a strong network and a forward-thinking approach, we continuously meet the evolving demands of our partners worldwide.
+				<a href="about.php" class="about__link">Read more →</a>
+			</p>
+		</div>
+		<div class="about__image-wrapper">
+			<img src="assets/logo.png" alt="Company Logo" class="about__image" />
+		</div>
+	</section>
+
 
 	<!-- Shipping Partners Marquee -->
 	<section class="icon-scroll">

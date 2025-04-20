@@ -48,51 +48,71 @@ document.addEventListener("DOMContentLoaded", () => {
 	const slides = document.querySelectorAll(".banner__slide");
 	const prevBtn = document.querySelector(".banner__nav--prev");
 	const nextBtn = document.querySelector(".banner__nav--next");
-	
+
 	let index = 0;
 	let autoScroll;
 	const slideCount = slides.length;
-	
+
 	function setPosition() {
-	  track.style.transform = `translateX(-${index * 100}%)`;
+		track.style.transform = `translateX(-${index * 100}%)`;
 	}
-	
+
 	function goToSlide(i) {
-	  index = (i + slideCount) % slideCount;
-	  setPosition();
+		index = (i + slideCount) % slideCount;
+		setPosition();
 	}
-	
+
 	function nextSlide() {
-	  goToSlide(index + 1);
+		goToSlide(index + 1);
 	}
-	
+
 	function prevSlide() {
-	  goToSlide(index - 1);
+		goToSlide(index - 1);
 	}
-	
+
 	function startAutoScroll() {
-	  autoScroll = setInterval(nextSlide, 3000);
+		autoScroll = setInterval(nextSlide, 3000);
 	}
-	
+
 	function stopAutoScroll() {
-	  clearInterval(autoScroll);
+		clearInterval(autoScroll);
 	}
-	
+
 	prevBtn.addEventListener("click", () => {
-	  stopAutoScroll();
-	  prevSlide();
-	  startAutoScroll();
+		stopAutoScroll();
+		prevSlide();
+		startAutoScroll();
 	});
-	
+
 	nextBtn.addEventListener("click", () => {
-	  stopAutoScroll();
-	  nextSlide();
-	  startAutoScroll();
+		stopAutoScroll();
+		nextSlide();
+		startAutoScroll();
 	});
-	
+
 	// Init
 	setPosition();
 	startAutoScroll();
+
+
+	// =====================================================
+	// About Section View Fade-In
+	// =====================================================
+	const aboutSection = document.querySelector(".about");
 	
+	if (!aboutSection) return;
+	
+	const observer = new IntersectionObserver(
+		([entry]) => {
+		if (entry.isIntersecting) {
+			aboutSection.classList.add("about--visible");
+			observer.disconnect();
+		}
+		},
+		{ threshold: 0.2 }
+	);
+	
+	observer.observe(aboutSection);
+	  
 
 });
