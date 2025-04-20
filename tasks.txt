@@ -1,18 +1,16 @@
 Sreyas - 20 April
 
-Fix Footer
-Create Products
-Rename Footer Classes
+Create Products and sub pages for that
 
 
 
 
-AK - 19 April
+AK - 20 April
 
 Make Banner for Home Page
 Header Backgrounds for product pages
 
 
-AK - 20 April
+AK - 21 April
 About us
 Contact us
