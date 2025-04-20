@@ -44,7 +44,7 @@
 	<?php //include("nav.php"); 
 	?>
 
-	<!-- HTML -->
+	<!-- Licences Marquee -->
 	<section class="icon-scroll">
 		<div class="icon-scroll__container">
 			<div class="icon-scroll__item"><img src="assets/icons/home/licences/1.png" alt="Icon 1" /></div>
@@ -64,6 +64,8 @@
 			<div class="icon-scroll__item"><img src="assets/icons/home/licences/15.png" alt="Icon 15" /></div>
 		</div>
 	</section>
+
+	<!-- Shipping Partners Marquee -->
 	<section class="icon-scroll">
 		<div class="icon-scroll__container">
 			<div class="icon-scroll__item"><img src="assets/icons/home/shipping_partners/1.png" alt="Icon 1" /></div>
