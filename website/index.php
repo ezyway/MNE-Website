@@ -47,7 +47,6 @@
 	<!-- HTML -->
 	<section class="icon-scroll">
 		<div class="icon-scroll__container">
-			<!-- Example of 13 icons -->
 			<div class="icon-scroll__item"><img src="assets/icons/home/licences/1.png" alt="Icon 1" /></div>
 			<div class="icon-scroll__item"><img src="assets/icons/home/licences/2.png" alt="Icon 2" /></div>
 			<div class="icon-scroll__item"><img src="assets/icons/home/licences/3.png" alt="Icon 3" /></div>
@@ -67,7 +66,6 @@
 	</section>
 	<section class="icon-scroll">
 		<div class="icon-scroll__container">
-			<!-- Example of 13 icons -->
 			<div class="icon-scroll__item"><img src="assets/icons/home/shipping_partners/1.png" alt="Icon 1" /></div>
 			<div class="icon-scroll__item"><img src="assets/icons/home/shipping_partners/2.png" alt="Icon 2" /></div>
 			<div class="icon-scroll__item"><img src="assets/icons/home/shipping_partners/3.png" alt="Icon 3" /></div>
