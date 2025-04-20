@@ -27,7 +27,6 @@ This block is here for auto complete */
     background: rgba(var(--grey-light), 0.8);
 	backdrop-filter: blur(5px);
 	-webkit-backdrop-filter: blur(5px);
-    margin-top: 10em;
 }
 
 .footer__container {
