@@ -86,7 +86,7 @@ if (isset($_GET["category"])) {
     Navigation Section
     - Included via PHP to allow reusability across pages.
     =================================================== -->
-    <?php include("nav.php"); ?>
+    <?php  include("nav.php"); ?>
 
     <div class="container">
         <div class="wrapper">
