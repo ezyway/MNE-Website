@@ -2,6 +2,27 @@
 document.addEventListener("DOMContentLoaded", () => {
     
     // ============================================
+    // Navbar shrink on scroll functionality
+    // ============================================
+    const navbar = document.querySelector(".navbar_container");
+    const shrinkThreshold = 200; // Scroll threshold in pixels
+    
+    // Function to check scroll position and update navbar
+    const checkScrollPosition = () => {
+        if (window.scrollY > shrinkThreshold) {
+            navbar.classList.add("navbar_container--shrink");
+        } else {
+            navbar.classList.remove("navbar_container--shrink");
+        }
+    };
+    
+    // Check position on page load
+    checkScrollPosition();
+    
+    // Add scroll event listener
+    window.addEventListener("scroll", checkScrollPosition);
+    
+    // ============================================
     // Hamburger menu functionality
     // ============================================
     const hamburger = document.querySelector(".navbar_hamburger");
@@ -83,6 +104,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 dropdown.style.display = 'none';
             }
         });
+        
+        // Also check scroll position when resizing
+        checkScrollPosition();
     });
 
     
