@@ -91,7 +91,10 @@ textarea:focus {
     padding: 0.25em;
     margin: 0.25em; /* Half of original 0.5em */
 }
-
+.navbar_container--shrink .navbar_nav__link {
+    padding: 5px 10px; /* Half of original 10px 20px */
+    font-size: 0.9em; /* Slightly smaller font */
+}
 
 /* Mobile Logo (hidden on desktop) */
 .navbar_logo--mobile {
