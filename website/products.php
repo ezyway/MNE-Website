@@ -19,7 +19,7 @@ if (isset($_GET["category"])) {
                 "assets\\images\\products\\all\\1.png",
                 "assets\\images\\products\\all\\1.png"
             ],
-            "desc" => [
+            "description" => [
                 "Aromatic spices in their natural form.",
                 "Finely ground spices for quick use.",
                 "Custom blends for flavorful cooking.",
@@ -46,7 +46,7 @@ if (isset($_GET["category"])) {
                 "assets\\images\\products\\all\\1.png",
                 "assets\\images\\products\\all\\1.png"
             ],
-            "desc" => [
+            "description" => [
                 "Aromatic spices in their natural form.",
                 "Finely ground spices for quick use.",
                 "Custom blends for flavorful cooking.",
@@ -86,7 +86,7 @@ if (isset($_GET["category"])) {
     Navigation Section
     - Included via PHP to allow reusability across pages.
     =================================================== -->
-    <?php  include("nav.php"); ?>
+    <?php include("nav.php"); ?>
 
     <div class="container">
         <div class="wrapper">
@@ -99,19 +99,19 @@ if (isset($_GET["category"])) {
             if (isset($data[$category])) {
                 $names = $data[$category]["name"];
                 $images = $data[$category]["image_url"];
-                $descs = $data[$category]["desc"];
+                $descriptions = $data[$category]["description"];
 
                 if (count($names) > 0 && count($images) === count($names)) {
                     echo "<div class='products_grid_wrapper'>";
                     echo "<div class='products_grid'>";
                     foreach ($names as $index => $product_name) {
                         $img_url = $images[$index];
-                        $desc = $descs[$index];
+                        $description = $descriptions[$index];
                         $img_url_fixed = str_replace("\\", "/", $img_url); // convert for CSS
                         echo "<div class='product_item' style=\"background-image: url('$img_url_fixed');\">";
                             echo "<div class='overlay'>";
                                 echo "<h3 class='product_name'>$product_name</h3>";
-                                echo "<p class='product_desc'>$desc</p>";
+                                echo "<p class='product_desc'>$description</p>";
                             echo "</div>";
                         echo "</div>";
                     }
