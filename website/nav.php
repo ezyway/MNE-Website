@@ -37,8 +37,8 @@
                 <ul class="navbar_dropdown">
                     <li class="navbar_dropdown__item"><a href="products.php?category=wholeSpices" class="navbar_dropdown__link">Whole Spices</a></li>
                     <li class="navbar_dropdown__item"><a href="products.php?category=groundSpices" class="navbar_dropdown__link">Grounded Spices</a></li>
-                    <!-- <li class="navbar_dropdown__item"><a href="products.php?category=blendedSpices" class="navbar_dropdown__link">Blended Spices</a></li> -->
-                    <li class="navbar_dropdown__item"><a href="products.php?category=grainsAndPulses" class="navbar_dropdown__link">Grains & Pulses</a></li>
+                    <li class="navbar_dropdown__item"><a href="products.php?category=grains" class="navbar_dropdown__link">Grains</a></li>
+                    <li class="navbar_dropdown__item"><a href="products.php?category=pulses" class="navbar_dropdown__link">Pulses</a></li>
                     <li class="navbar_dropdown__item"><a href="products.php?category=dryFruits" class="navbar_dropdown__link">Dry Fruits</a></li>
                     <li class="navbar_dropdown__item"><a href="products.php?category=makhana" class="navbar_dropdown__link">Makhana</a></li>
                 </ul>
