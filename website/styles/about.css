@@ -335,10 +335,6 @@ hr.custom_divider {
   
   /* Mobile responsiveness */
   @media (max-width: 480px) {
-    .why-choose {
-      padding: 20px 10px;
-    }
-  
     .why-choose__heading {
       font-size: 24px;
     }
