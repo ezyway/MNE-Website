@@ -21,14 +21,6 @@ if (isset($_GET["category"])) {
                 "Dry Fruits",
                 "Makhana"
             ],
-            "image_url" => [
-                "assets\\images\\products\\all\\1.png",
-                "assets\\images\\products\\all\\2.png",
-                "assets\\images\\products\\all\\3.png",
-                "assets\\images\\products\\all\\4.png",
-                "assets\\images\\products\\all\\5.png",
-                "assets\\images\\products\\all\\6.png"
-            ],
             "description" => [
                 "Premium whole spices for authentic flavor.",
                 "Freshly ground spices for convenient cooking.",
@@ -56,22 +48,6 @@ if (isset($_GET["category"])) {
                 "Dry Red Chilli",
                 "Poppy Seeds",
                 "Star Anise"
-            ],
-            "image_url" => [
-                "assets\\images\\products\\wholeSpices\\1.png",
-                "assets\\images\\products\\wholeSpices\\2.png",
-                "assets\\images\\products\\wholeSpices\\3.png",
-                "assets\\images\\products\\wholeSpices\\4.png",
-                "assets\\images\\products\\wholeSpices\\5.png",
-                "assets\\images\\products\\wholeSpices\\6.png",
-                "assets\\images\\products\\wholeSpices\\7.png",
-                "assets\\images\\products\\wholeSpices\\8.png",
-                "assets\\images\\products\\wholeSpices\\9.png",
-                "assets\\images\\products\\wholeSpices\\10.png",
-                "assets\\images\\products\\wholeSpices\\11.png",
-                "assets\\images\\products\\wholeSpices\\12.png",
-                "assets\\images\\products\\wholeSpices\\13.png",
-                "assets\\images\\products\\wholeSpices\\14.png"
             ],
             "description" => [
                 "Aromatic seeds essential for tempering.",
@@ -105,18 +81,6 @@ if (isset($_GET["category"])) {
                 "Dry Mango Powder",
                 "Hing (Asafoetida)"
             ],
-            "image_url" => [
-                "assets\\images\\products\\groundSpices\\1.png",
-                "assets\\images\\products\\groundSpices\\2.png",
-                "assets\\images\\products\\groundSpices\\3.png",
-                "assets\\images\\products\\groundSpices\\4.png",
-                "assets\\images\\products\\groundSpices\\5.png",
-                "assets\\images\\products\\groundSpices\\6.png",
-                "assets\\images\\products\\groundSpices\\7.png",
-                "assets\\images\\products\\groundSpices\\8.png",
-                "assets\\images\\products\\groundSpices\\9.png",
-                "assets\\images\\products\\groundSpices\\10.png"
-            ],
             "description" => [
                 "Hot and spicy powder for adding heat to dishes.",
                 "Vibrant red powder for rich color with mild heat.",
@@ -140,14 +104,6 @@ if (isset($_GET["category"])) {
                 "Barley",
                 "Maize",
                 "Sorghum"
-            ],
-            "image_url" => [
-                "assets\\images\\products\\grains\\1.png",
-                "assets\\images\\products\\grains\\2.png",
-                "assets\\images\\products\\grains\\3.png",
-                "assets\\images\\products\\grains\\4.png",
-                "assets\\images\\products\\grains\\5.png",
-                "assets\\images\\products\\grains\\6.png"
             ],
             "description" => [
                 "Versatile grain available in multiple varieties for everyday cooking.",
@@ -175,21 +131,6 @@ if (isset($_GET["category"])) {
                 "Soy Beans",
                 "Lentils (Masoor)",
                 "Yellow Corn"
-            ],
-            "image_url" => [
-                "assets\\images\\products\\pulses\\1.png",
-                "assets\\images\\products\\pulses\\2.png",
-                "assets\\images\\products\\pulses\\3.png",
-                "assets\\images\\products\\pulses\\4.png",
-                "assets\\images\\products\\pulses\\5.png",
-                "assets\\images\\products\\pulses\\6.png",
-                "assets\\images\\products\\pulses\\7.png",
-                "assets\\images\\products\\pulses\\8.png",
-                "assets\\images\\products\\pulses\\9.png",
-                "assets\\images\\products\\pulses\\10.png",
-                "assets\\images\\products\\pulses\\11.png",
-                "assets\\images\\products\\pulses\\12.png",
-                "assets\\images\\products\\pulses\\13.png"
             ],
             "description" => [
                 "Large beige chickpeas for hummus, curries and salads.",
@@ -220,16 +161,6 @@ if (isset($_GET["category"])) {
                 "Dates",
                 "Walnuts"
             ],
-            "image_url" => [
-                "assets\\images\\products\\dryFruits\\1.png",
-                "assets\\images\\products\\dryFruits\\2.png",
-                "assets\\images\\products\\dryFruits\\3.png",
-                "assets\\images\\products\\dryFruits\\4.png",
-                "assets\\images\\products\\dryFruits\\5.png",
-                "assets\\images\\products\\dryFruits\\6.png",
-                "assets\\images\\products\\dryFruits\\7.png",
-                "assets\\images\\products\\dryFruits\\8.png"
-            ],
             "description" => [
                 "Crunchy nuts rich in vitamin E and healthy fats.",
                 "Creamy, kidney-shaped nuts perfect for snacking and cooking.",
@@ -252,15 +183,6 @@ if (isset($_GET["category"])) {
                 "Peri Peri Makhana",
                 "Masala Makhana",
                 "Cheddar Cheese Makhana"
-            ],
-            "image_url" => [
-                "assets\\images\\products\\makhana\\1.png",
-                "assets\\images\\products\\makhana\\2.png",
-                "assets\\images\\products\\makhana\\3.png",
-                "assets\\images\\products\\makhana\\4.png",
-                "assets\\images\\products\\makhana\\5.png",
-                "assets\\images\\products\\makhana\\6.png",
-                "assets\\images\\products\\makhana\\7.png"
             ],
             "description" => [
                 "Natural puffed lotus seeds, light and nutritious.",
@@ -312,46 +234,56 @@ if (isset($_GET["category"])) {
                 </div>
 
                 <?php
-                    function renderProductItem($name, $description, $img_url, $is_link = false, $target_category = "")
-                    {
-                        $img_url_fixed = str_replace("\\", "/", $img_url);
-                        $tag = $is_link ? "a href='?category=$target_category'" : "div";
-                        $close_tag = $is_link ? "a" : "div";
+                function slugify($name)
+                {
+                    // 1) remove any parenthetical text
+                    $noParen = preg_replace('/\s*\(.*?\)\s*/', '', $name);
+                    // 2) lowercase
+                    $lower = strtolower($noParen);
+                    // 3) replace non-alphanumerics with underscores
+                    $slug  = preg_replace('/[^a-z0-9]+/', '_', $lower);
+                    // 4) trim leading/trailing underscores
+                    return trim($slug, '_');
+                }
 
-                        return "
-                            <$tag class='product_item' style=\"background-image: url('$img_url_fixed');\">
-                                <div class='overlay'>
-                                    <h3 class='product_name'>$name</h3>
-                                    <p class='product_desc'>$description</p>
-                                </div>
-                            </$close_tag>
+                function renderProductItem($name, $description, $categoryKey, $is_link = false, $target_category = "")
+                {
+                    $slug    = slugify($name);
+                    $img_url = "assets/images/products/{$categoryKey}/{$slug}.png";
+
+                    $tag       = $is_link
+                        ? "a href='?category=$target_category'"
+                        : "div";
+                    $close_tag = $is_link
+                        ? "a"
+                        : "div";
+
+                    return "
+                        <$tag class='product_item' style=\"background-image:url('$img_url');\">
+                            <div class='overlay'>
+                                <h3 class='product_name'>{$name}</h3>
+                                <p class='product_desc'>{$description}</p>
+                            </div>
+                        </$close_tag>
                         ";
+                }
+
+                $category      = $_GET["category"];
+                $category_data = $data[$category];
+                $names         = $category_data["name"];
+                $descriptions  = $category_data["description"];
+            
+                echo "<div class='products_grid_wrapper'><div class='products_grid'>";
+                foreach ($names as $i => $name) {
+                    $desc = $descriptions[$i];
+                    if ($category === "all") {
+                        $target = $data["category_mapping"][$name];
+                        echo renderProductItem($name, $desc, "all", true, $target);
+                    } else {
+                        echo renderProductItem($name, $desc, $category);
                     }
-
-                    $category = $_GET["category"];
-                    $category_data = $data[$category];
-                    $names = $category_data["name"];
-                    $images = $category_data["image_url"];
-                    $descriptions = $category_data["description"];
-
-                    echo "<div class='products_grid_wrapper'>";
-                    echo "<div class='products_grid'>";
-
-                    foreach ($names as $index => $name) {
-                        $description = $descriptions[$index];
-                        $img_url = $images[$index];
-
-                        // Make items clickable only for 'all' category
-                        if ($category === "all") {
-                            $target_key = $data["category_mapping"][$name];
-                            echo renderProductItem($name, $description, $img_url, true, $target_key);
-                        } else {
-                            echo renderProductItem($name, $description, $img_url);
-                        }
-
-                    }
-
-                    echo "</div></div>";
+                }
+                echo "</div></div>";
                 ?>
 
             </div>
