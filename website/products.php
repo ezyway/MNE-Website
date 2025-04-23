@@ -1,12 +1,23 @@
 <?php
 if (isset($_GET["category"])) {
     $data = [
+
+        "category_mapping" => [
+            "Whole Spices" => "wholeSpices",
+            "Ground Spices" => "groundSpices",
+            "Grains" => "grains",
+            "Pulses" => "pulses",
+            "Dry Fruits" => "dryFruits",
+            "Makhana" => "makhana"
+        ],
+
         "all" => [
             "title" => "All Products",
             "name" => [
                 "Whole Spices",
                 "Ground Spices",
-                "Grains & Pulses",
+                "Grains",
+                "Pulses",
                 "Dry Fruits",
                 "Makhana"
             ],
@@ -15,18 +26,21 @@ if (isset($_GET["category"])) {
                 "assets\\images\\products\\all\\2.png",
                 "assets\\images\\products\\all\\3.png",
                 "assets\\images\\products\\all\\4.png",
-                "assets\\images\\products\\all\\5.png"
+                "assets\\images\\products\\all\\5.png",
+                "assets\\images\\products\\all\\6.png"
             ],
             "description" => [
                 "Premium whole spices for authentic flavor.",
                 "Freshly ground spices for convenient cooking.",
-                "Nutritious grains and pulses for healthy meals.",
+                "Nutritious whole grains for healthy meals.",
+                "Protein-rich pulses for hearty dishes.",
                 "Premium quality dry fruits for snacking and cooking.",
                 "Light and nutritious fox nuts for healthy snacking."
             ]
         ],
+
         "wholeSpices" => [
-            "title" => "Whole Spices Collection",
+            "title" => "Whole Spices",
             "name" => [
                 "Cumin Seeds",
                 "Mustard Seeds",
@@ -76,13 +90,14 @@ if (isset($_GET["category"])) {
                 "Beautiful star-shaped spice with a licorice flavor."
             ]
         ],
+
         "groundSpices" => [
-            "title" => "Premium Ground Spices",
+            "title" => "Ground Spices",
             "name" => [
                 "Red Chilli Powder",
                 "Kashmiri Red Chilli Powder",
                 "Turmeric Powder",
-                "Coriander-Cumin Powder",
+                "Coriander Cumin Powder",
                 "Coriander Powder",
                 "Cumin Powder",
                 "Black Pepper Powder",
@@ -115,45 +130,84 @@ if (isset($_GET["category"])) {
                 "Pungent resin that adds onion-garlic flavor when cooked."
             ]
         ],
-        "grainsAndPulses" => [
-            "title" => "Nutritious Grains & Pulses",
+
+        "grains" => [
+            "title" => "Grains",
             "name" => [
-                "Basmati Rice",
-                "Brown Rice",
-                "Red Lentils (Masoor Dal)",
-                "Yellow Split Peas (Chana Dal)",
-                "Black Gram (Urad Dal)",
-                "Green Moong Dal",
-                "Chickpeas (Kabuli Chana)",
-                "Black Chickpeas (Kala Chana)",
-                "Pearl Millet (Bajra)",
-                "Quinoa"
+                "Rice",
+                "Wheat",
+                "Millets",
+                "Barley",
+                "Maize",
+                "Sorghum"
             ],
             "image_url" => [
-                "assets\\images\\products\\grainsAndPulses\\1.png",
-                "assets\\images\\products\\grainsAndPulses\\2.png",
-                "assets\\images\\products\\grainsAndPulses\\3.png",
-                "assets\\images\\products\\grainsAndPulses\\4.png",
-                "assets\\images\\products\\grainsAndPulses\\5.png",
-                "assets\\images\\products\\grainsAndPulses\\6.png",
-                "assets\\images\\products\\grainsAndPulses\\7.png",
-                "assets\\images\\products\\grainsAndPulses\\8.png",
-                "assets\\images\\products\\grainsAndPulses\\9.png",
-                "assets\\images\\products\\grainsAndPulses\\10.png"
+                "assets\\images\\products\\grains\\1.png",
+                "assets\\images\\products\\grains\\2.png",
+                "assets\\images\\products\\grains\\3.png",
+                "assets\\images\\products\\grains\\4.png",
+                "assets\\images\\products\\grains\\5.png",
+                "assets\\images\\products\\grains\\6.png"
             ],
             "description" => [
-                "Long-grain aromatic rice perfect for biryanis and pulaos.",
-                "Whole grain rice with bran layer intact for added nutrition.",
-                "Quick-cooking red lentils for soups and stews.",
-                "Split chickpeas with a nutty flavor for dals and curries.",
-                "Protein-rich lentils used in dosas and dals.",
-                "Nutritious split mung beans for light, digestible dishes.",
-                "Large beige chickpeas for hummus and chanas.",
-                "Smaller, darker chickpeas with earthy flavor and high fiber.",
-                "Ancient grain with nutty flavor and high nutrition.",
-                "Protein-packed pseudocereal for salads and bowls."
+                "Versatile grain available in multiple varieties for everyday cooking.",
+                "Wholesome staple grain perfect for breads, rotis and baking.",
+                "Ancient grains rich in nutrients and fiber for healthy alternatives.",
+                "Chewy, nutty grain ideal for soups, stews and healthy salads.",
+                "Sweet, versatile grain for snacks, meals and flour.",
+                "Drought-resistant ancient grain with a mild, earthy flavor."
             ]
         ],
+
+        "pulses" => [
+            "title" => "Pulses",
+            "name" => [
+                "Chickpea (Kabuli Chana)",
+                "Black Chickpea (Kala Chana)",
+                "Split Chickpea (Chana Dal)",
+                "White Pea (Matar)",
+                "Black Eyed Pea (Lobia)",
+                "Pigeon Pea (Arhar/Toor)",
+                "Green Gram (Moong Beans)",
+                "Black Gram (Urad/Mah)",
+                "Moth Beans",
+                "Kidney Beans (Rajma)",
+                "Soy Beans",
+                "Lentils (Masoor)",
+                "Yellow Corn"
+            ],
+            "image_url" => [
+                "assets\\images\\products\\pulses\\1.png",
+                "assets\\images\\products\\pulses\\2.png",
+                "assets\\images\\products\\pulses\\3.png",
+                "assets\\images\\products\\pulses\\4.png",
+                "assets\\images\\products\\pulses\\5.png",
+                "assets\\images\\products\\pulses\\6.png",
+                "assets\\images\\products\\pulses\\7.png",
+                "assets\\images\\products\\pulses\\8.png",
+                "assets\\images\\products\\pulses\\9.png",
+                "assets\\images\\products\\pulses\\10.png",
+                "assets\\images\\products\\pulses\\11.png",
+                "assets\\images\\products\\pulses\\12.png",
+                "assets\\images\\products\\pulses\\13.png"
+            ],
+            "description" => [
+                "Large beige chickpeas for hummus, curries and salads.",
+                "Smaller, darker chickpeas with earthy flavor and high fiber.",
+                "Split chickpeas with a nutty flavor for dals and curries.",
+                "White, round legumes perfect for curries and snacks.",
+                "Distinctive beans with black 'eye' marking, mild and versatile.",
+                "Yellow lentils with a mild flavor, perfect for dals.",
+                "Small round beans that can be used whole or split.",
+                "Rich, creamy beans essential for dosas and specialized dishes.",
+                "Small, elongated beans with earthy flavor, popular in Rajasthani cuisine.",
+                "Red, kidney-shaped beans for hearty dishes and chili.",
+                "Protein-rich beans used in various vegetarian preparations.",
+                "Quick-cooking red lentils for soups and stews.",
+                "Sweet, nutritious corn kernels for soups and salads."
+            ]
+        ],
+
         "dryFruits" => [
             "title" => "Premium Dry Fruits",
             "name" => [
@@ -187,6 +241,7 @@ if (isset($_GET["category"])) {
                 "Brain-shaped nuts rich in omega-3 fatty acids."
             ]
         ],
+
         "makhana" => [
             "title" => "Gourmet Makhana (Fox Nuts)",
             "name" => [
@@ -257,57 +312,48 @@ if (isset($_GET["category"])) {
                 </div>
 
                 <?php
-                $category = $_GET["category"];
-                if (isset($data[$category])) {
-                    $names = $data[$category]["name"];
-                    $images = $data[$category]["image_url"];
-                    $descriptions = $data[$category]["description"];
+                    function renderProductItem($name, $description, $img_url, $is_link = false, $target_category = "")
+                    {
+                        $img_url_fixed = str_replace("\\", "/", $img_url);
+                        $tag = $is_link ? "a href='?category=$target_category'" : "div";
+                        $close_tag = $is_link ? "a" : "div";
 
-                    if (count($names) > 0 && count($images) === count($names)) {
-                        echo "<div class='products_grid_wrapper'>";
-                        echo "<div class='products_grid'>";
-                        foreach ($names as $index => $product_name) {
-                            $img_url = $images[$index];
-                            $description = $descriptions[$index];
-                            $img_url_fixed = str_replace("\\", "/", $img_url); // convert for CSS
-
-                            // If we're in the "all" category, make items clickable
-                            if ($category === "all") {
-                                // Map the category name to its corresponding array key
-                                $category_mapping = [
-                                    "Whole Spices" => "wholeSpices",
-                                    "Ground Spices" => "groundSpices",
-                                    "Grains & Pulses" => "grainsAndPulses",
-                                    "Dry Fruits" => "dryFruits",
-                                    "Makhana" => "makhana"
-                                ];
-
-                                $target_category = $category_mapping[$product_name];
-                                echo "<a href='?category={$target_category}' class='product_item' style=\"background-image: url('$img_url_fixed');\">";
-                                echo "<div class='overlay'>";
-                                echo "<h3 class='product_name'>$product_name</h3>";
-                                echo "<p class='product_desc'>$description</p>";
-                                echo "</div>";
-                                echo "</a>";
-                            } else {
-                                // Regular non-clickable display for specific category items
-                                echo "<div class='product_item' style=\"background-image: url('$img_url_fixed');\">";
-                                echo "<div class='overlay'>";
-                                echo "<h3 class='product_name'>$product_name</h3>";
-                                echo "<p class='product_desc'>$description</p>";
-                                echo "</div>";
-                                echo "</div>";
-                            }
-                        }
-                        echo "</div>";
-                        echo "</div>";
-                    } else {
-                        echo "<p class='no_products'>No products found for this category.</p>";
+                        return "
+                            <$tag class='product_item' style=\"background-image: url('$img_url_fixed');\">
+                                <div class='overlay'>
+                                    <h3 class='product_name'>$name</h3>
+                                    <p class='product_desc'>$description</p>
+                                </div>
+                            </$close_tag>
+                        ";
                     }
-                } else {
-                    echo "<p class='no_products'>Category not found.</p>";
-                }
+
+                    $category = $_GET["category"];
+                    $category_data = $data[$category];
+                    $names = $category_data["name"];
+                    $images = $category_data["image_url"];
+                    $descriptions = $category_data["description"];
+
+                    echo "<div class='products_grid_wrapper'>";
+                    echo "<div class='products_grid'>";
+
+                    foreach ($names as $index => $name) {
+                        $description = $descriptions[$index];
+                        $img_url = $images[$index];
+
+                        // Make items clickable only for 'all' category
+                        if ($category === "all") {
+                            $target_key = $data["category_mapping"][$name];
+                            echo renderProductItem($name, $description, $img_url, true, $target_key);
+                        } else {
+                            echo renderProductItem($name, $description, $img_url);
+                        }
+
+                    }
+
+                    echo "</div></div>";
                 ?>
+
             </div>
         </div>
 
