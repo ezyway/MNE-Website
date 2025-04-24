@@ -59,11 +59,11 @@
 			foreach ($desktopImages as $img) {
 				$mobileVersion = preg_replace('/\.(jpg|jpeg|png|gif|webp)$/i', '_m.$1', $img);
 				echo "<div class='banner__slide'>
-					<picture>
-						<source media='(max-width: 768px)' srcset='$mobileVersion'>
-						<img src='$img' alt='Banner Image' class='banner__image'>
-					</picture>
-				</div>";
+						<picture>
+							<source media='(max-width: 768px)' srcset='$mobileVersion'>
+							<img src='$img' alt='Banner Image' class='banner__image'>
+						</picture>
+					</div>";
 			}
 			?>
 
