@@ -229,54 +229,73 @@ if (isset($_GET["category"])) {
 
         <!-- <div class="container">
             <div class="wrapper"> -->
+        <?php
+            // Get information to be used
+            $category      = $_GET["category"];
+            $category_data = $data[$category];
+            $names         = $category_data["name"];
+            $descriptions  = $category_data["description"];
+        ?>
 
+        <!-- HEADER BANNER WITH BREADCRUMB -->
+        <div class="headerBannerWrapper">
+            <div class="about-banner">
 
-                <!-- HEADER BANNER WITH BREADCRUMB -->
-                <div class="headerBannerWrapper">
-                    <div class="about-banner">
-                        <div class="about-banner__left">
-                            <div class="about-banner__content">
-                                <h1 class="about-banner__title">About Us</h1>
-                                <div class="breadcrumb">
-                                    <a href="index.php" class="breadcrumb__link">Home</a>
-                                    <span class="breadcrumb__separator">&gt;</span>
-                                    <a href="about.php" class="breadcrumb__link">About Us</a>
-                                </div>
-                            </div>
+                <div class="about-banner__left">
+                    <div class="about-banner__content">
+
+                        <h1 class="about-banner__title">
+                            <?php echo $data[$_GET["category"]]["title"]; ?>
+                        </h1>
+
+                        <div class="breadcrumb">
+                            <a href="index.php" class="breadcrumb__link">Home</a>
+                            <span class="breadcrumb__separator">&gt;</span>
+                            <a href="products.php?category=all" class="breadcrumb__link">Our Products</a>
+                            <?php if ($category !== "all") : ?>
+                                <span class="breadcrumb__separator">&gt;</span>
+                                <a href="products.php?category=<?php echo $category; ?>" class="breadcrumb__link">
+                                    <?php echo $category_data["title"]; ?>
+                                </a>
+                            <?php endif; ?>
                         </div>
 
-                        <div class="about-banner__right">
-                            <img src="assets/images/about/dry-tree_8414098.png" alt="">
-                        </div>
                     </div>
                 </div>
 
-                <?php
-                function slugify($name)
-                {
-                    // 1) remove any parenthetical text
-                    $noParen = preg_replace('/\s*\(.*?\)\s*/', '', $name);
-                    // 2) lowercase
-                    $lower = strtolower($noParen);
-                    // 3) replace non-alphanumerics with underscores
-                    $slug  = preg_replace('/[^a-z0-9]+/', '_', $lower);
-                    // 4) trim leading/trailing underscores
-                    return trim($slug, '_');
-                }
+                <div class="about-banner__right">
+                    <img src="assets/images/about/dry-tree_8414098.png" alt="">
+                </div>
 
-                function renderProductItem($name, $description, $categoryKey, $is_link = false, $target_category = "")
-                {
-                    $slug    = slugify($name);
-                    $img_url = "assets/images/products/{$categoryKey}/{$slug}.png";
+            </div>
+        </div>
 
-                    $tag       = $is_link
-                        ? "a href='?category=$target_category'"
-                        : "div";
-                    $close_tag = $is_link
-                        ? "a"
-                        : "div";
+        <?php
+        function slugify($name)
+        {
+            // 1) remove any parenthetical text
+            $noParen = preg_replace('/\s*\(.*?\)\s*/', '', $name);
+            // 2) lowercase
+            $lower = strtolower($noParen);
+            // 3) replace non-alphanumerics with underscores
+            $slug  = preg_replace('/[^a-z0-9]+/', '_', $lower);
+            // 4) trim leading/trailing underscores
+            return trim($slug, '_');
+        }
 
-                    return "
+        function renderProductItem($name, $description, $categoryKey, $is_link = false, $target_category = "")
+        {
+            $slug    = slugify($name);
+            $img_url = "assets/images/products/{$categoryKey}/{$slug}.png";
+
+            $tag       = $is_link
+                ? "a href='?category=$target_category'"
+                : "div";
+            $close_tag = $is_link
+                ? "a"
+                : "div";
+
+            return "
                         <$tag class='product_item' style=\"background-image:url('$img_url');\">
                             <div class='overlay'>
                                 <h3 class='product_name'>{$name}</h3>
@@ -284,32 +303,26 @@ if (isset($_GET["category"])) {
                             </div>
                         </$close_tag>
                         ";
-                }
+        }
 
-                $category      = $_GET["category"];
-                $category_data = $data[$category];
-                $names         = $category_data["name"];
-                $descriptions  = $category_data["description"];
+        echo "<div class='products_grid_wrapper'><div class='products_grid'>";
+        foreach ($names as $i => $name) {
+            $desc = $descriptions[$i];
+            if ($category === "all") {
+                $target = $data["category_mapping"][$name];
+                echo renderProductItem($name, $desc, "all", true, $target);
+            } else {
+                echo renderProductItem($name, $desc, $category);
+            }
+        }
+        echo "</div></div>";
+        ?>
 
-                echo "<div class='products_grid_wrapper'><div class='products_grid'>";
-                foreach ($names as $i => $name) {
-                    $desc = $descriptions[$i];
-                    if ($category === "all") {
-                        $target = $data["category_mapping"][$name];
-                        echo renderProductItem($name, $desc, "all", true, $target);
-                    } else {
-                        echo renderProductItem($name, $desc, $category);
-                    }
-                }
-                echo "</div></div>";
-                ?>
-
-            <!-- </div>
+        <!-- </div>
         </div> -->
 
 
         <?php
-        // Add this right before the closing </body> tag
 
         // Only show the back button if we're not on the 'all' category
         if (isset($_GET["category"]) && $_GET["category"] !== "all") {
