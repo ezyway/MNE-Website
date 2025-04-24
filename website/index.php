@@ -50,17 +50,30 @@
 			<?php
 			$imageDir = "assets/images/home";
 			$images = glob($imageDir . "/*.{jpg,jpeg,png,gif,webp}", GLOB_BRACE);
-			foreach ($images as $img) {
-				echo "<div class='banner__slide'><img src='$img' alt='Banner Image' class='banner__image'></div>";
+
+			// Filter out _m versions for looping
+			$desktopImages = array_filter($images, function ($img) {
+				return !preg_match('/_m\.(jpg|jpeg|png|gif|webp)$/i', $img);
+			});
+
+			foreach ($desktopImages as $img) {
+				$mobileVersion = preg_replace('/\.(jpg|jpeg|png|gif|webp)$/i', '_m.$1', $img);
+				echo "<div class='banner__slide'>
+					<picture>
+						<source media='(max-width: 768px)' srcset='$mobileVersion'>
+						<img src='$img' alt='Banner Image' class='banner__image'>
+					</picture>
+				</div>";
 			}
 			?>
+
 		</div>
 
 		<button class="banner__nav banner__nav--prev">&#10094;</button>
 		<button class="banner__nav banner__nav--next">&#10095;</button>
 	</div>
 
-	
+
 	<!-- Licences Marquee -->
 	<section class="icon-scroll">
 		<div class="icon-scroll__wrapper">
