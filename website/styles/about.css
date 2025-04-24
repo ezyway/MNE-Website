@@ -229,42 +229,6 @@ hr.custom_divider {
 	box-shadow: 0 0 2px 1px #b0ef8f;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-	.export-info__content {
-		flex-direction: column;
-		gap: 30px;
-	}
-
-	.export-info__heading {
-		font-size: 24px;
-	}
-
-	.export-info__paragraph {
-		font-size: 13px;
-	}
-
-	.export-info__brand-logo {
-		height: 30px;
-	}
-}
-
-@media (max-width: 480px) {
-	.export-info__circle-images {
-		width: 200px;
-		height: 200px;
-	}
-
-	.export-info__center-image {
-		width: 70px;
-		height: 70px;
-	}
-
-	.export-info__heading {
-		font-size: 20px;
-	}
-}
-
 /* WHY CHOOSE US */
 .why-choose {
 	text-align: center;
@@ -284,8 +248,9 @@ hr.custom_divider {
 }
 
 .why-choose__grid {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 	gap: 20px;
 }
 
@@ -294,9 +259,11 @@ hr.custom_divider {
 	border-radius: 12px;
 	padding: 20px;
 	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-	text-align: left;
-	position: relative;
+	display: flex;
+	align-items: center;
 	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	min-width: fit-content;
+	max-width: 100%;
 }
 
 .why-choose__card:hover {
@@ -307,113 +274,34 @@ hr.custom_divider {
 .why-choose__icon-wrapper {
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
-	margin-bottom: 10px;
+	justify-content: center;
+	gap: 12px;
+	white-space: nowrap;
 }
 
 .why-choose__icon {
 	width: 32px;
 	height: 32px;
+	flex-shrink: 0;
+}
+
+.why-choose__title {
+	white-space: nowrap;
+	text-align: center;
+	margin: 0;
+	font-size: 16px;
+	font-weight: bold;
+	color: #222;
 }
 
 .why-choose__number {
 	font-size: 20px;
 	color: #cdd0d4;
-	font-weight: 600;
-}
-
-.why-choose__title {
-	font-size: 16px;
 	font-weight: bold;
-	color: #222;
-	margin: 10px 0 5px;
-}
-
-.why-choose__desc {
-	font-size: 14px;
-	color: #555;
-	line-height: 1.5;
-}
-
-/* Mobile responsiveness */
-@media (max-width: 480px) {
-	.why-choose__heading {
-		font-size: 24px;
-	}
-
-	.why-choose__card {
-		padding: 16px;
-	}
-
-	.why-choose__number {
-		font-size: 18px;
-	}
-}
-
-/* CONNECT WITH US */
-.help-banner {
-	background-color: #0b9444;
-	background-image: url('../assets/images/about/bottomPoster.png');
-	/* Add your wave pattern here */
-	background-size: cover;
-	background-position: bottom;
-	border-radius: 10px;
-	margin: 4rem 2rem;
-	padding: 40px 20px;
-	color: #fff;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	border: 1px solid #c1ff72
-}
-
-.help-banner__content {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	width: 100%;
-	max-width: 1200px;
-	flex-wrap: wrap;
-	gap: 20px;
-}
-
-.help-banner__text {
-	font-size: 28px;
-	font-weight: 700;
-	flex: 1;
-	min-width: 250px;
-	color: #1a5d34;
-}
-
-.help-banner__button {
-	padding: 12px 24px;
-	border: 2px solid #fff;
-	border-radius: 8px;
-	background: transparent;
-	color: #fff;
-	text-decoration: none;
-	font-weight: 600;
-	transition: background 0.3s, color 0.3s;
-}
-
-.help-banner__button:hover {
-	background-color: #fff;
-	color: #1a5d34;
+	flex-shrink: 0;
 }
 
 /* Mobile responsiveness */
 @media (max-width: 768px) {
-	.help-banner__content {
-		flex-direction: column;
-		text-align: center;
-	}
 
-	.help-banner__text {
-		font-size: 22px;
-	}
-
-	.help-banner__button {
-		width: fit-content;
-		margin: 0 auto;
-	}
 }

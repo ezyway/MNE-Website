@@ -105,11 +105,11 @@
 					Philippines, United Arab Emirates, United States...
 				</p>
 
-				<div class="export-info__brands">
+				<!-- <div class="export-info__brands">
 					<span class="export-info__brands-title">Our Brands</span>
 					<img src="peanuts-logo.png" alt="Logo 1" class="export-info__brand-logo">
 					<img src="pure-spices-logo.png" alt="Logo 2" class="export-info__brand-logo">
-				</div>
+				</div> -->
 			</div>
 		</div>
 	</section>
@@ -150,102 +150,72 @@
 
 			<div class="why-choose__card">
 				<div class="why-choose__icon-wrapper">
-					<img src="./assets/images/about/ProductQuality.png" alt="" class="why-choose__icon">
 					<span class="why-choose__number">01</span>
+					<h3 class="why-choose__title">Product Quality</h3>
+					<img src="./assets/images/about/ProductQuality.png" alt="" class="why-choose__icon">
 				</div>
-				<h3 class="why-choose__title">Product Quality</h3>
-				<p class="why-choose__desc">
-					Quality in all aspects, such as dimensional accuracy, design, printing, labeling and packaging.
-				</p>
 			</div>
 
 			<div class="why-choose__card">
 				<div class="why-choose__icon-wrapper">
-					<img src="./assets/images/about/PersonalizedServices.png" alt="" class="why-choose__icon">
 					<span class="why-choose__number">02</span>
+					<h3 class="why-choose__title">Personalized Services</h3>
+					<img src="./assets/images/about/PersonalizedServices.png" alt="" class="why-choose__icon">
 				</div>
-				<h3 class="why-choose__title">Personalized Services</h3>
-				<p class="why-choose__desc">
-					We follow a client focused approach and thus provide our customers with highly customized services.
-				</p>
 			</div>
 
 			<div class="why-choose__card">
 				<div class="why-choose__icon-wrapper">
-					<img src="./assets/images/about/CompetitivePrice.png" alt="" class="why-choose__icon">
 					<span class="why-choose__number">03</span>
+					<h3 class="why-choose__title">Competitive Price</h3>
+					<img src="./assets/images/about/CompetitivePrice.png" alt="" class="why-choose__icon">
 				</div>
-				<h3 class="why-choose__title">Competitive Price</h3>
-				<p class="why-choose__desc">
-					We strive to offer our customers the best quality products at competitive industry prices.
-				</p>
 			</div>
 
 			<div class="why-choose__card">
 				<div class="why-choose__icon-wrapper">
-					<img src="./assets/images/about/ClientSatisfaction.png" alt="" class="why-choose__icon">
 					<span class="why-choose__number">04</span>
+					<h3 class="why-choose__title">Client Satisfaction</h3>
+					<img src="./assets/images/about/ClientSatisfaction.png" alt="" class="why-choose__icon">
 				</div>
-				<h3 class="why-choose__title">Client Satisfaction</h3>
-				<p class="why-choose__desc">
-					We recognize and deliver realistic solutions to our customers’ desires and demands.
-				</p>
 			</div>
 
 			<div class="why-choose__card">
 				<div class="why-choose__icon-wrapper">
-					<img src="./assets/images/about/StrongVendorBase.png" alt="" class="why-choose__icon">
 					<span class="why-choose__number">05</span>
+					<h3 class="why-choose__title">Strong Vendor Base</h3>
+					<img src="./assets/images/about/StrongVendorBase.png" alt="" class="why-choose__icon">
 				</div>
-				<h3 class="why-choose__title">Strong Vendor Base</h3>
-				<p class="why-choose__desc">
-					We select our suppliers on the basis of quality, capacity, financial stability, and delivery timelines.
-				</p>
 			</div>
 
 			<div class="why-choose__card">
 				<div class="why-choose__icon-wrapper">
-					<img src="./assets/images/about/Flexibility.png" alt="" class="why-choose__icon">
 					<span class="why-choose__number">06</span>
+					<h3 class="why-choose__title">Flexibility</h3>
+					<img src="./assets/images/about/Flexibility.png" alt="" class="why-choose__icon">
 				</div>
-				<h3 class="why-choose__title">Flexibility</h3>
-				<p class="why-choose__desc">
-					We produce goods as per customer needs and operate with full transparency and ethics.
-				</p>
 			</div>
 
 			<div class="why-choose__card">
 				<div class="why-choose__icon-wrapper">
-					<img src="./assets/images/about/Packaging.png" alt="" class="why-choose__icon">
 					<span class="why-choose__number">07</span>
+					<h3 class="why-choose__title">Packaging</h3>
+					<img src="./assets/images/about/Packaging.png" alt="" class="why-choose__icon">
 				</div>
-				<h3 class="why-choose__title">Packaging</h3>
-				<p class="why-choose__desc">
-					We use high quality packaging materials to ensure safety during transit and delivery.
-				</p>
 			</div>
 
 			<div class="why-choose__card">
 				<div class="why-choose__icon-wrapper">
-					<img src="./assets/images/about/TimelyDelivery.png" alt="" class="why-choose__icon">
 					<span class="why-choose__number">08</span>
+					<h3 class="why-choose__title">Timely Delivery</h3>
+					<img src="./assets/images/about/TimelyDelivery.png" alt="" class="why-choose__icon">
 				</div>
-				<h3 class="why-choose__title">Timely Delivery</h3>
-				<p class="why-choose__desc">
-					We ensure that orders are delivered within a specified time frame using proven methods.
-				</p>
 			</div>
 
 		</div>
 	</section>
 
-	<!-- CONNECT WITH US -->
-	<section class="help-banner">
-		<div class="help-banner__content">
-			<h2 class="help-banner__text">You Can Connect With Us<br>When Need Help!</h2>
-			<a href="contact.php" class="help-banner__button">Discover More</a>
-		</div>
-	</section>
+
 
 
 	<!-- ===================================================
