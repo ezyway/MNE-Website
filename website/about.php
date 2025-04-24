@@ -83,10 +83,6 @@
 					<img src="./assets/images/about/checkmark.png" alt=""> 
 					<strong>We Ensure Quality & Packaging</strong>
 				</div>
-
-				<div>
-					 <span>100%</span>
-				</div>
 			</div>
 
 			<hr class="custom_divider">
@@ -95,10 +91,6 @@
 				<div class="export-info__checkmarkAndText">
 					<img src="./assets/images/about/checkmark.png" alt=""> 
 					<strong>Trusted & Legally Approved Certified Services</strong>
-				</div>
-
-				<div>
-					<span>100%</span>
 				</div>
 			</div>
 			</div>
