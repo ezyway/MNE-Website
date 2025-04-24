@@ -260,7 +260,7 @@ if (isset($_GET["category"])) {
                 </div>
 
                 <div class="about-banner__right">
-                    <img src="assets/images/about/dry-tree_8414098.png" alt="">
+                    <img src="assets/images/header_img.png" alt="">
                 </div>
 
             </div>
