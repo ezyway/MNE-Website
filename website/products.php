@@ -97,7 +97,7 @@ if (isset($_GET["category"])) {
         "grains" => [
             "title" => "Grains",
             "name" => [
-                "Rice",
+                "Rice (All Types)",
                 "Wheat",
                 "Millets",
                 "Barley",
