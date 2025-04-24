@@ -227,10 +227,28 @@ if (isset($_GET["category"])) {
     =================================================== -->
         <?php include("nav.php"); ?>
 
-        <div class="container">
-            <div class="wrapper">
-                <div class="page_title_wrapper">
-                    <h2 class="page_title"><?php echo $data[$_GET["category"]]["title"]; ?></h2>
+        <!-- <div class="container">
+            <div class="wrapper"> -->
+
+
+                <!-- HEADER BANNER WITH BREADCRUMB -->
+                <div class="headerBannerWrapper">
+                    <div class="about-banner">
+                        <div class="about-banner__left">
+                            <div class="about-banner__content">
+                                <h1 class="about-banner__title">About Us</h1>
+                                <div class="breadcrumb">
+                                    <a href="index.php" class="breadcrumb__link">Home</a>
+                                    <span class="breadcrumb__separator">&gt;</span>
+                                    <a href="about.php" class="breadcrumb__link">About Us</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="about-banner__right">
+                            <img src="assets/images/about/dry-tree_8414098.png" alt="">
+                        </div>
+                    </div>
                 </div>
 
                 <?php
@@ -272,7 +290,7 @@ if (isset($_GET["category"])) {
                 $category_data = $data[$category];
                 $names         = $category_data["name"];
                 $descriptions  = $category_data["description"];
-            
+
                 echo "<div class='products_grid_wrapper'><div class='products_grid'>";
                 foreach ($names as $i => $name) {
                     $desc = $descriptions[$i];
@@ -286,8 +304,8 @@ if (isset($_GET["category"])) {
                 echo "</div></div>";
                 ?>
 
-            </div>
-        </div>
+            <!-- </div>
+        </div> -->
 
 
         <?php
