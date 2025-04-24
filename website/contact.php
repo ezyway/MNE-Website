@@ -43,6 +43,26 @@
          =================================================== -->
 	<?php include("nav.php"); ?>
 
+		<!-- HEADER BANNER WITH BREADCRUMB -->
+		<div class="headerBannerWrapper">
+		<div class="about-banner">
+			<div class="about-banner__left">
+				<div class="about-banner__content">
+					<h1 class="about-banner__title">Contact Us</h1>
+					<div class="breadcrumb">
+						<a href="index.php" class="breadcrumb__link">Home</a>
+						<span class="breadcrumb__separator">&gt;</span>
+						<a href="contact.php" class="breadcrumb__link">Contact Us</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="about-banner__right">
+				<img src="assets/images/header_img.png" alt="">
+			</div>
+		</div>
+	</div>
+
 	<section class="contact">
 		<div class="contact__container">
 		<div class="contact__info">
