@@ -36,6 +36,7 @@ This block is here for auto complete */
     gap: 50px;
     flex-wrap: wrap;
     margin-bottom: 1em;
+    margin-top: 5em;
 }
 
 /* Shared styles for all footer columns */
@@ -87,8 +88,7 @@ This block is here for auto complete */
     font-weight: bold;
     font-size: 1.2rem;
     color: #222;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 1em;
     font-size: 1.8em;
 }
 
@@ -148,7 +148,7 @@ This block is here for auto complete */
     height: 2em;
     width: 2em;
     margin: 0em 1em;
-    border-radius: 5px;
+    border-radius: 50%;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     padding: 10px;
