@@ -43,7 +43,108 @@
          =================================================== -->
 	<?php include("nav.php"); ?>
 
-	
+	<section class="contact">
+		<div class="contact__container">
+		<div class="contact__info">
+			<h4 class="contact__subtitle">GET IN TOUCH</h4>
+			<h2 class="contact__title">Connect With Us<br>When Need Help!</h2>
+			<p class="contact__description">
+			Our team proudly offers an on-time guarantee and a 100% customer satisfaction guarantee.
+			</p>
+
+			<!-- Phone -->
+			<div class="contact__card contact__card--phone">
+				<div class="contact__icon">
+					<img src="assets/images/contact/phone.png" alt="Phone Icon">
+				</div>
+				<div class="contact__details">
+					<p>
+						<a href="tel:+917435924700">+91 74359 24700</a><br>
+						<a href="tel:+919624515033">+91 96245 15033</a>
+					</p>
+				</div>
+			</div>
+
+			<!-- Email -->
+			<div class="contact__card contact__card--email">
+				<div class="contact__icon">
+					<img src="assets/images/contact/message.png" alt="Email Icon">
+				</div>
+				<div class="contact__details">
+					<p>
+						<a href="mailto:mahekshial@gmail.com">mahekshial@gmail.com</a><br>
+						<a href="mailto:yourbackup@example.com">yourbackup@example.com</a>
+					</p>
+				</div>
+			</div>
+
+			<!-- Address -->
+			<div class="contact__card contact__card--address">
+				<div class="contact__icon">
+					<img src="assets/images/contact/location.png" alt="Location Icon">
+				</div>
+				<div class="contact__details">
+					<p>
+						<a 
+							href="https://www.google.com/maps?q=Office+No.+410/411,+Unicorn+Prime,+Ranjit+Sagar+Road,+Jamnagar+361005,+Gujarat"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							Office No. 410/411, Unicorn Prime,<br>
+							Ranjit Sagar Road, Jamnagar - 361005 Gujarat (INDIA)
+						</a>
+					</p>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="contact__form-wrapper">
+			<p class="contact__form-instruction">
+			For Any Enquiries Or Feedback, Please Fill Out The Form Below.
+			</p>
+			<form class="contact__form">
+			<div class="contact__form-row">
+				<div class="contact__form-group contact__form-group--half">
+					<label>Name *</label>
+					<input type="text" placeholder="First">
+				</div>
+				<div class="contact__form-group contact__form-group--half">
+					<label>&nbsp;</label>
+					<input type="text" placeholder="Last">
+				</div>
+			</div>
+
+			<div class="contact__form-group">
+				<label>Company Name *</label>
+				<input type="text">
+			</div>
+
+			<div class="contact__form-group">
+				<label>Designation (optional)</label>
+				<input type="text">
+			</div>
+
+			<div class="contact__form-group">
+				<label>Phone Numbers *</label>
+				<input type="text">
+			</div>
+
+			<div class="contact__form-group">
+				<label>Your Email Address *</label>
+				<input type="email">
+			</div>
+
+			<div class="contact__form-group">
+				<label>Your Message</label>
+				<textarea rows="4"></textarea>
+			</div>
+
+			<button type="submit" class="contact__submit">Submit</button>
+			</form>
+		</div>
+		</div>
+	</section>
 
 	<!-- ===================================================
          Footer Section
