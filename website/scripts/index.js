@@ -99,20 +99,18 @@ document.addEventListener("DOMContentLoaded", () => {
 	// About Section View Fade-In
 	// =====================================================
 	const aboutSection = document.querySelector(".about");
-	
+
 	if (!aboutSection) return;
-	
+
 	const observer = new IntersectionObserver(
 		([entry]) => {
-		if (entry.isIntersecting) {
-			aboutSection.classList.add("about--visible");
-			observer.disconnect();
-		}
+			if (entry.isIntersecting) {
+				aboutSection.classList.add("about--visible");
+				observer.disconnect();
+			}
 		},
 		{ threshold: 0.2 }
 	);
-	
-	observer.observe(aboutSection);
-	  
 
+	observer.observe(aboutSection);
 });
