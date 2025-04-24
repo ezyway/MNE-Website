@@ -46,13 +46,17 @@ body {
    Page Title Section
    ================================ */
 .page_title_wrapper {
-    text-align: center;
     margin-bottom: 2em;
+    background-image: url("../assets/images/products/header.png");
+    height: 15em;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 
 .page_title {
     font-size: 2.5em;
-    font-weight: 700;
+    font-weight: bold;
     color: #1e1e1e;
 }
 
@@ -112,9 +116,7 @@ body {
     margin-bottom: 0.5em;
     /* Add space below the name by default */
     transform: translateY(0);
-    /* Initial position */
     transition: transform 0.4s ease;
-    /* Smooth transition for movement */
 }
 
 .product_desc {
@@ -123,12 +125,6 @@ body {
     margin: 0;
     overflow: hidden;
     transition: max-height 0.4s ease, opacity 0.4s ease, margin 0.4s ease;
-}
-
-/* Hover effect interactions */
-.product_item:hover .product_name {
-    transform: translateY(-8px);
-    /* Subtle upward movement */
 }
 
 .product_item:hover .product_desc {
