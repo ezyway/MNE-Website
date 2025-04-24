@@ -33,7 +33,7 @@
 	<!-- ===================================================
          Scripts
          =================================================== -->
-	<!-- <script src="scripts/XXXXXXXX.js" defer></script> -->
+	<script src="scripts/about.js" defer></script>
 </head>
 
 <body>
@@ -253,32 +253,6 @@
          - Included via PHP for consistency across pages.
          =================================================== -->
 	<?php include("footer.html"); ?>
-
-	<!-- FOR THE COUNTER -->
-	<script>
-		document.addEventListener("DOMContentLoaded", () => {
-			const counters = document.querySelectorAll('.stats__number');
-
-			counters.forEach(counter => {
-				const updateCount = () => {
-					const target = +counter.getAttribute('data-target');
-					const suffix = counter.getAttribute('data-suffix') || '';
-					const count = +counter.innerText.replace(/\D/g, '');
-					const increment = target / 100;
-
-					if (count < target) {
-						counter.innerText = Math.ceil(count + increment) + suffix;
-						setTimeout(updateCount, 20);
-					} else {
-						counter.innerText = target + suffix;
-					}
-				};
-
-				updateCount();
-			});
-		});
-	</script>
-
 
 </body>
 
