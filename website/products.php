@@ -1,7 +1,6 @@
 <?php
 if (isset($_GET["category"])) {
     $data = [
-
         "category_mapping" => [
             "Whole Spices" => "wholeSpices",
             "Ground Spices" => "groundSpices",
@@ -202,8 +201,8 @@ if (isset($_GET["category"])) {
 
     <head>
         <!-- ===================================================
-    Metadata & Document Setup
-    =================================================== -->
+            Metadata & Document Setup
+        =================================================== -->
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <meta name="description" content="XXXXXX">
@@ -222,13 +221,10 @@ if (isset($_GET["category"])) {
 
     <body>
         <!-- ===================================================
-    Navigation Section
-    - Included via PHP to allow reusability across pages.
-    =================================================== -->
+            Navigation Section
+        =================================================== -->
         <?php include("nav.php"); ?>
 
-        <!-- <div class="container">
-            <div class="wrapper"> -->
         <?php
             // Get information to be used
             $category      = $_GET["category"];
@@ -296,13 +292,13 @@ if (isset($_GET["category"])) {
                 : "div";
 
             return "
-                        <$tag class='product_item' style=\"background-image:url('$img_url');\">
-                            <div class='overlay'>
-                                <h3 class='product_name'>{$name}</h3>
-                                <p class='product_desc'>{$description}</p>
-                            </div>
-                        </$close_tag>
-                        ";
+                <$tag class='product_item' style=\"background-image:url('$img_url');\">
+                    <div class='overlay'>
+                        <h3 class='product_name'>{$name}</h3>
+                        <p class='product_desc'>{$description}</p>
+                    </div>
+                </$close_tag>
+            ";
         }
 
         echo "<div class='products_grid_wrapper'><div class='products_grid'>";
@@ -318,10 +314,6 @@ if (isset($_GET["category"])) {
         echo "</div></div>";
         ?>
 
-        <!-- </div>
-        </div> -->
-
-
         <?php
 
         // Only show the back button if we're not on the 'all' category
@@ -333,9 +325,8 @@ if (isset($_GET["category"])) {
         ?>
 
         <!-- ===================================================
-    Footer Section
-    - Included via PHP for consistency across pages.
-    =================================================== -->
+            Footer Section
+        =================================================== -->
         <?php include("footer.html"); ?>
 
     </body>
