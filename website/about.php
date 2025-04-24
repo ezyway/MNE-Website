@@ -80,7 +80,7 @@
 				<div class="export-info__highlights">
 					<div class="export-info__highlight">
 						<div class="export-info__checkmarkAndText">
-							<img src="./assets/images/about/checkmark.png" alt="">
+							<img src="./assets/icons/about/checkmark.png" alt="">
 							<strong>We Ensure Quality & Packaging</strong>
 						</div>
 					</div>
@@ -89,7 +89,7 @@
 
 					<div class="export-info__highlight">
 						<div class="export-info__checkmarkAndText">
-							<img src="./assets/images/about/checkmark.png" alt="">
+							<img src="./assets/icons/about/checkmark.png" alt="">
 							<strong>Trusted & Legally Approved Certified Services</strong>
 						</div>
 					</div>
@@ -150,65 +150,65 @@
 
 			<div class="why-choose__card">
 				<div class="why-choose__icon-wrapper">
-					<span class="why-choose__number">01</span>
+					<span class="why-choose__number">1</span>
 					<h3 class="why-choose__title">Product Quality</h3>
-					<img src="./assets/images/about/ProductQuality.png" alt="" class="why-choose__icon">
+					<img src="./assets/icons/about/product_quality.png" alt="" class="why-choose__icon">
 				</div>
 			</div>
 
 			<div class="why-choose__card">
 				<div class="why-choose__icon-wrapper">
-					<span class="why-choose__number">02</span>
+					<span class="why-choose__number">2</span>
 					<h3 class="why-choose__title">Personalized Services</h3>
-					<img src="./assets/images/about/PersonalizedServices.png" alt="" class="why-choose__icon">
+					<img src="./assets/icons/about/personalized_services.png" alt="" class="why-choose__icon">
 				</div>
 			</div>
 
 			<div class="why-choose__card">
 				<div class="why-choose__icon-wrapper">
-					<span class="why-choose__number">03</span>
+					<span class="why-choose__number">3</span>
 					<h3 class="why-choose__title">Competitive Price</h3>
-					<img src="./assets/images/about/CompetitivePrice.png" alt="" class="why-choose__icon">
+					<img src="./assets/icons/about/competitive_price.png" alt="" class="why-choose__icon">
 				</div>
 			</div>
 
 			<div class="why-choose__card">
 				<div class="why-choose__icon-wrapper">
-					<span class="why-choose__number">04</span>
+					<span class="why-choose__number">4</span>
 					<h3 class="why-choose__title">Client Satisfaction</h3>
-					<img src="./assets/images/about/ClientSatisfaction.png" alt="" class="why-choose__icon">
+					<img src="./assets/icons/about/client_satisfaction.png" alt="" class="why-choose__icon">
 				</div>
 			</div>
 
 			<div class="why-choose__card">
 				<div class="why-choose__icon-wrapper">
-					<span class="why-choose__number">05</span>
+					<span class="why-choose__number">5</span>
 					<h3 class="why-choose__title">Strong Vendor Base</h3>
-					<img src="./assets/images/about/StrongVendorBase.png" alt="" class="why-choose__icon">
+					<img src="./assets/icons/about/strong_vendor_base.png" alt="" class="why-choose__icon">
 				</div>
 			</div>
 
 			<div class="why-choose__card">
 				<div class="why-choose__icon-wrapper">
-					<span class="why-choose__number">06</span>
+					<span class="why-choose__number">6</span>
 					<h3 class="why-choose__title">Flexibility</h3>
-					<img src="./assets/images/about/Flexibility.png" alt="" class="why-choose__icon">
+					<img src="./assets/icons/about/flexibility.png" alt="" class="why-choose__icon">
 				</div>
 			</div>
 
 			<div class="why-choose__card">
 				<div class="why-choose__icon-wrapper">
-					<span class="why-choose__number">07</span>
+					<span class="why-choose__number">7</span>
 					<h3 class="why-choose__title">Packaging</h3>
-					<img src="./assets/images/about/Packaging.png" alt="" class="why-choose__icon">
+					<img src="./assets/icons/about/packaging.png" alt="" class="why-choose__icon">
 				</div>
 			</div>
 
 			<div class="why-choose__card">
 				<div class="why-choose__icon-wrapper">
-					<span class="why-choose__number">08</span>
+					<span class="why-choose__number">8</span>
 					<h3 class="why-choose__title">Timely Delivery</h3>
-					<img src="./assets/images/about/TimelyDelivery.png" alt="" class="why-choose__icon">
+					<img src="./assets/icons/about/timely_delivery.png" alt="" class="why-choose__icon">
 				</div>
 			</div>
 
