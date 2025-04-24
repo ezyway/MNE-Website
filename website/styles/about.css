@@ -1,5 +1,5 @@
 .headerBannerWrapper {
-	background: url('../assets/images/about/Header1.png') no-repeat center center/cover;
+	background: url('../assets/images/header.png') no-repeat center center/cover;
 	width: 100%;
 	height: 350px;
 	margin-top: 7rem;
@@ -153,7 +153,7 @@
 	width: 200px;
 	height: 200px;
 	transform: translate(-50%, -50%);
-	background-image: url('../assets/images/about/multi_pulses.jpg');
+	background-image: url('../assets/images/about/pulses.jpg');
 	background-size: cover;
 	border-radius: 50%;
 	z-index: 10;
