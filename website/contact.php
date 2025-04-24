@@ -105,11 +105,9 @@
 				</div>
 				<div class="contact__details">
 					<p>
-						<a 
-							href="https://www.google.com/maps?q=Office+No.+410/411,+Unicorn+Prime,+Ranjit+Sagar+Road,+Jamnagar+361005,+Gujarat"
+						<a href="https://www.google.com/maps?q=Office+No.+410/411,+Unicorn+Prime,+Ranjit+Sagar+Road,+Jamnagar+361005,+Gujarat"
 							target="_blank"
-							rel="noopener noreferrer"
-						>
+							rel="noopener noreferrer">
 							Office No. 410/411, Unicorn Prime,<br>
 							Ranjit Sagar Road, Jamnagar - 361005 Gujarat (INDIA)
 						</a>
@@ -127,11 +125,11 @@
 			<div class="contact__form-row">
 				<div class="contact__form-group contact__form-group--half">
 					<label>Name *</label>
-					<input type="text" placeholder="First">
+					<input type="text" placeholder="First Name">
 				</div>
 				<div class="contact__form-group contact__form-group--half">
 					<label>&nbsp;</label>
-					<input type="text" placeholder="Last">
+					<input type="text" placeholder="Last Name">
 				</div>
 			</div>
 
