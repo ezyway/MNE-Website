@@ -112,7 +112,6 @@ body {
     object-fit: cover;
     display: block;
 }
-
   
 
 /* ===================================================
@@ -127,9 +126,8 @@ body {
 	-webkit-backdrop-filter: blur(1px);
     gap: 2em;
     padding: 5em 5em;
-    margin: 0 auto;
-    opacity: 0;
     margin: 1em 5em;
+    opacity: 0;
     border-radius: 5em;
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
     color: black;
@@ -158,7 +156,6 @@ body {
 
 .about__link {
     display: inline-block;
-    margin-top: 1rem;
     color: #0077cc;
     font-weight: 600;
     text-decoration: none;
@@ -182,13 +179,31 @@ body {
     object-fit: contain;
 }
 
-/* Responsive */
+
+/* ===================================================
+	Responsive
+=================================================== */
 @media (max-width: 768px) {
+    .icon-scroll__wrapper {
+        margin: 1em 0.5em;
+        border-radius: 1em;
+    }
+    .icon-scroll__container {
+        gap: 1em;
+    }
+    .icon-scroll__item {
+        padding: 1em 0em;
+    }
+
+
     .about {
         flex-direction: column;
         text-align: center;
+        gap: 0em;
+        padding: 1em;
+        margin: 1em;
+        border-radius: 1em;
     }
-
     .about__image-wrapper {
         margin-top: 2rem;
     }
