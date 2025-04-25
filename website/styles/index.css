@@ -114,17 +114,23 @@ body {
 }
 
   
-/* About Us Section */
+
+/* ===================================================
+	About Us
+=================================================== */
 .about {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 2rem;
-    padding: 4rem 2rem;
-    max-width: 1200px;
+	background: rgb(var(--primary-light), 0.5);
+	backdrop-filter: blur(1px);
+	-webkit-backdrop-filter: blur(1px);
+    gap: 2em;
+    padding: 5em 5em;
     margin: 0 auto;
     opacity: 0;
-    transform: translateY(40px);
+    margin: 1em 5em;
+    border-radius: 5em;
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
     color: black;
 }
