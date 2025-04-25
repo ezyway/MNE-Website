@@ -69,7 +69,7 @@
 			<h4 class="contact__subtitle">GET IN TOUCH</h4>
 			<h2 class="contact__title">Connect With Us<br>When Need Help!</h2>
 			<p class="contact__description">
-			Our team proudly offers an on-time guarantee and a 100% customer satisfaction guarantee.
+				Our team proudly offers an on-time guarantee and a 100% customer satisfaction guarantee.
 			</p>
 
 			<!-- Phone -->
