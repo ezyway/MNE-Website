@@ -1,3 +1,6 @@
+/* ===================================================
+	Page Stuff
+=================================================== */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -8,7 +11,10 @@ body {
     font-family: sans-serif;
 }
 
-/* Bruce Banner Section */
+
+/* ===================================================
+	Banner Section
+=================================================== */
 .banner {
     margin-top: 7em;
     position: relative;
@@ -63,16 +69,16 @@ body {
 }
 
 
-
-/* Icon Marquee */
+/* ===================================================
+	Icon Marquee
+=================================================== */
 .icon-scroll {
     overflow: hidden;
-    height: 5em;
     display: flex;
     justify-content: center;
-    margin: 1em;
-    border-radius: 5em;
-    border: 1px solid red;
+	background: rgb(var(--primary-light), 0.01);
+	backdrop-filter: blur(1px);
+	-webkit-backdrop-filter: blur(1px);
 }
 
 .icon-scroll__wrapper {
@@ -81,11 +87,16 @@ body {
     height: 100%;
     box-sizing: border-box;
     position: relative;
+	background: rgb(var(--primary-light), 0.5);
+	backdrop-filter: blur(1px);
+	-webkit-backdrop-filter: blur(1px);
+    margin: 2em;
+    border-radius: 5em;
 }
 
 .icon-scroll__container {
     display: flex;
-    gap: 1em;
+    gap: 3em;
     height: 100%;
     transition: transform 0.1s linear;
     will-change: transform;
@@ -93,15 +104,11 @@ body {
 
 .icon-scroll__item {
     flex: 0 0 auto;
-    height: 5em;
-    padding: 0 2em;
-    border-radius: 10px;
+    padding: 1em 2em;
     overflow: hidden;
 }
 
 .icon-scroll__item img {
-    height: 100%;
-    width: 100%;
     object-fit: cover;
     display: block;
 }
