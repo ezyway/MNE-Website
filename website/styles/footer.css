@@ -27,6 +27,7 @@ This block is here for auto complete */
     background: rgba(var(--grey-light), 0.8);
 	backdrop-filter: blur(5px);
 	-webkit-backdrop-filter: blur(5px);
+    padding-top: 3em;
 }
 
 .footer__container {
@@ -36,7 +37,6 @@ This block is here for auto complete */
     gap: 50px;
     flex-wrap: wrap;
     margin-bottom: 1em;
-    margin-top: 5em;
 }
 
 /* Shared styles for all footer columns */
@@ -90,6 +90,9 @@ This block is here for auto complete */
     color: #222;
     margin-bottom: 1em;
     font-size: 1.8em;
+}
+.follow_h2 {
+    margin: 1em auto 0.5em auto;
 }
 
 .footer h2::after {
@@ -169,38 +172,6 @@ This block is here for auto complete */
     justify-content: center;
     gap: 15px;
     align-items: center;
-}
-
-
-/* =====SLOGAN===== */
-.college_slogan {
-    text-align: center;
-    color: white;
-    position: relative;
-    font-weight: bold;
-    color: #222;
-    font-size: 1em;
-    width: fit-content;
-    margin: auto auto 1em auto;
-    padding-top: 1em
-}
-
-.college_slogan::after {
-    content: "";
-    display: block;
-    width: 2em;
-    height: 3px;
-    background-color: rgb(var(--green));
-    margin-top: 3px;
-    margin-left: 2em;
-    border-radius: 2px;
-}
-
-hr.customHR {
-    border: 0;
-    height: 1px;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.75), rgba(0, 0, 0, 0));
-    margin-bottom: 1em;
 }
 
 
