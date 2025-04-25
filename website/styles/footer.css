@@ -218,14 +218,7 @@ This block is here for auto complete */
         align-items: center;
     }
     .footer h2{
-        text-align: center;
         width: fit-content;
-    }
-    .footer__title{
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
     }
 
     .footer__contact,
@@ -234,19 +227,12 @@ This block is here for auto complete */
         width: 95%;
         max-width: 95%;
         box-sizing: border-box;
+        padding: 1em;
     }
 
-    .footer__contact span,
-    .footer__about span,
-    .footer__map span {
-        text-align: center;
-    }
-    
-    .footer__contact a,
-    .footer__about a,
-    .footer__map a {
-        justify-content: center;
-        text-align: center;
+    .footer img {
+        margin: 0em 1em 0em 0em;
+
     }
 
     .socialWrapper {
