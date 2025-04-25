@@ -66,10 +66,9 @@
 	<section class="contact">
 		<div class="contact__container">
 		<div class="contact__info">
-			<h4 class="contact__subtitle">GET IN TOUCH</h4>
-			<h2 class="contact__title">Connect With Us<br>When Need Help!</h2>
+			<h2 class="contact__title">Connect With Us</h2>
 			<p class="contact__description">
-				Our team proudly offers an on-time guarantee and a 100% customer satisfaction guarantee.
+				Our team proudly offers on-time delivery and world class quality products with 100% customer satisfaction guarantee.
 			</p>
 
 			<!-- Phone -->
@@ -119,7 +118,9 @@
 
 		<div class="contact__form-wrapper">
 			<p class="contact__form-instruction">
-			For Any Enquiries Or Feedback, Please Fill Out The Form Below.
+					We're happy to listen to you.
+				<br>
+					Send us your Enquiries Or Feedback...
 			</p>
 			<form class="contact__form">
 			<div class="contact__form-row">
