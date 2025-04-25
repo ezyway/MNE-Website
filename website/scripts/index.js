@@ -4,40 +4,45 @@ document.addEventListener("DOMContentLoaded", () => {
 	// Marquee Section
 	// =====================================================
 	const marquees = document.querySelectorAll(".icon-scroll__container");
+
 	marquees.forEach(container => {
-		let position = 0;
-		let speed = 0.5;
 		let isHovered = false;
+		let position = 0;
+		const speed = 0.5;
 
-		setTimeout(() => {
-			const maxScroll = container.scrollWidth;
+		// Clone all children
+		const clone = container.cloneNode(true);
+		while (clone.children.length > 0) {
+			container.appendChild(clone.children[0]);
+		}
 
-			if (maxScroll <= container.offsetWidth) return;
+		// Get original content width
+		const originalWidth = [...container.children]
+			.slice(0, container.children.length / 2)
+			.reduce((acc, el) => acc + el.offsetWidth, 0);
 
-			const animate = () => {
-				if (!isHovered) {
-					position += speed;
+		// Set container width to prevent wrapping
+		container.style.whiteSpace = 'nowrap';
 
-					if (position >= maxScroll) {
-						position = 0; // Reset to start when reaching end
-					}
+		// Hover events
+		container.parentElement.addEventListener("mouseenter", () => {
+			isHovered = true;
+		});
+		container.parentElement.addEventListener("mouseleave", () => {
+			isHovered = false;
+		});
 
-					container.style.transform = `translateX(${-position}px)`;
+		function animate() {
+			if (!isHovered) {
+				position += speed;
+				if (position >= originalWidth) {
+					position = 0;
 				}
-
-				requestAnimationFrame(animate);
-			};
-
-			// Pause on hover
-			container.parentElement.addEventListener("mouseenter", () => {
-				isHovered = true;
-			});
-			container.parentElement.addEventListener("mouseleave", () => {
-				isHovered = false;
-			});
-
-			animate();
-		}, 100);
+				container.style.transform = `translateX(-${position}px)`;
+			}
+			requestAnimationFrame(animate);
+		}
+		animate();
 	});
 
 
