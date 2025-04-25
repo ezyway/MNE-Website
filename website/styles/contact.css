@@ -1,3 +1,12 @@
+.headerBannerWrapper {
+	margin-bottom: 0em;
+}
+.contact {
+	padding: 3em 0em;
+	background: rgb(var(--primary-dark), 0.2);
+	backdrop-filter: blur(1px);
+	-webkit-backdrop-filter: blur(1px);
+}
 .contact__container {
 	display: flex;
 	flex-wrap: wrap;
@@ -11,21 +20,16 @@
 	flex: 1 1 500px;
 }
 
-.contact__subtitle {
-	color: #006d3c;
-	font-weight: bold;
-	margin-bottom: 1em;
-}
-
 .contact__title {
 	color: #024c31;
-	font-size: 2em;
-	margin-bottom: 1em;
+	font-size: 2.5em;
+	margin-bottom: 0.5em;
 }
 
 .contact__description {
 	color: #555;
 	margin-bottom: 1em;
+	font-size: 1.5em;
 }
 
 .contact__card {
@@ -37,6 +41,7 @@
 	margin-bottom: 2em;
 	align-items: center;
 	gap: 1em;
+	font-size: 1.2em;
 }
 
 .contact__icon {
