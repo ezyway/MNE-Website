@@ -43,6 +43,8 @@
                     <li class="navbar_dropdown__item"><a href="products.php?category=makhana" class="navbar_dropdown__link">Makhana</a></li>
                 </ul>
             </li>
+            
+            <li class="navbar_nav__item"><a href="contact.php" class="navbar_nav__link">Contact Us</a></li>
 
             <!-- Google Translate Dropdown -->
             <li class="navbar_nav__item navbar_nav__item--dropdown">
@@ -50,7 +52,7 @@
                 <?php include("lang_dropdown.html"); ?>
             </li>
             
-            <li class="navbar_nav__item"><a href="contact.php" class="navbar_nav__link">Contact Us</a></li>
+            
 
 
         </ul>
