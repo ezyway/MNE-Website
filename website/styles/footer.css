@@ -51,7 +51,7 @@ This block is here for auto complete */
 .footer__contact,
 .footer__about,
 .footer__map {
-    background-color: white;
+    background-color: rgb(var(--primary-light), 0.8);
     padding: 2em;
     border-radius: 10px;
 }
