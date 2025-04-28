@@ -2,6 +2,12 @@
     <link href="styles/footer.css" rel="stylesheet">
 </head>
 
+<a href="https://wa.me/917435924700" class="whatsapp-float" target="_blank">
+    <img src="assets/icons/footer/whatsapp_square.png" alt="WhatsApp Icon">
+    <span class="whatsapp-text">WhatsApp Us</span>
+</a>
+
+
 <footer class="footer">
 
     <div class="footer__container">
@@ -92,3 +98,43 @@
         </p>
     </div>
 </footer>
+
+
+
+<script>
+    const whatsappButton = document.querySelector('.whatsapp-float');
+    const footer = document.querySelector('footer');
+
+    function adjustWhatsAppButton() {
+        const footerRect = footer.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+        const buttonHeight = whatsappButton.offsetHeight;
+        const pageHeight = document.documentElement.scrollHeight;
+        const scrollY = window.scrollY || window.pageYOffset;
+
+        // Distance from top of document to top of footer
+        const footerTop = footer.offsetTop;
+
+        // Where the button normally sits fixed from bottom (32px ~ 2em)
+        const fixedBottomSpace = 32;
+
+        // The scroll position at which we should switch
+        const switchPoint = footerTop - windowHeight + buttonHeight + fixedBottomSpace;
+
+        if (scrollY >= switchPoint) {
+            whatsappButton.style.position = 'absolute';
+            whatsappButton.style.top = (footerTop - buttonHeight - fixedBottomSpace) + 'px';
+            whatsappButton.style.bottom = 'auto';
+        } else {
+            whatsappButton.style.position = 'fixed';
+            whatsappButton.style.bottom = '2em';
+            whatsappButton.style.top = 'auto';
+        }
+    }
+
+    window.addEventListener('scroll', adjustWhatsAppButton);
+    window.addEventListener('resize', adjustWhatsAppButton);
+
+    // Run once on load
+    adjustWhatsAppButton();
+</script>
