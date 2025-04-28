@@ -1,16 +1,4 @@
-Sreyas - 20 April
+Sreyas - 28 April
 
-Create Products and sub pages for that
-Rice all types
-
-
-
-AK - 20 April
-
-Make Banner for Home Page
-Header Backgrounds for product pages
-
-
-AK - 21 April
-About us
-Contact us
+Check mobile styles of Contact, Header Title and Breadcrumbs, About Circle Image
+Add Floating WhatsApp Button
