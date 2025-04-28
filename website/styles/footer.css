@@ -19,6 +19,8 @@ This block is here for auto complete */
 	--tertiary: 255, 242, 196;
 	--tertiary-dark: 200, 190, 120;
 	--on-tertiary: 0, 0, 0;
+
+    --whatsapp-green: 40, 167, 26;
 }
 
 
@@ -145,7 +147,6 @@ This block is here for auto complete */
     margin-top: 20px;
 }
 
-
 /* Footer images */
 .footer img {
     height: 2em;
@@ -199,6 +200,49 @@ This block is here for auto complete */
 }
 
 
+.whatsapp-float {
+    position: fixed;
+    top: auto;
+    bottom: 2em;
+    right: 2em;
+    background-color: rgb(var(--whatsapp-green));
+    color: white;
+    border-radius: 10px;
+    padding: 0.5em;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-family: inherit;
+    z-index: 1000;
+    transition: all 0.5s ease;
+    overflow: hidden;
+    white-space: nowrap;
+    font-weight: bold;
+    transition: all 0.5s ease;
+}
+
+.whatsapp-float img {
+    width: 3em;
+    height: 3em;
+}
+
+.whatsapp-float .whatsapp-text {
+    max-width: 0;
+    padding: 0;
+    opacity: 0;
+    overflow: hidden;
+    font-size: 1em;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-float:hover .whatsapp-text {
+    opacity: 1;
+    max-width: 200px;
+    padding-right: 1em;
+}
+
+
+
 @media (min-width: 769px) {
     .footer__credits .footer__copyright {
         text-align: left;
@@ -237,5 +281,9 @@ This block is here for auto complete */
 
     .socialWrapper {
         margin-right: 0px;
+    }
+    
+    .whatsapp-float .whatsapp-text {
+        display: none;
     }
 }
