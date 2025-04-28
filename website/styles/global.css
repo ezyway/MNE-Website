@@ -111,12 +111,31 @@ body::before {
 
 /* Mobile responsiveness */
 @media (max-width: 768px) {
+	.headerBannerWrapper {
+		height: 15em;
+	}
+
 	.about-banner {
 		padding: 1em;
 	}
-	.about-banner__right img {
-		width: 10em;
+
+	.about-banner__left {
+		width: 100%;
 	}
+
+	.about-banner__right {
+		width: 0%;
+		position: relative;
+	}
+
+	.about-banner__right img{
+		position: absolute;
+		top: -6.5em;
+		left: -7em;
+		height: 7em;
+		width: 7em;
+	}
+
 	.about-banner__title {
 		font-size: 2em;
 	}
