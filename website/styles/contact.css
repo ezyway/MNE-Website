@@ -1,12 +1,14 @@
 .headerBannerWrapper {
 	margin-bottom: 0em;
 }
+
 .contact {
 	padding: 3em 0em;
 	background: rgb(var(--primary-dark), 0.2);
 	backdrop-filter: blur(1px);
 	-webkit-backdrop-filter: blur(1px);
 }
+
 .contact__container {
 	display: flex;
 	flex-wrap: wrap;
@@ -33,24 +35,32 @@
 }
 
 .contact__card {
-	display: flex;
-	background-color: #faf7f0;
-	border-radius: 10px;
-	box-shadow: 4px 4px 0 #ccc;
-	padding: 1em;
-	margin-bottom: 2em;
-	align-items: center;
-	gap: 1em;
-	font-size: 1.2em;
+    display: flex;
+    background-color: #faf7f0;
+    border-radius: 1em;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); 
+    padding: 1em;
+    margin-bottom: 2em;
+    align-items: center;
+    gap: 1.5em;
+    font-size: 1.2em;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.contact__card:hover {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+}
+
+.contact__card a{
+	text-decoration: none;
 }
 
 .contact__icon {
-	font-size: 1em;
-	display: flex;
+	font-size: 2em;
 }
 
 .contact__icon img {
-	width: 2em;
+	width: 1.5em;
+	height: 1.5em;
 }
 
 .contact__form-instruction {
@@ -58,63 +68,79 @@
 	font-weight: bold;
 }
 
-.contact__form-group {
+.contact__form {
 	display: flex;
 	flex-direction: column;
-	margin-bottom: 1em;
-	flex: 1 1 100%;
-}
-
-.contact__form-group--half {
-	flex: 1 1 calc(50% - 7.5px);
-	/* 50% with spacing for two fields side by side */
-}
-
-.contact__form-group label {
-	margin-bottom: 5px;
-	font-weight: bold;
-}
-
-.contact__form-group input,
-.contact__form-group textarea {
-	padding: 1em;
-	border: 1px solid #ccc;
-	border-radius: 5px;
-	transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Highlight on focus */
-.contact__form-group input:focus,
-.contact__form-group textarea:focus {
-	border-color: #00912c;
-	outline: none;
-	box-shadow: 0 0 0 2px rgba(0, 145, 44, 0.2);
+	gap: 1.5em;
 }
 
 .contact__form-row {
 	display: flex;
-	gap: 15px;
 	flex-wrap: wrap;
+	gap: 1.5em;
+}
+
+.contact__form-group {
+	flex: 1 1 100%;
+}
+
+.contact__input-wrapper {
+	position: relative;
+	transition: all 0.3s ease;
+}
+
+.contact__input-wrapper input,
+.contact__input-wrapper textarea {
+	width: 100%;
+	padding: 1em 1em 1em 4em;
+	border: none;
+	border-radius: 50px;
+	background-color: white;
+	font-size: 1em;
+	transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Hover or focus scaling */
+.contact__input-wrapper:has(input:focus),
+.contact__input-wrapper:has(textarea:focus) {
+  transform: scale(1.02);
+}
+
+.contact__input-wrapper textarea {
+	border-radius: 25px;
+}
+
+.contact__input-wrapper input:focus,
+.contact__input-wrapper textarea:focus {
+	outline: none;
+	background-color: #f9fff9;
+}
+
+.contact__input-icon {
+	position: absolute;
+	top: 50%;
+	left: 0.2em;
+	transform: translateY(-50%);
+	width: 3em;
+	height: 3em;
+	pointer-events: none;
 }
 
 .contact__submit {
 	background-color: #00912c;
 	color: white;
 	padding: 1em;
-	font-weight: bold;
-	font-size: 1em;
 	border: none;
-	border-radius: 5px;
+	border-radius: 50px;
+	font-size: 1.2em;
+	font-weight: bold;
 	cursor: pointer;
+	transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .contact__submit:hover {
 	background-color: #007e25;
-}
-
-.contact__details a {
-	text-decoration: none;
-	color: #000;
+	transform: scale(1.05);
 }
 
 /* Responsive */
@@ -122,8 +148,47 @@
 	.contact__form-row {
 		flex-direction: column;
 	}
+	.contact__container {
+        flex-direction: column;
+		padding: 0.5em;
+		gap: 2em;
+		width: 100%;
+    }
 
-	.contact__form-group--half {
-		flex: 1 1 100%;
-	}
+    .contact__info,
+    .contact__form-wrapper {
+        flex: 1 1 100%;
+    }
+
+
+    /* Card Text Adjustments */
+    .contact__title {
+        font-size: 2em;
+		text-align: center;
+    }
+
+    .contact__description {
+        font-size: 1.3em;
+		text-align: center;
+    }
+
+    .contact__form-group {
+        flex: 1 1 100%;
+    }
+
+    /* Input and Textarea */
+    .contact__input-wrapper input,
+    .contact__input-wrapper textarea {
+        padding: 1.2em 1em 1.2em 3.5em;
+        font-size: 1em;
+    }
+
+    .contact__input-wrapper textarea {
+        border-radius: 12px; /* Rounded corners for textareas */
+    }
+
+    .contact__submit {
+        padding: 1.2em;
+        font-size: 1.1em; /* Slightly smaller submit button font */
+    }
 }
