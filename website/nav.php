@@ -47,7 +47,7 @@
             <li class="navbar_nav__item"><a href="contact.php" class="navbar_nav__link">Contact Us</a></li>
 
             <!-- Google Translate Dropdown -->
-            <li class="navbar_nav__item navbar_nav__item--dropdown">
+            <li class="navbar_nav__item navbar_nav__item--dropdown navbar_nav__item--translate">
                 <a href="#" class="navbar_nav__link">Translate <span class="navbar_nav__arrow">&#9662;</span></a>
                 <?php include("lang_dropdown.html"); ?>
             </li>
@@ -72,12 +72,14 @@
 <!-- Google Translate Init -->
 <script>
     const supportedLanguages = [
-        'af','sq','am','ar','hy','az','eu','be','bn','bs','bg','ca','ceb','zh-CN','zh-TW','co','hr','cs','da',
-        'nl','en','eo','et','fi','fr','fy','gl','ka','de','el','gu','ht','ha','haw','iw','hi','hmn','hu','is',
-        'ig','id','ga','it','ja','jw','kn','kk','km','ko','ku','ky','lo','la','lv','lt','lb','mk','mg','ms',
-        'ml','mt','mi','mr','mn','my','ne','no','ny','ps','fa','pl','pt','pa','ro','ru','sm','gd','sr','st',
-        'sn','sd','si','sk','sl','so','es','su','sw','sv','tl','tg','ta','te','th','tr','uk','ur','uz','vi',
-        'cy','xh','yi','yo','zu'
+        'af','sq','am','ar','hy','az','eu','be','bn','bs','bg','ca','ceb',
+        'zh-CN','zh-TW','co','hr','cs','da','nl','en','eo','et','fi','fr',
+        'fy','gl','ka','de','el','gu','ht','ha','haw','iw','hi','hmn','hu',
+        'is','ig','id','ga','it','ja','jw','kn','kk','km','ko','ku','ky',
+        'lo','la','lv','lt','lb','mk','mg','ms','ml','mt','mi','mr','mn',
+        'my','ne','no','ny','ps','fa','pl','pt','pa','ro','ru','sm','gd',
+        'sr','st','sn','sd','si','sk','sl','so','es','su','sw','sv','tl',
+        'tg','ta','te','th','tr','uk','ur','uz','vi','cy','xh','yi','yo','zu'
     ];
 
     function googleTranslateElementInit() {

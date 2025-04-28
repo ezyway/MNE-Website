@@ -106,7 +106,7 @@ textarea:focus {
 	list-style: none;
 	display: flex;
 	gap: 15px;
-	padding-right: 1em;
+	padding-right: 2em;
 }
 
 .navbar_nav__link {
@@ -143,6 +143,7 @@ textarea:focus {
 	z-index: 1000;
 }
 
+
 .navbar_dropdown__item {
 	padding: 2px 5px;
 }
@@ -162,6 +163,11 @@ textarea:focus {
 	/* change to a slightly darker green on hover */
 	color: rgb(var(--primary-light));
 	background: rgba(var(--secondary), 0.8);
+}
+
+/* Specifically adjust the Translate dropdown */
+.navbar_nav__item--translate .navbar_dropdown {
+    right: 0px;
 }
 
 /* Show dropdown on hover */
