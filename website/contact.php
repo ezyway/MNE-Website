@@ -77,10 +77,8 @@
 						<img src="assets/images/contact/phone.png" alt="Phone Icon">
 					</div>
 					<div class="contact__details">
-						<p>
-							<a href="tel:+917435924700">+91 74359 24700</a><br>
-							<a href="tel:+919624515033">+91 96245 15033</a>
-						</p>
+						<a href="tel:+917435924700">+91 74359 24700</a><br>
+						<a href="tel:+919624515033">+91 96245 15033</a>
 					</div>
 				</div>
 
@@ -90,12 +88,13 @@
 						<img src="assets/images/contact/message.png" alt="Email Icon">
 					</div>
 					<div class="contact__details">
-						<p>
+						<div class="contact__email-scroll">
 							<a href="mailto:mahekshial@gmail.com">mahekshial@gmail.com</a><br>
-							<a href="mailto:yourbackup@example.com">yourbackup@example.com</a>
-						</p>
+							<a href="mailto:yourbackup@example.com">mail@gmail.com</a>
+						</div>
 					</div>
 				</div>
+
 
 				<!-- Address -->
 				<div class="contact__card contact__card--address">
@@ -103,14 +102,12 @@
 						<img src="assets/images/contact/location.png" alt="Location Icon">
 					</div>
 					<div class="contact__details">
-						<p>
-							<a href="https://www.google.com/maps?q=Office+No.+410/411,+Unicorn+Prime,+Ranjit+Sagar+Road,+Jamnagar+361005,+Gujarat"
-								target="_blank"
-								rel="noopener noreferrer">
-								Office No. 410/411, Unicorn Prime,<br>
-								Ranjit Sagar Road, Jamnagar - 361005 Gujarat (INDIA)
-							</a>
-						</p>
+						<a href="https://www.google.com/maps?q=Office+No.+410/411,+Unicorn+Prime,+Ranjit+Sagar+Road,+Jamnagar+361005,+Gujarat"
+							target="_blank"
+							rel="noopener noreferrer">
+							Office No. 410/411, Unicorn Prime,
+							Ranjit Sagar Road, Jamnagar - 361005 Gujarat (INDIA)
+						</a>
 					</div>
 				</div>
 
