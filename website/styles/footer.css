@@ -225,7 +225,6 @@ This block is here for auto complete */
     overflow: hidden;
     white-space: nowrap;
     font-weight: bold;
-    /* transition: all 0.5s ease; */
     box-sizing: border-box;
 }
 
