@@ -61,8 +61,8 @@
 
 .export-info__circle-images {
 	position: relative;
-	width: 400px;
-	height: 400px;
+	width: 25em;
+	height: 25em;
 	border-radius: 50%;
 	overflow: hidden;
 	display: grid;
