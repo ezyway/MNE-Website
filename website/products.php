@@ -217,6 +217,10 @@ if (isset($_GET["category"])) {
         <!-- Custom Styles -->
         <link href="styles/global.css" rel="stylesheet">
         <link href="styles/products.css" rel="stylesheet">
+
+        <!-- JS File -->
+        <script src="scripts/products.js" defer></script>
+
     </head>
 
     <body>
