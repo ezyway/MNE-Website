@@ -120,6 +120,7 @@ body::before {
 	}
 
 	.about-banner__left {
+		padding-top: 6em;
 		width: 100%;
 	}
 
@@ -130,10 +131,10 @@ body::before {
 
 	.about-banner__right img{
 		position: absolute;
-		top: -6.5em;
-		left: -7em;
-		height: 7em;
-		width: 7em;
+		top: -7em;
+		left: -9.5em;
+		height: 10em;
+		width: 10em;
 	}
 
 	.about-banner__title {
