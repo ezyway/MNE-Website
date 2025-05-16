@@ -286,7 +286,7 @@ if (isset($_GET["category"])) {
         function renderProductItem($name, $description, $categoryKey, $is_link = false, $target_category = "")
         {
             $slug    = slugify($name);
-            $img_url = "assets/images/products/{$categoryKey}/{$slug}.png";
+            $img_url = "assets/images/products/{$categoryKey}/{$slug}.webp";
 
             $tag       = $is_link
                 ? "a href='?category=$target_category'"
