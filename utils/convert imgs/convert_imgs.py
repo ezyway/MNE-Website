@@ -92,11 +92,15 @@ def main():
     quality= prompt_int("Enter WebP quality (0-100)",  default=80, min_val=0, max_val=100)
     size   = (width, height)
 
-    cwd = os.getcwd()
-    src_root = os.path.join(cwd, "input_images")
-    dst_root = os.path.join(cwd, "output_images")
+    # Get the directory where the script itself is located
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    src_root = os.path.join(script_dir, "input_images")
+    dst_root = os.path.join(script_dir, "output_images")
 
     if not os.path.isdir(src_root):
+        print(f"\nError: The input directory was not found.")
+        print(f"Expected to find: {src_root}")
+        print(f"Please create this directory and place the images you want to convert inside it.")
         sys.exit(1)
 
     before_mb = get_folder_size_mb(src_root)
@@ -112,7 +116,6 @@ def main():
 
     start_time = time.time()
     with multiprocessing.Pool() as pool:
-    # with multiprocessing.Pool(processes=1) as pool:
         results = pool.map(process_image_task, tasks)
     end_time = time.time()
 
@@ -122,11 +125,10 @@ def main():
     failed = total - succeeded
     elapsed = end_time - start_time
 
-    print("\n✅ Conversion complete.")
-    print(f"📂 Input size: {before_mb:.2f} MB | Output size: {after_mb:.2f} MB")
+    print("\nConversion complete.")
+    print(f"Input size: {before_mb:.2f} MB | Output size: {after_mb:.2f} MB")
     print(f"Processed {total} files in {elapsed:.2f} seconds.")
-    print(f"✅ Converted: {succeeded} | ❌ Failed: {failed}")
+    print(f"Converted: {succeeded} | Failed: {failed}")
 
 if __name__ == "__main__":
-    multiprocessing.freeze_support()
     main()
