@@ -149,7 +149,7 @@ if (isset($_GET["category"])) {
         ],
 
         "dryFruits" => [
-            "title" => "Premium Dry Fruits",
+            "title" => "Dry Fruits",
             "name" => [
                 "Almonds",
                 "Cashew",
@@ -173,7 +173,7 @@ if (isset($_GET["category"])) {
         ],
 
         "makhana" => [
-            "title" => "Gourmet Makhana (Fox Nuts)",
+            "title" => "Makhana <br> (Fox Nuts)",
             "name" => [
                 "Plain Makhana",
                 "Roasted Makhana",
