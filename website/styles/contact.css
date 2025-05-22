@@ -9,16 +9,28 @@
 .contact__container {
 	display: flex;
 	flex-wrap: wrap;
-	gap: 5em;
+	gap: 2em;
 	width: 80%;
 	margin: 0 auto;
 	box-sizing: border-box;
 }
 
-.contact__info,
 .contact__form-wrapper {
-	flex: 1 1 500px;
+	flex: 2 1 700px;
 }
+
+.contact__info {
+	flex: 1 1 350px;
+}
+
+.contact__form-wrapper,
+.contact__info {
+	background: rgba(var(--primary-dark), 0.8);
+	padding: 1em;
+	border-radius: 1em;
+}
+
+
 
 .contact__title {
 	color: #024c31;
@@ -63,67 +75,47 @@
 	max-width: 250px;
 }
 
+/* ==========================================
+Contact Form
+========================================== */
+
 .contact__form-instruction {
 	margin-bottom: 1em;
 	font-weight: bold;
 }
 
-.contact__form {
-	display: flex;
-	flex-direction: column;
-	gap: 1.5em;
-}
-
-.contact__form-row {
+.form-row {
 	display: flex;
 	flex-wrap: wrap;
 	gap: 1.5em;
 }
 
-.contact__form-group {
-	flex: 1 1 100%;
+.form-group {
+	flex: 1 1 auto;
+	min-width: 200px;
+	margin-bottom: 1em;
 }
 
-.contact__input-wrapper {
-	position: relative;
-	transition: transform 0.3s ease;
+
+.contact__form label {
+	display: block;
+	margin-bottom: 0.5em;
+	font-weight: 500;
+	color: #333;
 }
 
-.contact__input-wrapper input,
-.contact__input-wrapper textarea {
+.contact__form input,
+.contact__form textarea {
+	display: block;
 	width: 100%;
-	padding: 1em 1em 1em 4em;
-	border: none;
-	border-radius: 50px;
-	background: #fff;
+	padding: 1em; 
+	border: 1px solid #ccc;
+	border-radius: 1em;
+	box-sizing: border-box;
+	font-family: inherit;
 	font-size: 1em;
-	transition: border-color 0.3s ease, background-color 0.3s ease;
 }
 
-.contact__input-wrapper textarea {
-	border-radius: 25px;
-}
-
-.contact__input-wrapper:has(input:focus),
-.contact__input-wrapper:has(textarea:focus) {
-	transform: scale(1.02);
-}
-
-.contact__input-wrapper input:focus,
-.contact__input-wrapper textarea:focus {
-	outline: none;
-	background: #f9fff9;
-}
-
-.contact__input-icon {
-	position: absolute;
-	top: 50%;
-	left: 0.2em;
-	transform: translateY(-50%);
-	width: 3em;
-	height: 3em;
-	pointer-events: none;
-}
 
 .contact__submit {
 	padding: 1em;
@@ -132,7 +124,7 @@
 	color: #fff;
 	background: #00912c;
 	border: none;
-	border-radius: 50px;
+	border-radius: 10px;
 	cursor: pointer;
 	transition: background 0.3s ease, transform 0.2s ease;
 }
@@ -156,6 +148,11 @@
 	.contact__info,
 	.contact__form-wrapper {
 		flex: 1 1 100%;
+	}
+
+	.form-row {
+		flex-direction: column;
+		gap: 0;
 	}
 
 	.contact__card {

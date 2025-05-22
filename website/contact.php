@@ -120,65 +120,56 @@
 					Send us your Enquiries Or Feedback...
 				</p>
 				<form class="contact__form">
-					<div class="contact__form-row">
-						<!-- First Name -->
-						<div class="contact__form-group">
-							<div class="contact__input-wrapper">
-								<img src="assets/icons/contact/user.png" alt="User Icon" class="contact__input-icon">
-								<input type="text" id="firstName" placeholder="First Name" required>
-							</div>
-						</div>
 
-						<!-- Last Name -->
-						<div class="contact__form-group">
-							<div class="contact__input-wrapper">
-								<img src="assets/icons/contact/user.png" alt="User Icon" class="contact__input-icon">
-								<input type="text" id="lastName" placeholder="Last Name" required>
-							</div>
+					<!-- Row 1: First Name and Last Name -->
+					<div class="form-row">
+						<div class="form-group">
+							<label for="firstName">First Name</label>
+							<input type="text" id="firstName" name="firstName" required>
+						</div>
+						<div class="form-group">
+							<label for="lastName">Last Name</label>
+							<input type="text" id="lastName" name="lastName" required>
 						</div>
 					</div>
 
-					<!-- Company Name -->
-					<div class="contact__form-group">
-						<div class="contact__input-wrapper">
-							<img src="assets/icons/contact/company.png" alt="Company Icon" class="contact__input-icon">
-							<input type="text" id="company" placeholder="Company Name" required>
+					<!-- Row 2: Company Name and Designation -->
+					<div class="form-row">
+						<div class="form-group">
+							<label for="company">Company Name</label>
+							<input type="text" id="company" name="company" required>
+						</div>
+						<div class="form-group">
+							<label for="designation">Designation (optional)</label>
+							<input type="text" id="designation" name="designation">
 						</div>
 					</div>
 
-					<!-- Designation -->
-					<div class="contact__form-group">
-						<div class="contact__input-wrapper">
-							<img src="assets/icons/contact/designation.png" alt="Designation Icon" class="contact__input-icon">
-							<input type="text" id="designation" placeholder="Designation (optional)">
+					<!-- Row 3: Phone Number and Email -->
+					<div class="form-row">
+						<div class="form-group">
+							<label for="phone">Phone Number</label>
+							<input type="tel" id="phone" name="phone" required>
+						</div>
+						<div class="form-group">
+							<label for="email">Email Address</label>
+							<input type="email" id="email" name="email" required>
 						</div>
 					</div>
 
-					<!-- Phone -->
-					<div class="contact__form-group">
-						<div class="contact__input-wrapper">
-							<img src="assets/icons/contact/phone.png" alt="Phone Icon" class="contact__input-icon">
-							<input type="tel" id="phone" placeholder="Phone Number" required>
-						</div>
+					<!-- Subject (Full Width) -->
+					<div class="form-group">
+						<label for="subject">Subject</label>
+						<input type="text" id="subject" name="subject" required>
 					</div>
 
-					<!-- Email -->
-					<div class="contact__form-group">
-						<div class="contact__input-wrapper">
-							<img src="assets/icons/contact/email.png" alt="Email Icon" class="contact__input-icon">
-							<input type="email" id="email" placeholder="Email Address" required>
-						</div>
+					<!-- Message (Full Width) -->
+					<div class="form-group">
+						<label for="message">Your Message</label>
+						<textarea id="message" name="message" rows="4" required></textarea>
 					</div>
-
-					<!-- Message -->
-					<div class="contact__form-group">
-						<div class="contact__input-wrapper">
-							<img src="assets/icons/contact/message.png" alt="Message Icon" class="contact__input-icon">
-							<textarea id="message" placeholder="Your Message" rows="4"></textarea>
-						</div>
-					</div>
-
-					<button type="submit" class="contact__submit">Submit</button>
+					
+					<button type="submit" class="contact__submit">Send</button>
 				</form>
 
 			</div>
