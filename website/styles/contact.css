@@ -47,7 +47,7 @@
 .contact__card {
 	display: flex;
 	align-items: center;
-	gap: 1.5em;
+	gap: 1em;
 	padding: 1em;
 	margin-bottom: 2em;
 	font-size: 1.2em;
@@ -63,6 +63,7 @@
 
 .contact__card a {
 	text-decoration: none;
+	color: green;
 }
 
 .contact__icon img {
@@ -70,10 +71,6 @@
 	height: 1.5em;
 }
 
-.contact__email-scroll {
-	overflow-x: auto;
-	max-width: 250px;
-}
 
 /* ==========================================
 Contact Form

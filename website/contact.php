@@ -89,8 +89,7 @@
 					</div>
 					<div class="contact__details">
 						<div class="contact__email-scroll">
-							<a href="mailto:mahekshial@gmail.com">mahekshial@gmail.com</a><br>
-							<a href="mailto:yourbackup@example.com">mail@gmail.com</a>
+							<a href="mailto:mahekshial@gmail.com">info.marutinandanshipping<wbr />@gmail.com</a><br>
 						</div>
 					</div>
 				</div>
