@@ -177,6 +177,7 @@ body {
     max-width: 100%;
     height: auto;
     object-fit: contain;
+    border-radius: 50em;
 }
 
 
