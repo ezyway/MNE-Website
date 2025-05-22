@@ -35,13 +35,11 @@
 .contact__title {
 	color: #024c31;
 	font-size: 2.5em;
-	margin-bottom: 0.5em;
 }
 
 .contact__description {
 	color: #555;
 	font-size: 1.5em;
-	margin-bottom: 1em;
 }
 
 .contact__card {
@@ -49,7 +47,7 @@
 	align-items: center;
 	gap: 1em;
 	padding: 1em;
-	margin-bottom: 2em;
+	margin-top: 1em;
 	font-size: 1.2em;
 	background: #faf7f0;
 	border-radius: 1em;
@@ -96,7 +94,7 @@ Contact Form
 
 .contact__form label {
 	display: block;
-	margin-bottom: 0.5em;
+	margin-bottom: 5px;
 	font-weight: 500;
 	color: #333;
 }
@@ -105,9 +103,9 @@ Contact Form
 .contact__form textarea {
 	display: block;
 	width: 100%;
-	padding: 1em; 
+	padding: 0.5em; 
 	border: 1px solid #ccc;
-	border-radius: 1em;
+	border-radius: 10px;
 	box-sizing: border-box;
 	font-family: inherit;
 	font-size: 1em;
