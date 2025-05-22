@@ -96,13 +96,11 @@
 				</div>
 
 				<p class="export-info__paragraph">
-					We Karmani Exports engaged in Exporting of Raw Bold & Java Peanut, Blanched Peanut, Sesame Seeds,
-					Desiccated Coconut, Raisins, Cashew Kernels, Almonds & Spices from India...
+					We, Maruti Nandan Shipping, are engaged in exporting a wide range of high-quality food products from India. Our offerings include premium Whole Spices, Ground Spices, Grains, Pulses, Dry Fruits, and Makhana (Fox Nuts).Sourced from trusted producers, our products reflect the rich agricultural heritage and flavors of India. We cater to global markets, serving wholesalers, retailers, and individuals seeking authentic and nutritious ingredients. With a commitment to consistency and quality, we aim to bring the taste of India to kitchens around the world.
 				</p>
 
 				<p class="export-info__paragraph">
-					We are regularly exporting to more than 25 countries like China, Vietnam, Indonesia, Thailand, Malaysia,
-					Philippines, United Arab Emirates, United States...
+					We are regularly exporting to many countries like China, Vietnam, Indonesia, Thailand, Malaysia, Philippines, United Arab Emirates, United States...
 				</p>
 
 				<!-- <div class="export-info__brands">
