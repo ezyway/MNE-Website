@@ -13,7 +13,7 @@ if (isset($_GET["category"])) {
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <meta name="description" content="XXXXXX">
-        <title><?php echo $data[$_GET["category"]]["title"]; ?></title>
+        <title><?= strip_tags($data[$_GET["category"]]["title"]) ?></title>
         <link rel="shortcut icon" type="image/x-icon" href="assets/logo.ico">
 
         <!-- Fonts -->
