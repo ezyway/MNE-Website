@@ -12,7 +12,7 @@
 	<meta name="description" content="XXXXX">
 
 	<!-- Document Title -->
-	<title>XXXXXXXX - Exports</title>
+	<title>Maruti Nandan Shipping</title>
 
 	<!-- Favicon -->
 	<link rel="shortcut icon" type="image/x-icon" href="assets/logo.ico">
@@ -110,7 +110,7 @@
 			</p>
 		</div>
 		<div class="about__image-wrapper">
-			<img src="assets/logo.png" alt="Company Logo" class="about__image" />
+			<img src="assets/logo.jpg" alt="Company Logo" class="about__image" />
 		</div>
 	</section>
 
