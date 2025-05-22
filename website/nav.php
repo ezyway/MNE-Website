@@ -17,7 +17,7 @@
 
         <!-- Logo Section -->
         <div class="navbar_logo">
-            <img src="assets/logo.png" alt="Company Logo" class="navbar_logo__image" id="logoTrigger">
+            <img src="assets/logo.jpg" alt="Company Logo" class="navbar_logo__image" id="logoTrigger">
         </div>
 
         <!-- Navigation Links -->
@@ -25,7 +25,7 @@
 
             <!-- Mobile Logo -->
             <div class="navbar_logo--mobile">
-                <img src="assets/logo.png" alt="Company Logo">
+                <img src="assets/logo.jpg" alt="Company Logo">
             </div>
 
             <li class="navbar_nav__item"><a href="index.php" class="navbar_nav__link">Home</a></li>

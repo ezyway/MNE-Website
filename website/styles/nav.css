@@ -73,12 +73,12 @@ textarea:focus {
 /* --------- Logo Styles --------- */
 /* Desktop Logo */
 .navbar_logo__image {
+	display: block;
 	background: rgba(var(--primary-light), 1);
 	cursor: pointer;
-	border-radius: 10px;
 	width: 15em;
-	padding: 0.5em;
 	margin: 0.5em;
+	border-radius: 5em;
 	transition: width 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -88,8 +88,7 @@ textarea:focus {
 }
 .navbar_container--shrink .navbar_logo__image {
     width: 7.5em;
-    padding: 0.25em;
-    margin: 0.25em; /* Half of original 0.5em */
+    margin: 0.5em;
 }
 
 /* Mobile Logo (hidden on desktop) */
@@ -319,13 +318,13 @@ textarea:focus {
 		display: flex;
 		justify-content: center;
 		margin: 20px auto;
-		border-radius: 50%;
 	}
 
 	.navbar_logo--mobile img {
 		transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
 		width: 120px;
 		height: auto;
+		border-radius: 5em;
 	}
 
 	.navbar_logo--mobile:hover img {
