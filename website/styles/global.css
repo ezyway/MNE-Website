@@ -48,12 +48,12 @@
 	--border-gold: rgba(212, 163, 39, 0.35);
 
 	/* Apple Frosted Glass Tokens */
-	--glass-bg: rgba(255, 255, 255, 0.76);
+	--glass-bg: rgba(255, 255, 255, 0.78);
 	--glass-bg-subtle: rgba(255, 255, 255, 0.6);
 	--glass-bg-dark: rgba(8, 34, 27, 0.88);
-	--glass-border: rgba(255, 255, 255, 0.65);
+	--glass-border: rgba(255, 255, 255, 0.88);
 	--glass-border-dark: rgba(255, 255, 255, 0.12);
-	--glass-blur: blur(20px) saturate(180%);
+	--glass-blur: blur(24px) saturate(190%);
 	--glass-blur-heavy: blur(28px) saturate(200%);
 
 	/* Typography Stack */
@@ -83,6 +83,7 @@
 	--radius-md: 14px;
 	--radius-lg: 20px;
 	--radius-xl: 28px;
+	--radius-2xl: 36px;
 	--radius-full: 9999px;
 
 	/* Legacy RGB compatibility triplets */
@@ -165,9 +166,10 @@ p {
 	backdrop-filter: var(--glass-blur);
 	-webkit-backdrop-filter: var(--glass-blur);
 	border: 1px solid var(--glass-border);
-	box-shadow: var(--shadow-md);
-	border-radius: var(--radius-xl);
+	box-shadow: 0 24px 60px rgba(14, 59, 51, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.95);
+	border-radius: 2.25rem;
 }
+
 
 .glass-panel--dark {
 	background: var(--glass-bg-dark);
