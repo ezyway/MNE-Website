@@ -247,10 +247,6 @@ body.home {
     font-size: 0.76rem;
     font-weight: 600;
     color: var(--ink-muted);
-    letter-spacing: 0.02em;
-    margin-top: 2px;
-}
-
 /* ===================================================
    Section Glassmorphism Wrapper Boxes
    =================================================== */
@@ -260,15 +256,7 @@ body.home {
     padding: 3.75rem 3rem;
     border-radius: 2.25rem;
     overflow: hidden;
-    background: rgba(255, 255, 255, 0.78);
-    backdrop-filter: blur(24px) saturate(190%);
-    -webkit-backdrop-filter: blur(24px) saturate(190%);
-    border: 1px solid rgba(255, 255, 255, 0.88);
-    box-shadow: 
-        0 24px 60px rgba(14, 59, 51, 0.08),
-        inset 0 1px 0 rgba(255, 255, 255, 0.95);
 }
-
 
 /* ===================================================
    Marquee Accreditations & Certifications
@@ -278,6 +266,7 @@ body.home {
     max-width: 1280px;
     margin: 0 auto;
 }
+
 
 
 .trust-marquee__header {
@@ -831,27 +820,6 @@ body.home {
     border-radius: 2.25rem;
     text-align: center;
     overflow: hidden;
-    background: rgba(255, 255, 255, 0.78);
-    backdrop-filter: blur(24px) saturate(190%);
-    -webkit-backdrop-filter: blur(24px) saturate(190%);
-    border: 1px solid rgba(255, 255, 255, 0.88);
-    box-shadow: 
-        0 24px 60px rgba(14, 59, 51, 0.08),
-        inset 0 1px 0 rgba(255, 255, 255, 0.95);
-}
-
-
-
-.cta-banner__glow {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 450px;
-    height: 250px;
-    background: radial-gradient(ellipse at center, rgba(212, 163, 39, 0.2), transparent 70%);
-    filter: blur(50px);
-    pointer-events: none;
 }
 
 .cta-banner__content {
@@ -864,6 +832,7 @@ body.home {
     align-items: center;
     gap: 1.25rem;
 }
+
 
 .cta-banner__title {
     font-size: clamp(1.8rem, 3.2vw, 2.5rem);
