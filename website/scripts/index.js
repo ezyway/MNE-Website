@@ -82,8 +82,11 @@ document.addEventListener("DOMContentLoaded", () => {
 		const particles = [...floatElements].map((el, i) => {
 			const rect = el.getBoundingClientRect();
 			const depth = parseFloat(el.dataset.depth || "1");
+			const width = rect.width || 75;
+			const height = rect.height || 75;
+			const radius = Math.max(width, height) / 2;
 			
-			// Initial pixel positions from style or layout
+			// Initial pixel positions distributed across the canvas
 			let initialX = (parseFloat(el.style.left) / 100) * vw;
 			let initialY = (parseFloat(el.style.top) / 100) * vh;
 
@@ -99,22 +102,23 @@ document.addEventListener("DOMContentLoaded", () => {
 				depth,
 				x: initialX,
 				y: initialY,
-				vx: (Math.random() - 0.5) * 0.6,
-				vy: (Math.random() - 0.5) * 0.6,
-				rot: (Math.random() - 0.5) * 15,
-				vRot: (Math.random() - 0.5) * 0.1,
-				width: rect.width || 80,
-				height: rect.height || 80,
+				vx: (Math.random() - 0.5) * 0.3,
+				vy: (Math.random() - 0.5) * 0.3,
+				rot: (Math.random() - 0.5) * 12,
+				vRot: (Math.random() - 0.5) * 0.04,
+				width,
+				height,
+				radius,
 				wanderPhase: Math.random() * Math.PI * 2,
-				wanderSpeed: 0.006 + Math.random() * 0.007
+				wanderSpeed: 0.003 + Math.random() * 0.004
 			};
 		});
 
-		// Track pointer movement and velocity
+		// Track pointer movement and velocity smoothly
 		window.addEventListener("pointermove", (e) => {
 			if (state.lastPointerX !== -9999) {
-				state.pointerVx = e.clientX - state.lastPointerX;
-				state.pointerVy = e.clientY - state.lastPointerY;
+				state.pointerVx = (e.clientX - state.lastPointerX) * 0.5;
+				state.pointerVy = (e.clientY - state.lastPointerY) * 0.5;
 			}
 			state.pointerX = e.clientX;
 			state.pointerY = e.clientY;
@@ -129,91 +133,122 @@ document.addEventListener("DOMContentLoaded", () => {
 			state.pointerY = -9999;
 		});
 
-		// Interactive click burst on floating item
+		// Gentle click interaction
 		particles.forEach(p => {
-			p.el.addEventListener("pointerdown", (e) => {
+			p.el.addEventListener("pointerdown", () => {
 				const burstAngle = Math.random() * Math.PI * 2;
-				const burstSpeed = 8 + Math.random() * 6;
+				const burstSpeed = 3.5 + Math.random() * 2.5;
 				p.vx += Math.cos(burstAngle) * burstSpeed;
 				p.vy += Math.sin(burstAngle) * burstSpeed;
-				p.vRot += (Math.random() - 0.5) * 8;
+				p.vRot += (Math.random() - 0.5) * 2;
 			});
 		});
 
-		const REPEL_RADIUS = 210;
-		const REPEL_FORCE = 80;
-		const DAMPING = 0.95;
-		const BASE_WANDER_FORCE = 0.12;
+		// Gentle physics parameters for calm, organic motion
+		const REPEL_RADIUS = 160;
+		const REPEL_FORCE = 24;
+		const DAMPING = 0.965;
+		const BASE_WANDER_FORCE = 0.028;
 
 		function physicsLoop() {
+			// 1. Particle-to-Particle Collision Avoidance (Zero Overlap)
+			for (let i = 0; i < particles.length; i++) {
+				for (let j = i + 1; j < particles.length; j++) {
+					const p1 = particles[i];
+					const p2 = particles[j];
+
+					const c1x = p1.x + p1.radius;
+					const c1y = p1.y + p1.radius;
+					const c2x = p2.x + p2.radius;
+					const c2y = p2.y + p2.radius;
+
+					const dx = c1x - c2x;
+					const dy = c1y - c2y;
+					const dist = Math.hypot(dx, dy);
+					const minDist = p1.radius + p2.radius + 18; // 18px comfortable clearance
+
+					if (dist < minDist && dist > 0.001) {
+						const overlap = minDist - dist;
+						const nx = dx / dist;
+						const ny = dy / dist;
+						const pushForce = overlap * 0.035;
+
+						p1.vx += nx * pushForce;
+						p1.vy += ny * pushForce;
+						p2.vx -= nx * pushForce;
+						p2.vy -= ny * pushForce;
+					}
+				}
+			}
+
+			// 2. Individual Particle Physics & Mouse Interaction
 			particles.forEach(p => {
-				// 1. Autonomous ambient wandering
+				// Autonomous gentle wandering
 				p.wanderPhase += p.wanderSpeed;
 				const wanderFx = Math.cos(p.wanderPhase) * BASE_WANDER_FORCE;
 				const wanderFy = Math.sin(p.wanderPhase * 1.25) * BASE_WANDER_FORCE;
 				p.vx += wanderFx;
 				p.vy += wanderFy;
 
-				// 2. Interactive Mouse Repulsion & Kinetic Impulse
+				// Gentle Mouse Proximity Repulsion
 				if (state.active) {
-					const cx = p.x + p.width / 2;
-					const cy = p.y + p.height / 2;
+					const cx = p.x + p.radius;
+					const cy = p.y + p.radius;
 					const dx = cx - state.pointerX;
 					const dy = cy - state.pointerY;
 					const dist = Math.hypot(dx, dy);
 
 					if (dist < REPEL_RADIUS && dist > 1) {
-						// Proximity curve
 						const normalizedDist = dist / REPEL_RADIUS;
-						const force = Math.pow(1 - normalizedDist, 1.8) * (REPEL_FORCE / dist) * p.depth;
+						const force = Math.pow(1 - normalizedDist, 1.6) * (REPEL_FORCE / dist) * p.depth;
 						
-						p.vx += dx * force * 0.1;
-						p.vy += dy * force * 0.1;
+						p.vx += dx * force * 0.06;
+						p.vy += dy * force * 0.06;
 
-						// Add mouse movement momentum
-						p.vx += state.pointerVx * 0.08 * (1 - normalizedDist);
-						p.vy += state.pointerVy * 0.08 * (1 - normalizedDist);
+						// Subtle mouse speed nudge
+						p.vx += state.pointerVx * 0.03 * (1 - normalizedDist);
+						p.vy += state.pointerVy * 0.03 * (1 - normalizedDist);
 
-						// Impart rotational torque
-						p.vRot += (dx * p.vy - dy * p.vx) * 0.0004;
+						// Gentle torque
+						p.vRot += (dx * p.vy - dy * p.vx) * 0.00015;
 					}
 				}
 
-				// 3. Apply Damping / Drag
+				// Apply Damping / Air Resistance
 				p.vx *= DAMPING;
 				p.vy *= DAMPING;
-				p.vRot *= 0.93;
+				p.vRot *= 0.95;
 
-				// 4. Update Position & Rotation
+				// Update Position & Rotation
 				p.x += p.vx;
 				p.y += p.vy;
 				p.rot += p.vRot;
 
-				// 5. Soft Boundary Reflection (Bounces smoothly off viewport edges)
-				const margin = 20;
+				// Soft Boundary Reflection
+				const margin = 15;
 				if (p.x < margin) {
 					p.x = margin;
-					p.vx = Math.abs(p.vx) * 0.7 + 0.3;
+					p.vx = Math.abs(p.vx) * 0.6 + 0.15;
 				} else if (p.x > vw - p.width - margin) {
 					p.x = vw - p.width - margin;
-					p.vx = -Math.abs(p.vx) * 0.7 - 0.3;
+					p.vx = -Math.abs(p.vx) * 0.6 - 0.15;
 				}
 
 				if (p.y < margin) {
 					p.y = margin;
-					p.vy = Math.abs(p.vy) * 0.7 + 0.3;
+					p.vy = Math.abs(p.vy) * 0.6 + 0.15;
 				} else if (p.y > vh - p.height - margin) {
 					p.y = vh - p.height - margin;
-					p.vy = -Math.abs(p.vy) * 0.7 - 0.3;
+					p.vy = -Math.abs(p.vy) * 0.6 - 0.15;
 				}
 
-				// 6. Hardware-Accelerated 3D Transform
+				// Hardware-Accelerated 3D Transform
 				p.el.style.transform = `translate3d(${p.x.toFixed(1)}px, ${p.y.toFixed(1)}px, 0) rotate(${p.rot.toFixed(1)}deg)`;
 			});
 
-			// Reset pointer velocity after consumption
-			state.pointerVx *= 0.8;
-			state.pointerVy *= 0.8;
+			// Gradual pointer velocity decay
+			state.pointerVx *= 0.75;
+			state.pointerVy *= 0.75;
 
 			requestAnimationFrame(physicsLoop);
 		}
@@ -222,6 +257,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		requestAnimationFrame(physicsLoop);
 	}
 });
+
 
 
 
