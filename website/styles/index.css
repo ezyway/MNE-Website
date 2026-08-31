@@ -9,26 +9,30 @@ body.home {
 }
 
 /* ===================================================
-   Ambient Background Glow Field
+   Ambient Background Glow Field & Page-Wide Cutouts
    =================================================== */
 .ambient {
-    position: fixed;
+    position: absolute;
     inset: 0;
-    z-index: -1;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
     overflow: hidden;
     background:
-        radial-gradient(ellipse 80% 60% at 75% -5%, rgba(39, 165, 136, 0.15), transparent 60%),
-        radial-gradient(ellipse 70% 50% at 10% 105%, rgba(212, 163, 39, 0.14), transparent 60%),
+        radial-gradient(ellipse 80% 60% at 75% 2%, rgba(39, 165, 136, 0.14), transparent 60%),
+        radial-gradient(ellipse 70% 50% at 10% 98%, rgba(212, 163, 39, 0.13), transparent 60%),
         var(--surface);
 }
 
 .ambient__blob {
-    position: absolute;
+    position: fixed;
     border-radius: 50%;
     filter: blur(100px);
     opacity: 0.55;
     will-change: transform;
     animation: ambient-drift 28s ease-in-out infinite alternate;
+    pointer-events: none;
 }
 
 .ambient__blob--teal {
@@ -62,36 +66,58 @@ body.home {
     100% { transform: translate(6vw, -4vw) scale(1.15); }
 }
 
-/* ===================================================
-   Hero Section
-   =================================================== */
-.hero {
-    position: relative;
-    min-height: 100vh;
+/* Page-Wide Floating Commodity Parallax Field */
+.page-ambient-field {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.ambient__float {
+    position: absolute;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 7.5rem 1.5rem 4rem 1.5rem;
-    overflow: hidden;
-}
-
-/* Floating Commodity Parallax Field */
-.hero__field {
-    position: absolute;
-    inset: 0;
-    z-index: 1;
-    pointer-events: none;
-}
-
-.hero__float {
-    position: absolute;
-    display: block;
-    opacity: 0.88;
-    filter: drop-shadow(0 14px 28px rgba(14, 59, 51, 0.2));
+    border-radius: var(--radius-xl);
+    background: rgba(255, 255, 255, 0.55);
+    backdrop-filter: blur(14px) saturate(160%);
+    -webkit-backdrop-filter: blur(14px) saturate(160%);
+    border: 1px solid rgba(255, 255, 255, 0.75);
+    box-shadow: 
+        0 14px 30px rgba(14, 59, 51, 0.12),
+        inset 0 1px 0 rgba(255, 255, 255, 0.85);
+    padding: 0.55rem;
+    pointer-events: auto;
+    cursor: pointer;
+    user-select: none;
     will-change: transform;
     animation: float-drift var(--bob-duration, 7s) ease-in-out infinite alternate;
     animation-delay: var(--bob-delay, 0s);
-    user-select: none;
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.ambient__float:hover {
+    border-color: rgba(212, 163, 39, 0.5);
+    box-shadow: 
+        0 20px 42px rgba(14, 59, 51, 0.18),
+        0 0 20px rgba(212, 163, 39, 0.25);
+}
+
+.ambient__float img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: var(--radius-lg);
+    filter: drop-shadow(0 4px 10px rgba(14, 59, 51, 0.12));
+    transition: transform var(--duration-normal) var(--ease-apple);
+    pointer-events: none;
+}
+
+.ambient__float:hover img {
+    transform: scale(1.14) rotate(4deg);
 }
 
 @keyframes float-drift {
@@ -102,6 +128,20 @@ body.home {
         transform: translateY(0.75rem) rotate(3deg);
     }
 }
+
+/* ===================================================
+   Hero Section
+   =================================================== */
+.hero {
+    position: relative;
+    z-index: 5;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7.5rem 1.5rem 4rem 1.5rem;
+}
+
 
 /* Hero Frosted Command Card */
 .hero__card {

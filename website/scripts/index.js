@@ -52,25 +52,24 @@ document.addEventListener("DOMContentLoaded", () => {
 	});
 
 	// =====================================================
-	// 3. Hero Floating Commodity Field Parallax
-	// - Fluid mouse tracking with depth scaling
-	// - Gentle magnetic repulsion on proximity
+	// 3. Page-Wide Floating Commodity Field Parallax
+	// - Fluid window-wide mouse tracking with depth scaling
+	// - Interactive magnetic repulsion when cursor gets close
 	// =====================================================
-	const hero = document.getElementById("heroSection");
-	const floats = document.querySelectorAll(".hero__float");
+	const floats = document.querySelectorAll(".ambient__float");
 
-	if (hero && floats.length > 0 && !prefersReducedMotion) {
+	if (floats.length > 0 && !prefersReducedMotion) {
 		floats.forEach((el, i) => {
-			el.style.setProperty("--bob-duration", `${6.5 + (i % 4)}s`);
-			el.style.setProperty("--bob-delay", `${-i * 0.8}s`);
+			el.style.setProperty("--bob-duration", `${6.2 + (i % 5) * 0.7}s`);
+			el.style.setProperty("--bob-delay", `${-i * 0.75}s`);
 		});
 
 		const state = {
 			mouseX: 0.5,
 			mouseY: 0.5,
-			pointerX: -9999,
-			pointerY: -9999,
-			inside: false
+			pointerClientX: -9999,
+			pointerClientY: -9999,
+			active: false
 		};
 
 		const items = [...floats].map(el => ({
@@ -80,45 +79,50 @@ document.addEventListener("DOMContentLoaded", () => {
 			y: 0
 		}));
 
-		const handlePointerMove = (e) => {
-			const rect = hero.getBoundingClientRect();
-			state.mouseX = (e.clientX - rect.left) / rect.width;
-			state.mouseY = (e.clientY - rect.top) / rect.height;
-			state.pointerX = e.clientX - rect.left;
-			state.pointerY = e.clientY - rect.top;
-			state.inside = true;
-		};
+		window.addEventListener("pointermove", (e) => {
+			state.mouseX = e.clientX / window.innerWidth;
+			state.mouseY = e.clientY / window.innerHeight;
+			state.pointerClientX = e.clientX;
+			state.pointerClientY = e.clientY;
+			state.active = true;
+		}, { passive: true });
 
-		hero.addEventListener("pointermove", handlePointerMove, { passive: true });
-
-		hero.addEventListener("pointerleave", () => {
-			state.inside = false;
+		document.addEventListener("pointerleave", () => {
+			state.active = false;
 			state.mouseX = 0.5;
 			state.mouseY = 0.5;
 		});
 
-		const PARALLAX_RANGE = 35;
-		const REPEL_RADIUS = 130;
-		const REPEL_STRENGTH = 45;
-		const EASE = 0.07;
+		const PARALLAX_RANGE = 42;
+		const REPEL_RADIUS = 160;
+		const REPEL_STRENGTH = 65;
+		const EASE = 0.08;
 
 		let animFrameId = null;
 
 		function renderParallax() {
+			const vh = window.innerHeight;
+			const vw = window.innerWidth;
+
 			items.forEach(item => {
+				const rect = item.el.getBoundingClientRect();
+
+				// Skip offscreen elements to save CPU
+				if (rect.bottom < -100 || rect.top > vh + 100) {
+					return;
+				}
+
 				const parallaxX = (state.mouseX - 0.5) * PARALLAX_RANGE * item.depth;
 				const parallaxY = (state.mouseY - 0.5) * PARALLAX_RANGE * item.depth;
 
 				let repelX = 0;
 				let repelY = 0;
 
-				if (state.inside) {
-					const rect = item.el.getBoundingClientRect();
-					const heroRect = hero.getBoundingClientRect();
-					const cx = rect.left - heroRect.left + rect.width / 2;
-					const cy = rect.top - heroRect.top + rect.height / 2;
-					const dx = cx - state.pointerX;
-					const dy = cy - state.pointerY;
+				if (state.active) {
+					const cx = rect.left + rect.width / 2;
+					const cy = rect.top + rect.height / 2;
+					const dx = cx - state.pointerClientX;
+					const dy = cy - state.pointerClientY;
 					const dist = Math.hypot(dx, dy);
 
 					if (dist < REPEL_RADIUS && dist > 0.001) {
@@ -143,4 +147,5 @@ document.addEventListener("DOMContentLoaded", () => {
 		renderParallax();
 	}
 });
+
 

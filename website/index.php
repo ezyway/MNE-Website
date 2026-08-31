@@ -42,11 +42,76 @@
 
 <body class="home">
 
-	<!-- Ambient Animated Glow Field -->
+	<!-- Ambient Animated Glow Field & Page-Wide Interactive Commodity Cutouts -->
 	<div class="ambient" aria-hidden="true">
 		<div class="ambient__blob ambient__blob--teal"></div>
 		<div class="ambient__blob ambient__blob--gold"></div>
 		<div class="ambient__blob ambient__blob--mint"></div>
+
+		<!-- Page-Wide Floating Product Cutouts (Interactive with Mouse) -->
+		<div class="page-ambient-field" id="pageAmbientField">
+			<!-- Section 1: Hero Area -->
+			<div class="ambient__float" data-depth="1.4" style="left: 4%; top: 6%; width: 5.4em;">
+				<img src="assets/images/hero_floats/star_anise.png" alt="Star Anise">
+			</div>
+			<div class="ambient__float" data-depth="0.8" style="left: 10%; top: 18%; width: 5.6em;">
+				<img src="assets/images/hero_floats/cardamom.png" alt="Cardamom">
+			</div>
+			<div class="ambient__float" data-depth="1.2" style="left: 88%; top: 5%; width: 5.2em;">
+				<img src="assets/images/hero_floats/chilli.png" alt="Red Chilli">
+			</div>
+			<div class="ambient__float" data-depth="0.6" style="left: 92%; top: 16%; width: 5.8em;">
+				<img src="assets/images/hero_floats/cashew.png" alt="Cashew">
+			</div>
+			<div class="ambient__float" data-depth="1.0" style="left: 5%; top: 26%; width: 4.8em;">
+				<img src="assets/images/hero_floats/turmeric.png" alt="Turmeric">
+			</div>
+			<div class="ambient__float" data-depth="1.5" style="left: 86%; top: 25%; width: 5.5em;">
+				<img src="assets/images/hero_floats/makhana.png" alt="Makhana">
+			</div>
+
+			<!-- Section 2: Marquee & Bento Grid Area -->
+			<div class="ambient__float" data-depth="0.7" style="left: 3%; top: 35%; width: 5.2em;">
+				<img src="assets/images/hero_floats/almonds.png" alt="Almonds">
+			</div>
+			<div class="ambient__float" data-depth="1.3" style="left: 93%; top: 38%; width: 5.0em;">
+				<img src="assets/images/hero_floats/clove.png" alt="Clove">
+			</div>
+			<div class="ambient__float" data-depth="0.9" style="left: 4%; top: 48%; width: 5.4em;">
+				<img src="assets/images/hero_floats/cinnamon.png" alt="Cinnamon">
+			</div>
+			<div class="ambient__float" data-depth="1.1" style="left: 91%; top: 50%; width: 5.2em;">
+				<img src="assets/images/hero_floats/pistachio.png" alt="Pistachio">
+			</div>
+
+			<!-- Section 3: Trust Pillars & Features Area -->
+			<div class="ambient__float" data-depth="0.6" style="left: 2%; top: 60%; width: 5.5em;">
+				<img src="assets/images/hero_floats/chickpea.png" alt="Chickpea">
+			</div>
+			<div class="ambient__float" data-depth="1.4" style="left: 92%; top: 63%; width: 5.6em;">
+				<img src="assets/images/hero_floats/beans.png" alt="Kidney Beans">
+			</div>
+			<div class="ambient__float" data-depth="0.8" style="left: 5%; top: 72%; width: 5.0em;">
+				<img src="assets/images/hero_floats/walnuts.png" alt="Walnuts">
+			</div>
+
+			<!-- Section 4: About Story & Shipping Area -->
+			<div class="ambient__float" data-depth="1.2" style="left: 90%; top: 76%; width: 5.4em;">
+				<img src="assets/images/hero_floats/cardamom.png" alt="Cardamom">
+			</div>
+			<div class="ambient__float" data-depth="0.7" style="left: 3%; top: 86%; width: 5.2em;">
+				<img src="assets/images/hero_floats/star_anise.png" alt="Star Anise">
+			</div>
+			<div class="ambient__float" data-depth="1.3" style="left: 92%; top: 89%; width: 5.6em;">
+				<img src="assets/images/hero_floats/makhana.png" alt="Makhana">
+			</div>
+			<div class="ambient__float" data-depth="0.9" style="left: 6%; top: 96%; width: 5.0em;">
+				<img src="assets/images/hero_floats/chilli.png" alt="Red Chilli">
+			</div>
+			<div class="ambient__float" data-depth="1.1" style="left: 89%; top: 97%; width: 5.2em;">
+				<img src="assets/images/hero_floats/cashew.png" alt="Cashew">
+			</div>
+		</div>
 	</div>
 
 	<!-- ===================================================
@@ -55,28 +120,12 @@
 	<?php include("nav.php"); ?>
 
 	<!-- ===================================================
-         Hero Section: Apple Frosted Command Card & Floating Icon Field
+         Hero Section: Apple Frosted Command Card
          =================================================== -->
 	<header class="hero" id="heroSection">
-		<!-- Interactive Floating Commodity Cutouts -->
-		<div class="hero__field" aria-hidden="true">
-			<img class="hero__float" data-depth="1.4" style="left: 5%; top: 16%; width: 5.2em;" src="assets/images/hero_floats/star_anise.png" alt="Star Anise">
-			<img class="hero__float" data-depth="0.7" style="left: 12%; top: 72%; width: 5.5em;" src="assets/images/hero_floats/cardamom.png" alt="Green Cardamom">
-			<img class="hero__float" data-depth="1.1" style="left: 22%; top: 10%; width: 4.8em;" src="assets/images/hero_floats/chilli.png" alt="Dry Red Chilli">
-			<img class="hero__float" data-depth="0.5" style="left: 34%; top: 82%; width: 5.8em;" src="assets/images/hero_floats/beans.png" alt="Kidney Beans">
-			<img class="hero__float" data-depth="1.6" style="left: 58%; top: 8%; width: 5.6em;" src="assets/images/hero_floats/cashew.png" alt="Cashew Nut">
-			<img class="hero__float" data-depth="0.8" style="left: 74%; top: 76%; width: 4.6em;" src="assets/images/hero_floats/clove.png" alt="Aromatic Clove">
-			<img class="hero__float" data-depth="1.3" style="left: 84%; top: 16%; width: 5.8em;" src="assets/images/hero_floats/makhana.png" alt="Gourmet Makhana">
-			<img class="hero__float" data-depth="0.6" style="left: 91%; top: 64%; width: 5.2em;" src="assets/images/hero_floats/almonds.png" alt="Almonds">
-			<img class="hero__float" data-depth="1.0" style="left: 7%; top: 46%; width: 4.5em;" src="assets/images/hero_floats/turmeric.png" alt="Golden Turmeric">
-			<img class="hero__float" data-depth="1.5" style="left: 88%; top: 38%; width: 4.8em;" src="assets/images/hero_floats/cinnamon.png" alt="Cinnamon Stick">
-			<img class="hero__float" data-depth="0.9" style="left: 46%; top: 18%; width: 4.2em;" src="assets/images/hero_floats/chickpea.png" alt="Kabuli Chickpea">
-			<img class="hero__float" data-depth="0.7" style="left: 65%; top: 86%; width: 4.5em;" src="assets/images/hero_floats/pistachio.png" alt="Pistachio">
-		</div>
-
-
 		<!-- Central Frosted Command Card -->
 		<div class="hero__card glass-panel">
+
 			<div class="hero__badge-wrapper">
 				<span class="eyebrow">
 					<span class="pulse-dot" aria-hidden="true"></span>
