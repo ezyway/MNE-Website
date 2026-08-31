@@ -83,28 +83,32 @@ body.home {
     align-items: center;
     justify-content: center;
     border-radius: var(--radius-xl);
-    background: rgba(255, 255, 255, 0.55);
+    background: rgba(255, 255, 255, 0.58);
     backdrop-filter: blur(14px) saturate(160%);
     -webkit-backdrop-filter: blur(14px) saturate(160%);
-    border: 1px solid rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.8);
     box-shadow: 
         0 14px 30px rgba(14, 59, 51, 0.12),
         inset 0 1px 0 rgba(255, 255, 255, 0.85);
     padding: 0.55rem;
     pointer-events: auto;
-    cursor: pointer;
+    cursor: grab;
     user-select: none;
     will-change: transform;
-    animation: float-drift var(--bob-duration, 7s) ease-in-out infinite alternate;
-    animation-delay: var(--bob-delay, 0s);
-    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+    transition: box-shadow 0.3s ease, border-color 0.3s ease, background 0.3s ease;
 }
 
 .ambient__float:hover {
-    border-color: rgba(212, 163, 39, 0.5);
+    border-color: rgba(212, 163, 39, 0.55);
+    background: rgba(255, 255, 255, 0.8);
     box-shadow: 
         0 20px 42px rgba(14, 59, 51, 0.18),
-        0 0 20px rgba(212, 163, 39, 0.25);
+        0 0 24px rgba(212, 163, 39, 0.28);
+}
+
+.ambient__float:active {
+    cursor: grabbing;
+    transform: scale(0.95);
 }
 
 .ambient__float img {
@@ -118,17 +122,9 @@ body.home {
 }
 
 .ambient__float:hover img {
-    transform: scale(1.14) rotate(4deg);
+    transform: scale(1.12);
 }
 
-@keyframes float-drift {
-    from {
-        transform: translateY(-0.75rem) rotate(-3deg);
-    }
-    to {
-        transform: translateY(0.75rem) rotate(3deg);
-    }
-}
 
 /* ===================================================
    Hero Section

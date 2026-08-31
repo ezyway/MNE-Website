@@ -48,48 +48,55 @@
 		<div class="ambient__blob ambient__blob--gold"></div>
 		<div class="ambient__blob ambient__blob--mint"></div>
 
-		<!-- Fixed Viewport Floating Product Cutouts (Stays Fixed as Content Scrolls) -->
+		<!-- Interactive Free-Floating Product Field (Full Canvas & Interactive Physics) -->
 		<div class="page-ambient-field" id="pageAmbientField">
-			<!-- Left Perimeter -->
-			<div class="ambient__float" data-depth="1.4" style="left: 3%; top: 12%; width: 5.2em;">
+			<div class="ambient__float" data-depth="1.4" style="left: 8%; top: 14%; width: 5.2em;">
 				<img src="assets/images/hero_floats/star_anise.png" alt="Star Anise">
 			</div>
-			<div class="ambient__float" data-depth="0.8" style="left: 5%; top: 38%; width: 5.4em;">
+			<div class="ambient__float" data-depth="0.9" style="left: 28%; top: 22%; width: 4.8em;">
 				<img src="assets/images/hero_floats/cardamom.png" alt="Cardamom">
 			</div>
-			<div class="ambient__float" data-depth="1.1" style="left: 2%; top: 66%; width: 4.8em;">
-				<img src="assets/images/hero_floats/turmeric.png" alt="Turmeric">
-			</div>
-			<div class="ambient__float" data-depth="1.5" style="left: 4%; top: 88%; width: 5.5em;">
-				<img src="assets/images/hero_floats/makhana.png" alt="Makhana">
-			</div>
-
-			<!-- Right Perimeter -->
-			<div class="ambient__float" data-depth="1.2" style="left: 92%; top: 10%; width: 5.0em;">
-				<img src="assets/images/hero_floats/chilli.png" alt="Red Chilli">
-			</div>
-			<div class="ambient__float" data-depth="0.6" style="left: 90%; top: 35%; width: 5.6em;">
-				<img src="assets/images/hero_floats/cashew.png" alt="Cashew">
-			</div>
-			<div class="ambient__float" data-depth="1.3" style="left: 93%; top: 62%; width: 5.2em;">
-				<img src="assets/images/hero_floats/almonds.png" alt="Almonds">
-			</div>
-			<div class="ambient__float" data-depth="0.9" style="left: 89%; top: 86%; width: 4.8em;">
-				<img src="assets/images/hero_floats/clove.png" alt="Clove">
-			</div>
-
-			<!-- Top & Bottom Edge Accents -->
-			<div class="ambient__float" data-depth="0.7" style="left: 68%; top: 4%; width: 4.6em; opacity: 0.75;">
+			<div class="ambient__float" data-depth="1.2" style="left: 48%; top: 12%; width: 5.4em;">
 				<img src="assets/images/hero_floats/cinnamon.png" alt="Cinnamon">
 			</div>
-			<div class="ambient__float" data-depth="1.0" style="left: 26%; top: 92%; width: 4.6em; opacity: 0.75;">
+			<div class="ambient__float" data-depth="1.5" style="left: 72%; top: 18%; width: 5.0em;">
+				<img src="assets/images/hero_floats/chilli.png" alt="Red Chilli">
+			</div>
+			<div class="ambient__float" data-depth="0.7" style="left: 88%; top: 15%; width: 5.6em;">
+				<img src="assets/images/hero_floats/cashew.png" alt="Cashew">
+			</div>
+
+			<div class="ambient__float" data-depth="1.1" style="left: 14%; top: 46%; width: 5.2em;">
+				<img src="assets/images/hero_floats/makhana.png" alt="Makhana">
+			</div>
+			<div class="ambient__float" data-depth="0.8" style="left: 38%; top: 52%; width: 4.6em;">
+				<img src="assets/images/hero_floats/clove.png" alt="Clove">
+			</div>
+			<div class="ambient__float" data-depth="1.3" style="left: 64%; top: 44%; width: 5.5em;">
+				<img src="assets/images/hero_floats/almonds.png" alt="Almonds">
+			</div>
+			<div class="ambient__float" data-depth="1.0" style="left: 84%; top: 48%; width: 5.0em;">
+				<img src="assets/images/hero_floats/turmeric.png" alt="Turmeric">
+			</div>
+
+			<div class="ambient__float" data-depth="1.4" style="left: 6%; top: 76%; width: 5.4em;">
+				<img src="assets/images/hero_floats/chickpea.png" alt="Chickpea">
+			</div>
+			<div class="ambient__float" data-depth="0.8" style="left: 24%; top: 82%; width: 5.0em;">
 				<img src="assets/images/hero_floats/pistachio.png" alt="Pistachio">
 			</div>
-			<div class="ambient__float" data-depth="0.8" style="left: 74%; top: 93%; width: 4.8em; opacity: 0.75;">
-				<img src="assets/images/hero_floats/chickpea.png" alt="Chickpea">
+			<div class="ambient__float" data-depth="1.2" style="left: 50%; top: 78%; width: 5.2em;">
+				<img src="assets/images/hero_floats/beans.png" alt="Kidney Beans">
+			</div>
+			<div class="ambient__float" data-depth="0.7" style="left: 76%; top: 82%; width: 5.4em;">
+				<img src="assets/images/hero_floats/walnuts.png" alt="Walnuts">
+			</div>
+			<div class="ambient__float" data-depth="1.3" style="left: 90%; top: 74%; width: 5.2em;">
+				<img src="assets/images/hero_floats/star_anise.png" alt="Star Anise">
 			</div>
 		</div>
 	</div>
+
 
 
 	<!-- ===================================================
