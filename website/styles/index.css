@@ -9,14 +9,14 @@ body.home {
 }
 
 /* ===================================================
-   Ambient Background Glow Field & Page-Wide Cutouts
+   Ambient Background Glow Field & Fixed Cutouts
    =================================================== */
 .ambient {
-    position: absolute;
+    position: fixed;
     inset: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
     pointer-events: none;
     overflow: hidden;
     background:
@@ -26,7 +26,7 @@ body.home {
 }
 
 .ambient__blob {
-    position: fixed;
+    position: absolute;
     border-radius: 50%;
     filter: blur(100px);
     opacity: 0.55;
@@ -66,7 +66,7 @@ body.home {
     100% { transform: translate(6vw, -4vw) scale(1.15); }
 }
 
-/* Page-Wide Floating Commodity Parallax Field */
+/* Fixed Viewport Floating Commodity Parallax Field */
 .page-ambient-field {
     position: absolute;
     inset: 0;
@@ -75,6 +75,7 @@ body.home {
     pointer-events: none;
     z-index: 1;
 }
+
 
 .ambient__float {
     position: absolute;
