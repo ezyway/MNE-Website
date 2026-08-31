@@ -629,10 +629,14 @@ body.home {
     position: relative;
     z-index: 2;
     background: #ffffff;
-    padding: 1rem;
-    border-radius: 50%;
+    padding: 1.25rem 1.75rem;
+    border-radius: var(--radius-lg);
     box-shadow: 0 16px 36px rgba(14, 59, 51, 0.18);
+    max-width: 240px;
+    height: auto;
+    object-fit: contain;
 }
+
 
 .about-spotlight__badge {
     margin-top: 1.75rem;

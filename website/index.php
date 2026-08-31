@@ -385,8 +385,9 @@
 
 				<div class="about-spotlight__visual">
 					<div class="about-spotlight__emblem-ring" aria-hidden="true"></div>
-					<img src="assets/logo.png" alt="Maruti Nandan Exports Seal" class="about-spotlight__logo-emblem" width="180" height="180" loading="lazy">
+					<img src="assets/logo.png" alt="Maruti Nandan Logo" class="about-spotlight__logo-emblem" width="220" height="110" loading="lazy">
 					<div class="about-spotlight__badge glass-panel">
+
 						<span class="about-spotlight__badge-year">Established</span>
 						<strong>Jamnagar, Gujarat</strong>
 						<small>Connecting 25+ Global Ports</small>

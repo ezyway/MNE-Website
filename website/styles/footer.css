@@ -79,11 +79,16 @@
 }
 
 .site-footer__logo-img {
-    border-radius: 50%;
+    height: 52px;
+    width: auto;
+    max-width: 140px;
+    object-fit: contain;
+    border-radius: var(--radius-sm);
     background: #ffffff;
-    padding: 4px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    padding: 4px 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
 }
+
 
 .site-footer__brand-title {
     font-family: var(--font-display);

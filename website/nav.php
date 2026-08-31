@@ -13,12 +13,13 @@
             
             <!-- Brand Identity -->
             <a href="index.php" class="navbar__brand" aria-label="Maruti Nandan Exports Home">
-                <img src="assets/logo.png" alt="Maruti Nandan Exports Logo" class="navbar__logo-img" width="48" height="48">
+                <img src="assets/logo.png" alt="Maruti Nandan Exports Logo" class="navbar__logo-img" width="100" height="50">
                 <div class="navbar__brand-text">
                     <span class="navbar__brand-name">Maruti Nandan</span>
                     <span class="navbar__brand-tagline">Exports • India</span>
                 </div>
             </a>
+
 
             <!-- Desktop Navigation Links -->
             <ul class="navbar__menu" id="desktopNavMenu">
@@ -140,12 +141,13 @@
     <div class="navbar__drawer" id="mobileDrawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
         <div class="navbar__drawer-header">
             <div class="navbar__brand">
-                <img src="assets/logo.png" alt="Maruti Nandan Exports" class="navbar__logo-img" width="40" height="40">
+                <img src="assets/logo.png" alt="Maruti Nandan Exports" class="navbar__logo-img" width="90" height="45">
                 <div class="navbar__brand-text">
                     <span class="navbar__brand-name">Maruti Nandan</span>
                     <span class="navbar__brand-tagline">Exports</span>
                 </div>
             </div>
+
             <button type="button" class="navbar__drawer-close" id="drawerCloseBtn" aria-label="Close menu">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
             </button>
