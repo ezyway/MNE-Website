@@ -247,9 +247,14 @@ body.home {
     font-size: 0.76rem;
     font-weight: 600;
     color: var(--ink-muted);
+    letter-spacing: 0.02em;
+    margin-top: 2px;
+}
+
 /* ===================================================
    Section Glassmorphism Wrapper Boxes
    =================================================== */
+
 .section-glass-box {
     position: relative;
     z-index: 10;
@@ -336,13 +341,14 @@ body.home {
     width: auto;
     object-fit: contain;
     border-radius: var(--radius-md);
-    filter: grayscale(0.5) opacity(0.85);
+    filter: drop-shadow(0 2px 4px rgba(14, 59, 51, 0.06));
     transition: all var(--duration-fast) var(--ease-smooth);
 }
 
 .trust-marquee__item:hover img {
-    filter: grayscale(0) opacity(1);
+    filter: drop-shadow(0 4px 8px rgba(14, 59, 51, 0.12)) scale(1.04);
 }
+
 
 .trust-marquee__item span {
     font-size: 0.72rem;
@@ -792,17 +798,18 @@ body.home {
 }
 
 .shipping-marquee__item img {
-    height: 32px;
+    height: 34px;
     width: auto;
     object-fit: contain;
     border-radius: var(--radius-sm);
-    filter: grayscale(0.7) opacity(0.8);
+    filter: drop-shadow(0 2px 4px rgba(14, 59, 51, 0.06));
     transition: all var(--duration-fast) var(--ease-smooth);
 }
 
 .shipping-marquee__item:hover img {
-    filter: grayscale(0) opacity(1);
+    filter: drop-shadow(0 4px 8px rgba(14, 59, 51, 0.12)) scale(1.04);
 }
+
 
 
 /* ===================================================
