@@ -250,20 +250,32 @@ body.home {
     margin-top: 2px;
 }
 
-.hero__stat-divider {
-    width: 1px;
-    height: 36px;
-    background: var(--border-medium);
+/* ===================================================
+   Section Glassmorphism Wrapper Boxes
+   =================================================== */
+.section-glass-box {
+    position: relative;
+    z-index: 10;
+    padding: 3.75rem 3rem;
+    border-radius: var(--radius-2xl);
+    background: rgba(255, 255, 255, 0.78);
+    backdrop-filter: blur(24px) saturate(190%);
+    -webkit-backdrop-filter: blur(24px) saturate(190%);
+    border: 1px solid rgba(255, 255, 255, 0.88);
+    box-shadow: 
+        0 24px 60px rgba(14, 59, 51, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 0.95);
 }
 
 /* ===================================================
    Marquee Accreditations & Certifications
    =================================================== */
 .trust-marquee {
-    padding: 4rem 1.5rem 2rem 1.5rem;
+    padding: 3.5rem 1.5rem 2rem 1.5rem;
     max-width: 1280px;
     margin: 0 auto;
 }
+
 
 .trust-marquee__header {
     text-align: center;
@@ -395,16 +407,23 @@ body.home {
     flex-direction: column;
     justify-content: space-between;
     overflow: hidden;
+    background: rgba(255, 255, 255, 0.82);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.95);
+    box-shadow: 0 8px 24px rgba(14, 59, 51, 0.04);
     transition: transform var(--duration-normal) var(--ease-apple),
                 box-shadow var(--duration-normal) var(--ease-apple),
-                border-color var(--duration-normal) ease;
+                border-color var(--duration-normal) ease,
+                background var(--duration-normal) ease;
 }
 
 .bento-card:hover {
     transform: translateY(-6px);
     box-shadow: var(--shadow-xl);
     border-color: rgba(212, 163, 39, 0.4);
+    background: #ffffff;
 }
+
 
 .bento-card--large {
     grid-column: span 2;
@@ -550,14 +569,23 @@ body.home {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    transition: transform var(--duration-normal) var(--ease-apple), box-shadow var(--duration-normal) var(--ease-apple);
+    background: rgba(255, 255, 255, 0.82);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.95);
+    box-shadow: 0 8px 24px rgba(14, 59, 51, 0.04);
+    transition: transform var(--duration-normal) var(--ease-apple),
+                box-shadow var(--duration-normal) var(--ease-apple),
+                border-color var(--duration-normal) ease,
+                background var(--duration-normal) ease;
 }
 
 .feature-card:hover {
     transform: translateY(-6px);
     box-shadow: var(--shadow-lg);
     border-color: rgba(212, 163, 39, 0.35);
+    background: #ffffff;
 }
+
 
 .feature-card__icon-wrap {
     width: 54px;
@@ -920,8 +948,14 @@ body.home {
         padding: 2rem 1.5rem;
     }
 
+    .section-glass-box {
+        padding: 2.25rem 1.25rem;
+        border-radius: var(--radius-xl);
+    }
+
     .cta-banner__card {
         padding: 3rem 1.25rem;
     }
 }
+
 

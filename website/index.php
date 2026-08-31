@@ -168,28 +168,30 @@
          Licences & Certifications Marquee
          =================================================== -->
 	<section class="trust-marquee reveal-init" aria-label="Certifications & Accreditations">
-		<div class="trust-marquee__header">
-			<span class="eyebrow eyebrow--emerald">Verified Quality &amp; Compliance</span>
-			<h2 class="trust-marquee__title">Internationally Certified Export Standards</h2>
-		</div>
+		<div class="section-glass-box glass-panel">
+			<div class="trust-marquee__header">
+				<span class="eyebrow eyebrow--emerald">Verified Quality &amp; Compliance</span>
+				<h2 class="trust-marquee__title">Internationally Certified Export Standards</h2>
+			</div>
 
-		<div class="trust-marquee__wrapper glass-panel">
-			<div class="trust-marquee__track" id="licencesTrack">
-				<div class="trust-marquee__item"><img src="assets/icons/home/licences/1.png" alt="APEDA Certified" loading="lazy" width="64" height="64" /><span>APEDA</span></div>
-				<div class="trust-marquee__item"><img src="assets/icons/home/licences/2.png" alt="FSSAI Approved" loading="lazy" width="64" height="64" /><span>FSSAI</span></div>
-				<div class="trust-marquee__item"><img src="assets/icons/home/licences/3.png" alt="Spices Board India" loading="lazy" width="64" height="64" /><span>Spices Board</span></div>
-				<div class="trust-marquee__item"><img src="assets/icons/home/licences/4.png" alt="ISO Standard" loading="lazy" width="64" height="64" /><span>ISO Standard</span></div>
-				<div class="trust-marquee__item"><img src="assets/icons/home/licences/5.png" alt="Quality Certification" loading="lazy" width="64" height="64" /><span>Quality Grade</span></div>
-				<div class="trust-marquee__item"><img src="assets/icons/home/licences/6.png" alt="Export Compliance" loading="lazy" width="64" height="64" /><span>Export Compliant</span></div>
-				<div class="trust-marquee__item"><img src="assets/icons/home/licences/7.png" alt="Lab Tested" loading="lazy" width="64" height="64" /><span>Lab Tested</span></div>
-				<div class="trust-marquee__item"><img src="assets/icons/home/licences/8.png" alt="Phytosanitary Certified" loading="lazy" width="64" height="64" /><span>Phytosanitary</span></div>
-				<div class="trust-marquee__item"><img src="assets/icons/home/licences/9.png" alt="Global Food Safety" loading="lazy" width="64" height="64" /><span>Food Safety</span></div>
-				<div class="trust-marquee__item"><img src="assets/icons/home/licences/10.png" alt="Halal Compliant" loading="lazy" width="64" height="64" /><span>Halal Compliant</span></div>
-				<div class="trust-marquee__item"><img src="assets/icons/home/licences/11.png" alt="Non-GMO Verified" loading="lazy" width="64" height="64" /><span>Non-GMO Standard</span></div>
-				<div class="trust-marquee__item"><img src="assets/icons/home/licences/12.png" alt="Customs Verified" loading="lazy" width="64" height="64" /><span>Customs Cleared</span></div>
-				<div class="trust-marquee__item"><img src="assets/icons/home/licences/13.png" alt="HACCP Certified" loading="lazy" width="64" height="64" /><span>HACCP</span></div>
-				<div class="trust-marquee__item"><img src="assets/icons/home/licences/14.png" alt="Fumigation Verified" loading="lazy" width="64" height="64" /><span>Fumigated</span></div>
-				<div class="trust-marquee__item"><img src="assets/icons/home/licences/15.png" alt="Government Export License" loading="lazy" width="64" height="64" /><span>Govt. Licensed</span></div>
+			<div class="trust-marquee__wrapper">
+				<div class="trust-marquee__track" id="licencesTrack">
+					<div class="trust-marquee__item"><img src="assets/icons/home/licences/1.png" alt="APEDA Certified" loading="lazy" width="64" height="64" /><span>APEDA</span></div>
+					<div class="trust-marquee__item"><img src="assets/icons/home/licences/2.png" alt="FSSAI Approved" loading="lazy" width="64" height="64" /><span>FSSAI</span></div>
+					<div class="trust-marquee__item"><img src="assets/icons/home/licences/3.png" alt="Spices Board India" loading="lazy" width="64" height="64" /><span>Spices Board</span></div>
+					<div class="trust-marquee__item"><img src="assets/icons/home/licences/4.png" alt="ISO Standard" loading="lazy" width="64" height="64" /><span>ISO Standard</span></div>
+					<div class="trust-marquee__item"><img src="assets/icons/home/licences/5.png" alt="Quality Certification" loading="lazy" width="64" height="64" /><span>Quality Grade</span></div>
+					<div class="trust-marquee__item"><img src="assets/icons/home/licences/6.png" alt="Export Compliance" loading="lazy" width="64" height="64" /><span>Export Compliant</span></div>
+					<div class="trust-marquee__item"><img src="assets/icons/home/licences/7.png" alt="Lab Tested" loading="lazy" width="64" height="64" /><span>Lab Tested</span></div>
+					<div class="trust-marquee__item"><img src="assets/icons/home/licences/8.png" alt="Phytosanitary Certified" loading="lazy" width="64" height="64" /><span>Phytosanitary</span></div>
+					<div class="trust-marquee__item"><img src="assets/icons/home/licences/9.png" alt="Global Food Safety" loading="lazy" width="64" height="64" /><span>Food Safety</span></div>
+					<div class="trust-marquee__item"><img src="assets/icons/home/licences/10.png" alt="Halal Compliant" loading="lazy" width="64" height="64" /><span>Halal Compliant</span></div>
+					<div class="trust-marquee__item"><img src="assets/icons/home/licences/11.png" alt="Non-GMO Verified" loading="lazy" width="64" height="64" /><span>Non-GMO Standard</span></div>
+					<div class="trust-marquee__item"><img src="assets/icons/home/licences/12.png" alt="Customs Verified" loading="lazy" width="64" height="64" /><span>Customs Cleared</span></div>
+					<div class="trust-marquee__item"><img src="assets/icons/home/licences/13.png" alt="HACCP Certified" loading="lazy" width="64" height="64" /><span>HACCP</span></div>
+					<div class="trust-marquee__item"><img src="assets/icons/home/licences/14.png" alt="Fumigation Verified" loading="lazy" width="64" height="64" /><span>Fumigated</span></div>
+					<div class="trust-marquee__item"><img src="assets/icons/home/licences/15.png" alt="Government Export License" loading="lazy" width="64" height="64" /><span>Govt. Licensed</span></div>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -199,140 +201,142 @@
          Six Pillars of Export Excellence (Bento Grid)
          =================================================== -->
 	<section class="showcase-section" id="productsShowcase" aria-label="Export Product Portfolio">
-		<div class="section-header reveal-init">
-			<span class="eyebrow">Export Portfolio</span>
-			<h2 class="section-title">Six Pillars of Agricultural Excellence</h2>
-			<p class="section-subtitle">
-				Carefully handpicked, moisture-regulated, and laboratory-tested commodities tailored for international commercial buyers and distributors.
-			</p>
-		</div>
+		<div class="section-glass-box glass-panel reveal-init">
+			<div class="section-header">
+				<span class="eyebrow">Export Portfolio</span>
+				<h2 class="section-title">Six Pillars of Agricultural Excellence</h2>
+				<p class="section-subtitle">
+					Carefully handpicked, moisture-regulated, and laboratory-tested commodities tailored for international commercial buyers and distributors.
+				</p>
+			</div>
 
-		<div class="bento-grid">
-			
-			<!-- Card 1: Whole Spices (Featured Big Card) -->
-			<div class="bento-card bento-card--large glass-panel reveal-init">
-				<div class="bento-card__badge">Export Grade A</div>
-				<div class="bento-card__content">
-					<span class="bento-card__category">Aromatic Spices</span>
-					<h3 class="bento-card__title">Whole Spices</h3>
-					<p class="bento-card__desc">
-						Green Cardamom, Cloves, Star Anise, Cumin Seeds, Bay Leaves, Black Pepper, Carom and Mustard seeds with rich volatile oil contents and authentic aroma.
-					</p>
-					<div class="bento-card__tags">
-						<span>Alleppey Cardamom</span>
-						<span>Bold Cloves</span>
-						<span>Gujarat Cumin</span>
+			<div class="bento-grid">
+				
+				<!-- Card 1: Whole Spices (Featured Big Card) -->
+				<div class="bento-card bento-card--large glass-panel reveal-init">
+					<div class="bento-card__badge">Export Grade A</div>
+					<div class="bento-card__content">
+						<span class="bento-card__category">Aromatic Spices</span>
+						<h3 class="bento-card__title">Whole Spices</h3>
+						<p class="bento-card__desc">
+							Green Cardamom, Cloves, Star Anise, Cumin Seeds, Bay Leaves, Black Pepper, Carom and Mustard seeds with rich volatile oil contents and authentic aroma.
+						</p>
+						<div class="bento-card__tags">
+							<span>Alleppey Cardamom</span>
+							<span>Bold Cloves</span>
+							<span>Gujarat Cumin</span>
+						</div>
+						<a href="products.php?category=wholeSpices" class="bento-card__link">
+							<span>Explore Whole Spices</span>
+							<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+						</a>
 					</div>
-					<a href="products.php?category=wholeSpices" class="bento-card__link">
-						<span>Explore Whole Spices</span>
-						<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-					</a>
-				</div>
-				<div class="bento-card__media">
-					<img src="assets/images/products/all/whole_spices.png" alt="Whole Spices Assortment" class="bento-card__img" loading="lazy">
-				</div>
-			</div>
-
-			<!-- Card 2: Grounded Spices -->
-			<div class="bento-card glass-panel reveal-init">
-				<div class="bento-card__badge">100% Pure</div>
-				<div class="bento-card__content">
-					<span class="bento-card__category">Pure Powders</span>
-					<h3 class="bento-card__title">Grounded Spices</h3>
-					<p class="bento-card__desc">
-						Curcumin-rich Turmeric, Kashmiri Red Chilli, Coriander-Cumin &amp; Dry Ginger powders pulverized under low heat to retain natural color and aroma.
-					</p>
-					<a href="products.php?category=groundSpices" class="bento-card__link">
-						<span>Explore Ground Spices</span>
-						<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-					</a>
-				</div>
-				<div class="bento-card__media">
-					<img src="assets/images/products/all/ground_spices.png" alt="Ground Spices Powders" class="bento-card__img" loading="lazy">
-				</div>
-			</div>
-
-			<!-- Card 3: Grains & Cereals -->
-			<div class="bento-card glass-panel reveal-init">
-				<div class="bento-card__badge">Sortex Cleaned</div>
-				<div class="bento-card__content">
-					<span class="bento-card__category">Staples & Cereals</span>
-					<h3 class="bento-card__title">Grains &amp; Cereals</h3>
-					<p class="bento-card__desc">
-						1121 Long Grain Basmati Rice, Sharbati Wheat, Pearl Millets, Sorghum, Maize and Barley sorted with automated laser optical machinery.
-					</p>
-					<a href="products.php?category=grains" class="bento-card__link">
-						<span>Explore Grains</span>
-						<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-					</a>
-				</div>
-				<div class="bento-card__media">
-					<img src="assets/images/products/all/grains.png" alt="Grains and Basmati Rice" class="bento-card__img" loading="lazy">
-				</div>
-			</div>
-
-			<!-- Card 4: Pulses & Legumes -->
-			<div class="bento-card glass-panel reveal-init">
-				<div class="bento-card__badge">High Protein</div>
-				<div class="bento-card__content">
-					<span class="bento-card__category">Legumes</span>
-					<h3 class="bento-card__title">Pulses &amp; Legumes</h3>
-					<p class="bento-card__desc">
-						Kabuli Chickpeas (75-80 count), Red Kidney Beans, Green Gram, Split Chickpeas, Pigeon Pea, and Yellow Corn packed for bulk container dispatch.
-					</p>
-					<a href="products.php?category=pulses" class="bento-card__link">
-						<span>Explore Pulses</span>
-						<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-					</a>
-				</div>
-				<div class="bento-card__media">
-					<img src="assets/images/products/all/pulses.png" alt="Pulses and Chickpeas" class="bento-card__img" loading="lazy">
-				</div>
-			</div>
-
-			<!-- Card 5: Premium Dry Fruits -->
-			<div class="bento-card glass-panel reveal-init">
-				<div class="bento-card__badge">Grade Selection</div>
-				<div class="bento-card__content">
-					<span class="bento-card__category">Nuts & Dry Fruits</span>
-					<h3 class="bento-card__title">Premium Dry Fruits</h3>
-					<p class="bento-card__desc">
-						King-size Cashews (W180, W240), California &amp; Mamra Almonds, Iranian Pistachios, Afghan Figs, and Golden Seedless Raisins.
-					</p>
-					<a href="products.php?category=dryFruits" class="bento-card__link">
-						<span>Explore Dry Fruits</span>
-						<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-					</a>
-				</div>
-				<div class="bento-card__media">
-					<img src="assets/images/products/all/dry_fruits.png" alt="Dry Fruits Assortment" class="bento-card__img" loading="lazy">
-				</div>
-			</div>
-
-			<!-- Card 6: Gourmet Makhana (Featured Card) -->
-			<div class="bento-card bento-card--large glass-panel reveal-init">
-				<div class="bento-card__badge">Superfood Export</div>
-				<div class="bento-card__content">
-					<span class="bento-card__category">Gourmet Healthy Snacking</span>
-					<h3 class="bento-card__title">Gourmet Makhana (Foxnuts)</h3>
-					<p class="bento-card__desc">
-						Hand-harvested, jumbo size 5+ Suta graded foxnuts. Available in Raw Plain Grade, Slow-Roasted, Himalayan Pink Salt, Peri-Peri, Cheddar Cheese, and Tangy Masala flavors.
-					</p>
-					<div class="bento-card__tags">
-						<span>5+ Suta Jumbo</span>
-						<span>Zero Cholesterol</span>
-						<span>Nitrogen Packed</span>
+					<div class="bento-card__media">
+						<img src="assets/images/products/all/whole_spices.png" alt="Whole Spices Assortment" class="bento-card__img" loading="lazy">
 					</div>
-					<a href="products.php?category=makhana" class="bento-card__link">
-						<span>Explore Gourmet Makhana</span>
-						<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-					</a>
 				</div>
-				<div class="bento-card__media">
-					<img src="assets/images/products/all/makhana.png" alt="Gourmet Makhana Foxnuts" class="bento-card__img" loading="lazy">
-				</div>
-			</div>
 
+				<!-- Card 2: Grounded Spices -->
+				<div class="bento-card glass-panel reveal-init">
+					<div class="bento-card__badge">100% Pure</div>
+					<div class="bento-card__content">
+						<span class="bento-card__category">Pure Powders</span>
+						<h3 class="bento-card__title">Grounded Spices</h3>
+						<p class="bento-card__desc">
+							Curcumin-rich Turmeric, Kashmiri Red Chilli, Coriander-Cumin &amp; Dry Ginger powders pulverized under low heat to retain natural color and aroma.
+						</p>
+						<a href="products.php?category=groundSpices" class="bento-card__link">
+							<span>Explore Ground Spices</span>
+							<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+						</a>
+					</div>
+					<div class="bento-card__media">
+						<img src="assets/images/products/all/ground_spices.png" alt="Ground Spices Powders" class="bento-card__img" loading="lazy">
+					</div>
+				</div>
+
+				<!-- Card 3: Grains & Cereals -->
+				<div class="bento-card glass-panel reveal-init">
+					<div class="bento-card__badge">Sortex Cleaned</div>
+					<div class="bento-card__content">
+						<span class="bento-card__category">Staples & Cereals</span>
+						<h3 class="bento-card__title">Grains &amp; Cereals</h3>
+						<p class="bento-card__desc">
+							1121 Long Grain Basmati Rice, Sharbati Wheat, Pearl Millets, Sorghum, Maize and Barley sorted with automated laser optical machinery.
+						</p>
+						<a href="products.php?category=grains" class="bento-card__link">
+							<span>Explore Grains</span>
+							<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+						</a>
+					</div>
+					<div class="bento-card__media">
+						<img src="assets/images/products/all/grains.png" alt="Grains and Basmati Rice" class="bento-card__img" loading="lazy">
+					</div>
+				</div>
+
+				<!-- Card 4: Pulses & Legumes -->
+				<div class="bento-card glass-panel reveal-init">
+					<div class="bento-card__badge">High Protein</div>
+					<div class="bento-card__content">
+						<span class="bento-card__category">Legumes</span>
+						<h3 class="bento-card__title">Pulses &amp; Legumes</h3>
+						<p class="bento-card__desc">
+							Kabuli Chickpeas (75-80 count), Red Kidney Beans, Green Gram, Split Chickpeas, Pigeon Pea, and Yellow Corn packed for bulk container dispatch.
+						</p>
+						<a href="products.php?category=pulses" class="bento-card__link">
+							<span>Explore Pulses</span>
+							<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+						</a>
+					</div>
+					<div class="bento-card__media">
+						<img src="assets/images/products/all/pulses.png" alt="Pulses and Chickpeas" class="bento-card__img" loading="lazy">
+					</div>
+				</div>
+
+				<!-- Card 5: Premium Dry Fruits -->
+				<div class="bento-card glass-panel reveal-init">
+					<div class="bento-card__badge">Grade Selection</div>
+					<div class="bento-card__content">
+						<span class="bento-card__category">Nuts & Dry Fruits</span>
+						<h3 class="bento-card__title">Premium Dry Fruits</h3>
+						<p class="bento-card__desc">
+							King-size Cashews (W180, W240), California &amp; Mamra Almonds, Iranian Pistachios, Afghan Figs, and Golden Seedless Raisins.
+						</p>
+						<a href="products.php?category=dryFruits" class="bento-card__link">
+							<span>Explore Dry Fruits</span>
+							<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+						</a>
+					</div>
+					<div class="bento-card__media">
+						<img src="assets/images/products/all/dry_fruits.png" alt="Dry Fruits Assortment" class="bento-card__img" loading="lazy">
+					</div>
+				</div>
+
+				<!-- Card 6: Gourmet Makhana (Featured Card) -->
+				<div class="bento-card bento-card--large glass-panel reveal-init">
+					<div class="bento-card__badge">Superfood Export</div>
+					<div class="bento-card__content">
+						<span class="bento-card__category">Gourmet Healthy Snacking</span>
+						<h3 class="bento-card__title">Gourmet Makhana (Foxnuts)</h3>
+						<p class="bento-card__desc">
+							Hand-harvested, jumbo size 5+ Suta graded foxnuts. Available in Raw Plain Grade, Slow-Roasted, Himalayan Pink Salt, Peri-Peri, Cheddar Cheese, and Tangy Masala flavors.
+						</p>
+						<div class="bento-card__tags">
+							<span>5+ Suta Jumbo</span>
+							<span>Zero Cholesterol</span>
+							<span>Nitrogen Packed</span>
+						</div>
+						<a href="products.php?category=makhana" class="bento-card__link">
+							<span>Explore Gourmet Makhana</span>
+							<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+						</a>
+					</div>
+					<div class="bento-card__media">
+						<img src="assets/images/products/all/makhana.png" alt="Gourmet Makhana Foxnuts" class="bento-card__img" loading="lazy">
+					</div>
+				</div>
+
+			</div>
 		</div>
 	</section>
 
@@ -341,53 +345,55 @@
          Why Choose Maruti Nandan Exports (Trust Pillars)
          =================================================== -->
 	<section class="features-section" aria-label="Export Infrastructure Advantages">
-		<div class="section-header reveal-init">
-			<span class="eyebrow eyebrow--emerald">Why Global Importers Trust Us</span>
-			<h2 class="section-title">End-to-End Export Infrastructure</h2>
-			<p class="section-subtitle">
-				From farm contract sourcing to rapid maritime container loading, every step of our export pipeline is built for precision, freshness, and global compliance.
-			</p>
-		</div>
-
-		<div class="features-grid">
-			<div class="feature-card glass-panel reveal-init">
-				<div class="feature-card__icon-wrap">
-					<img src="assets/icons/about/strong_vendor_base.png" alt="Farm Sourcing" width="32" height="32">
-				</div>
-				<h3 class="feature-card__title">Farm-Direct Procurement</h3>
-				<p class="feature-card__text">
-					Direct relationships with accredited farmer networks across Gujarat, Kerala, Rajasthan, and Punjab ensure zero unnecessary middlemen and consistent seasonal supply.
+		<div class="section-glass-box glass-panel reveal-init">
+			<div class="section-header">
+				<span class="eyebrow eyebrow--emerald">Why Global Importers Trust Us</span>
+				<h2 class="section-title">End-to-End Export Infrastructure</h2>
+				<p class="section-subtitle">
+					From farm contract sourcing to rapid maritime container loading, every step of our export pipeline is built for precision, freshness, and global compliance.
 				</p>
 			</div>
 
-			<div class="feature-card glass-panel reveal-init">
-				<div class="feature-card__icon-wrap">
-					<img src="assets/icons/about/product_quality.png" alt="Lab Testing" width="32" height="32">
+			<div class="features-grid">
+				<div class="feature-card glass-panel reveal-init">
+					<div class="feature-card__icon-wrap">
+						<img src="assets/icons/about/strong_vendor_base.png" alt="Farm Sourcing" width="32" height="32">
+					</div>
+					<h3 class="feature-card__title">Farm-Direct Procurement</h3>
+					<p class="feature-card__text">
+						Direct relationships with accredited farmer networks across Gujarat, Kerala, Rajasthan, and Punjab ensure zero unnecessary middlemen and consistent seasonal supply.
+					</p>
 				</div>
-				<h3 class="feature-card__title">Sortex &amp; Lab Grading</h3>
-				<p class="feature-card__text">
-					Automated Buhler Sortex optical cleaning, moisture regulation, and accredited laboratory testing for pesticide residue, aflatoxin, and microbial safety.
-				</p>
-			</div>
 
-			<div class="feature-card glass-panel reveal-init">
-				<div class="feature-card__icon-wrap">
-					<img src="assets/icons/about/packaging.png" alt="Export Packaging" width="32" height="32">
+				<div class="feature-card glass-panel reveal-init">
+					<div class="feature-card__icon-wrap">
+						<img src="assets/icons/about/product_quality.png" alt="Lab Testing" width="32" height="32">
+					</div>
+					<h3 class="feature-card__title">Sortex &amp; Lab Grading</h3>
+					<p class="feature-card__text">
+						Automated Buhler Sortex optical cleaning, moisture regulation, and accredited laboratory testing for pesticide residue, aflatoxin, and microbial safety.
+					</p>
 				</div>
-				<h3 class="feature-card__title">Moisture-Lock Packaging</h3>
-				<p class="feature-card__text">
-					Custom international packaging including vacuum-sealed foil, multi-wall paper bags, PP woven bags, and nitrogen-flushed retail containers with private labeling.
-				</p>
-			</div>
 
-			<div class="feature-card glass-panel reveal-init">
-				<div class="feature-card__icon-wrap">
-					<img src="assets/icons/about/timely_delivery.png" alt="Maritime Logistics" width="32" height="32">
+				<div class="feature-card glass-panel reveal-init">
+					<div class="feature-card__icon-wrap">
+						<img src="assets/icons/about/packaging.png" alt="Export Packaging" width="32" height="32">
+					</div>
+					<h3 class="feature-card__title">Moisture-Lock Packaging</h3>
+					<p class="feature-card__text">
+						Custom international packaging including vacuum-sealed foil, multi-wall paper bags, PP woven bags, and nitrogen-flushed retail containers with private labeling.
+					</p>
 				</div>
-				<h3 class="feature-card__title">Mundra &amp; Kandla Port Proximity</h3>
-				<p class="feature-card__text">
-					Situated in Jamnagar, Gujarat within immediate reach of Mundra &amp; Kandla container terminals, enabling rapid vessel booking, customs clearance, and FOB/CIF delivery.
-				</p>
+
+				<div class="feature-card glass-panel reveal-init">
+					<div class="feature-card__icon-wrap">
+						<img src="assets/icons/about/timely_delivery.png" alt="Maritime Logistics" width="32" height="32">
+					</div>
+					<h3 class="feature-card__title">Mundra &amp; Kandla Port Proximity</h3>
+					<p class="feature-card__text">
+						Situated in Jamnagar, Gujarat within immediate reach of Mundra &amp; Kandla container terminals, enabling rapid vessel booking, customs clearance, and FOB/CIF delivery.
+					</p>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -439,29 +445,32 @@
          Shipping & Maritime Logistics Partners Marquee
          =================================================== -->
 	<section class="shipping-marquee reveal-init" aria-label="Maritime Shipping Partners">
-		<div class="shipping-marquee__header">
-			<span class="eyebrow">Global Multimodal Freight</span>
-			<h2 class="shipping-marquee__title">Trusted Ocean Freight Logistics Partners</h2>
-		</div>
+		<div class="section-glass-box glass-panel">
+			<div class="shipping-marquee__header">
+				<span class="eyebrow">Global Multimodal Freight</span>
+				<h2 class="shipping-marquee__title">Trusted Ocean Freight Logistics Partners</h2>
+			</div>
 
-		<div class="shipping-marquee__wrapper glass-panel">
-			<div class="shipping-marquee__track" id="shippingTrack">
-				<div class="shipping-marquee__item"><img src="assets/icons/home/shipping_partners/1.png" alt="Shipping Line Partner 1" loading="lazy" width="70" height="40" /></div>
-				<div class="shipping-marquee__item"><img src="assets/icons/home/shipping_partners/2.png" alt="Shipping Line Partner 2" loading="lazy" width="70" height="40" /></div>
-				<div class="shipping-marquee__item"><img src="assets/icons/home/shipping_partners/3.png" alt="Shipping Line Partner 3" loading="lazy" width="70" height="40" /></div>
-				<div class="shipping-marquee__item"><img src="assets/icons/home/shipping_partners/4.png" alt="Shipping Line Partner 4" loading="lazy" width="70" height="40" /></div>
-				<div class="shipping-marquee__item"><img src="assets/icons/home/shipping_partners/5.png" alt="Shipping Line Partner 5" loading="lazy" width="70" height="40" /></div>
-				<div class="shipping-marquee__item"><img src="assets/icons/home/shipping_partners/6.png" alt="Shipping Line Partner 6" loading="lazy" width="70" height="40" /></div>
-				<div class="shipping-marquee__item"><img src="assets/icons/home/shipping_partners/7.png" alt="Shipping Line Partner 7" loading="lazy" width="70" height="40" /></div>
-				<div class="shipping-marquee__item"><img src="assets/icons/home/shipping_partners/8.png" alt="Shipping Line Partner 8" loading="lazy" width="70" height="40" /></div>
-				<div class="shipping-marquee__item"><img src="assets/icons/home/shipping_partners/9.png" alt="Shipping Line Partner 9" loading="lazy" width="70" height="40" /></div>
-				<div class="shipping-marquee__item"><img src="assets/icons/home/shipping_partners/10.png" alt="Shipping Line Partner 10" loading="lazy" width="70" height="40" /></div>
-				<div class="shipping-marquee__item"><img src="assets/icons/home/shipping_partners/11.png" alt="Shipping Line Partner 11" loading="lazy" width="70" height="40" /></div>
-				<div class="shipping-marquee__item"><img src="assets/icons/home/shipping_partners/12.png" alt="Shipping Line Partner 12" loading="lazy" width="70" height="40" /></div>
-				<div class="shipping-marquee__item"><img src="assets/icons/home/shipping_partners/13.png" alt="Shipping Line Partner 13" loading="lazy" width="70" height="40" /></div>
+			<div class="shipping-marquee__wrapper">
+				<div class="shipping-marquee__track" id="shippingTrack">
+					<div class="shipping-marquee__item"><img src="assets/icons/home/shipping_partners/1.png" alt="Shipping Line Partner 1" loading="lazy" width="70" height="40" /></div>
+					<div class="shipping-marquee__item"><img src="assets/icons/home/shipping_partners/2.png" alt="Shipping Line Partner 2" loading="lazy" width="70" height="40" /></div>
+					<div class="shipping-marquee__item"><img src="assets/icons/home/shipping_partners/3.png" alt="Shipping Line Partner 3" loading="lazy" width="70" height="40" /></div>
+					<div class="shipping-marquee__item"><img src="assets/icons/home/shipping_partners/4.png" alt="Shipping Line Partner 4" loading="lazy" width="70" height="40" /></div>
+					<div class="shipping-marquee__item"><img src="assets/icons/home/shipping_partners/5.png" alt="Shipping Line Partner 5" loading="lazy" width="70" height="40" /></div>
+					<div class="shipping-marquee__item"><img src="assets/icons/home/shipping_partners/6.png" alt="Shipping Line Partner 6" loading="lazy" width="70" height="40" /></div>
+					<div class="shipping-marquee__item"><img src="assets/icons/home/shipping_partners/7.png" alt="Shipping Line Partner 7" loading="lazy" width="70" height="40" /></div>
+					<div class="shipping-marquee__item"><img src="assets/icons/home/shipping_partners/8.png" alt="Shipping Line Partner 8" loading="lazy" width="70" height="40" /></div>
+					<div class="shipping-marquee__item"><img src="assets/icons/home/shipping_partners/9.png" alt="Shipping Line Partner 9" loading="lazy" width="70" height="40" /></div>
+					<div class="shipping-marquee__item"><img src="assets/icons/home/shipping_partners/10.png" alt="Shipping Line Partner 10" loading="lazy" width="70" height="40" /></div>
+					<div class="shipping-marquee__item"><img src="assets/icons/home/shipping_partners/11.png" alt="Shipping Line Partner 11" loading="lazy" width="70" height="40" /></div>
+					<div class="shipping-marquee__item"><img src="assets/icons/home/shipping_partners/12.png" alt="Shipping Line Partner 12" loading="lazy" width="70" height="40" /></div>
+					<div class="shipping-marquee__item"><img src="assets/icons/home/shipping_partners/13.png" alt="Shipping Line Partner 13" loading="lazy" width="70" height="40" /></div>
+				</div>
 			</div>
 		</div>
 	</section>
+
 
 
 	<!-- ===================================================
