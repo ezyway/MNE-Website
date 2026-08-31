@@ -24,8 +24,8 @@
    ================================ */
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: #f9f9f9;
-    color: #333;
+    background-color: var(--surface);
+    color: var(--ink);
     margin: 0;
     padding: 0;
 }
@@ -82,10 +82,10 @@ body {
 }
 
 .product_name {
-    font-size: 1.3em;
+    font-family: var(--font-display);
+    font-size: 1.4em;
     font-weight: 600;
     margin-bottom: 0.5em;
-    /* Add space below the name by default */
     transform: translateY(0);
     transition: transform 0.4s ease;
 }

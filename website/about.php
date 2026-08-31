@@ -24,7 +24,7 @@
 	<!-- Fonts -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
 	<!-- Custom Styles -->
 	<link href="styles/global.css" rel="stylesheet">
@@ -64,7 +64,7 @@
 	</div>
 
 	<!-- ABOUT TEXT AND IMAGES WITH DESCRIPTION -->
-	<section class="export-info">
+	<section class="export-info js-reveal">
 		<div class="export-info__content">
 			<div class="export-info__circle-images">
 				<div class="export-info__image export-info__image--top-left"></div>
@@ -116,7 +116,7 @@
 
 	<!-- COUNTER -->
 	<section class="stats">
-		<div class="stats__overlay">
+		<div class="stats__overlay js-reveal">
 			<div class="stats__container">
 
 				<div class="stats__item">
@@ -144,7 +144,7 @@
 	</section>
 
 	<!-- WHY CHOOSE US -->
-	<section class="why-choose">
+	<section class="why-choose js-reveal">
 		<h2 class="why-choose__heading">Why Choose Us?</h2>
 		<div class="why-choose__grid">
 

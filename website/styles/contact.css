@@ -2,8 +2,7 @@
 
 .contact {
 	padding: 3em 0;
-	background: rgba(var(--primary-dark), 0.2);
-	backdrop-filter: blur(1px);
+	background: transparent;
 }
 
 .contact__container {
@@ -21,13 +20,13 @@
 }
 
 .contact__title {
-	color: #024c31;
+	color: var(--teal);
 	font-size: 2.5em;
 	margin-bottom: 0.5em;
 }
 
 .contact__description {
-	color: #555;
+	color: var(--ink-soft);
 	font-size: 1.5em;
 	margin-bottom: 1em;
 }
@@ -39,14 +38,17 @@
 	padding: 1em;
 	margin-bottom: 2em;
 	font-size: 1.2em;
-	background: #faf7f0;
+	background: #fff;
+	border: 1px solid var(--line);
 	border-radius: 1em;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	box-shadow: 0 8px 24px rgba(14, 59, 51, 0.08);
+	transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .contact__card:hover {
-	box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+	box-shadow: 0 12px 32px rgba(14, 59, 51, 0.14);
+	border-color: var(--gold);
+	transform: translateY(-2px);
 }
 
 .contact__card a {
@@ -93,10 +95,11 @@
 .contact__input-wrapper textarea {
 	width: 100%;
 	padding: 1em 1em 1em 4em;
-	border: none;
+	border: 1px solid var(--line);
 	border-radius: 50px;
 	background: #fff;
 	font-size: 1em;
+	font-family: inherit;
 	transition: border-color 0.3s ease, background-color 0.3s ease;
 }
 
@@ -113,6 +116,7 @@
 .contact__input-wrapper textarea:focus {
 	outline: none;
 	background: #f9fff9;
+	border-color: var(--teal-bright);
 }
 
 .contact__input-icon {
@@ -130,7 +134,7 @@
 	font-size: 1.2em;
 	font-weight: bold;
 	color: #fff;
-	background: #00912c;
+	background: var(--teal-mid);
 	border: none;
 	border-radius: 50px;
 	cursor: pointer;
@@ -138,8 +142,8 @@
 }
 
 .contact__submit:hover {
-	background: #007e25;
-	transform: scale(1.05);
+	background: var(--teal);
+	transform: scale(1.03);
 }
 
 @media (max-width: 768px) {

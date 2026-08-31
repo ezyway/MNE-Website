@@ -1,210 +1,870 @@
 /* ===================================================
-	Page Stuff
-=================================================== */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+   Maruti Nandan Exports — Homepage Styles
+   Apple Frosted Glass & Interactive Bento System
+   =================================================== */
 
-body {
-    font-family: sans-serif;
+body.home {
+    position: relative;
+    overflow-x: hidden;
 }
-
 
 /* ===================================================
-	Banner Section
-=================================================== */
-.banner {
-    margin-top: 7em;
+   Ambient Background Glow Field
+   =================================================== */
+.ambient {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    overflow: hidden;
+    background:
+        radial-gradient(ellipse 80% 60% at 75% -5%, rgba(39, 165, 136, 0.15), transparent 60%),
+        radial-gradient(ellipse 70% 50% at 10% 105%, rgba(212, 163, 39, 0.14), transparent 60%),
+        var(--surface);
+}
+
+.ambient__blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(100px);
+    opacity: 0.55;
+    will-change: transform;
+    animation: ambient-drift 28s ease-in-out infinite alternate;
+}
+
+.ambient__blob--teal {
+    width: 45vw;
+    height: 45vw;
+    top: 25%;
+    left: -10vw;
+    background: rgba(39, 165, 136, 0.3);
+}
+
+.ambient__blob--gold {
+    width: 40vw;
+    height: 40vw;
+    top: 50%;
+    right: -12vw;
+    background: rgba(212, 163, 39, 0.25);
+    animation-delay: -9s;
+}
+
+.ambient__blob--mint {
+    width: 32vw;
+    height: 32vw;
+    top: 110%;
+    left: 25%;
+    background: rgba(21, 92, 79, 0.22);
+    animation-delay: -18s;
+}
+
+@keyframes ambient-drift {
+    0% { transform: translate(0, 0) scale(1); }
+    100% { transform: translate(6vw, -4vw) scale(1.15); }
+}
+
+/* ===================================================
+   Hero Section
+   =================================================== */
+.hero {
     position: relative;
-    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7.5rem 1.5rem 4rem 1.5rem;
     overflow: hidden;
 }
 
-.banner__track {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-    will-change: transform;
+/* Floating Commodity Parallax Field */
+.hero__field {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
 }
 
-.banner__slide {
-    min-width: 100%;
+.hero__float {
+    position: absolute;
+    display: block;
+    opacity: 0.88;
+    filter: drop-shadow(0 14px 28px rgba(14, 59, 51, 0.2));
+    will-change: transform;
+    animation: float-drift var(--bob-duration, 7s) ease-in-out infinite alternate;
+    animation-delay: var(--bob-delay, 0s);
     user-select: none;
 }
 
-.banner__image {
-    width: 100%;
-    height: auto;
-    display: block;
+@keyframes float-drift {
+    from {
+        transform: translateY(-0.75rem) rotate(-3deg);
+    }
+    to {
+        transform: translateY(0.75rem) rotate(3deg);
+    }
 }
 
-.banner__nav {
-    position: absolute;
-    top: 50%;
-    height: 1.5em;
-    width: 1.5em;
-    transform: translateY(-50%);
-    background: rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(10px);
-    border: none;
-    font-size: 2rem;
-    cursor: pointer;
-    z-index: 10;
-    border-radius: 50%;
-    color: black;
-    transition: background 0.3s ease-in-out;
-}
-
-.banner__nav:hover {
-    background: rgba(255, 255, 255, 0.7);
-}
-
-.banner__nav--prev {
-    left: 10px;
-}
-
-.banner__nav--next {
-    right: 10px;
-}
-
-
-/* ===================================================
-	Icon Marquee
-=================================================== */
-.icon-scroll {
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-	background: rgb(var(--primary-light), 0.01);
-	backdrop-filter: blur(1px);
-	-webkit-backdrop-filter: blur(1px);
-}
-
-.icon-scroll__wrapper {
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
-    box-sizing: border-box;
+/* Hero Frosted Command Card */
+.hero__card {
     position: relative;
-	background: rgb(var(--primary-light), 0.5);
-	backdrop-filter: blur(1px);
-	-webkit-backdrop-filter: blur(1px);
-    margin: 2em;
-    border-radius: 5em;
+    z-index: 20;
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 3.5rem 3rem 2.75rem 3rem;
+    border-radius: var(--radius-xl);
+    text-align: center;
+    animation: hero-card-enter 1s cubic-bezier(0.16, 1, 0.3, 1) both;
+    animation-delay: 0.15s;
 }
 
-.icon-scroll__container {
+@keyframes hero-card-enter {
+    from {
+        opacity: 0;
+        transform: translateY(40px) scale(0.96);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.hero__badge-wrapper {
+    margin-bottom: 1.25rem;
+}
+
+.pulse-dot {
+    width: 8px;
+    height: 8px;
+    background: #27a588;
+    border-radius: 50%;
+    display: inline-block;
+    box-shadow: 0 0 0 0 rgba(39, 165, 136, 0.7);
+    animation: beacon-pulse 2s infinite;
+}
+
+@keyframes beacon-pulse {
+    0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(39, 165, 136, 0.7);
+    }
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 8px rgba(39, 165, 136, 0);
+    }
+    100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(39, 165, 136, 0);
+    }
+}
+
+.hero__title {
+    font-size: clamp(2.4rem, 4.8vw, 3.8rem);
+    color: var(--teal-950);
+    line-height: 1.12;
+    margin-bottom: 1.25rem;
+}
+
+.hero__title em {
+    font-style: italic;
+    color: var(--gold-600);
+    font-weight: 500;
+}
+
+.hero__text {
+    font-size: clamp(1rem, 1.3vw, 1.12rem);
+    color: var(--ink-secondary);
+    line-height: 1.75;
+    max-width: 680px;
+    margin: 0 auto 2rem auto;
+}
+
+.hero__text strong {
+    color: var(--teal-900);
+    font-weight: 700;
+}
+
+.hero__actions {
     display: flex;
-    gap: 3em;
-    height: 100%;
-    transition: transform 0.1s linear;
-    will-change: transform;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 2.75rem;
 }
 
-.icon-scroll__item {
-    flex: 0 0 auto;
-    padding: 1em 2em;
-    overflow: hidden;
+.hero__btn {
+    padding: 0.95rem 2.2rem;
+    font-size: 1rem;
 }
 
-.icon-scroll__item img {
-    object-fit: cover;
-    display: block;
-}
-  
-
-/* ===================================================
-	About Us
-=================================================== */
-.about {
+/* Stats Ribbon */
+.hero__stats {
     display: flex;
     align-items: center;
     justify-content: space-between;
-	background: rgb(var(--primary-light), 0.5);
-	backdrop-filter: blur(1px);
-	-webkit-backdrop-filter: blur(1px);
-    gap: 2em;
-    padding: 5em 5em;
-    margin: 1em 5em;
-    opacity: 0;
-    border-radius: 5em;
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-    color: black;
+    padding-top: 1.75rem;
+    border-top: 1px solid var(--border-light);
+    gap: 1rem;
 }
 
-.about--visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.about__content {
-    flex: 1;
-}
-
-.about__heading {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    color: #222;
-}
-
-.about__text {
-    font-size: 1.1rem;
-    line-height: 1.7;
-    color: #444;
-}
-
-.about__link {
-    display: inline-block;
-    color: #0077cc;
-    font-weight: 600;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-.about__link:hover {
-    color: #004c99;
-}
-
-.about__image-wrapper {
+.hero__stat-item {
     flex: 1;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
 }
 
-.about__image {
+.hero__stat-num {
+    font-family: var(--font-sans);
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--teal-900);
+    line-height: 1.1;
+    font-variant-numeric: tabular-nums;
+}
+
+.hero__stat-lbl {
+    font-size: 0.76rem;
+    font-weight: 600;
+    color: var(--ink-muted);
+    letter-spacing: 0.02em;
+    margin-top: 2px;
+}
+
+.hero__stat-divider {
+    width: 1px;
+    height: 36px;
+    background: var(--border-medium);
+}
+
+/* ===================================================
+   Marquee Accreditations & Certifications
+   =================================================== */
+.trust-marquee {
+    padding: 4rem 1.5rem 2rem 1.5rem;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.trust-marquee__header {
+    text-align: center;
+    margin-bottom: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.trust-marquee__title {
+    font-size: 1.5rem;
+    color: var(--teal-900);
+}
+
+.trust-marquee__wrapper {
+    overflow: hidden;
+    position: relative;
+    padding: 1.25rem 0;
+    border-radius: var(--radius-xl);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.trust-marquee__track {
+    display: flex;
+    align-items: center;
+    gap: 3.5rem;
+    width: max-content;
+    animation: marquee-scroll 32s linear infinite;
+}
+
+.trust-marquee__wrapper:hover .trust-marquee__track {
+    animation-play-state: paused;
+}
+
+@keyframes marquee-scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+
+.trust-marquee__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+    flex-shrink: 0;
+    user-select: none;
+}
+
+.trust-marquee__item img {
+    height: 52px;
+    width: auto;
+    object-fit: contain;
+    filter: grayscale(0.85) opacity(0.8);
+    transition: all var(--duration-fast) var(--ease-smooth);
+}
+
+.trust-marquee__item:hover img {
+    filter: grayscale(0) opacity(1);
+    transform: translateY(-4px) scale(1.08);
+}
+
+.trust-marquee__item span {
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--ink-muted);
+    letter-spacing: 0.04em;
+}
+
+/* ===================================================
+   Section Header (Reusable)
+   =================================================== */
+.section-header {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto 3.5rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.section-title {
+    font-size: clamp(2rem, 3.5vw, 2.8rem);
+    color: var(--teal-950);
+}
+
+.section-subtitle {
+    font-size: 1.05rem;
+    color: var(--ink-secondary);
+    line-height: 1.7;
+}
+
+/* ===================================================
+   Bento Grid Showcase
+   =================================================== */
+.showcase-section {
+    padding: 5rem 1.5rem;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.75rem;
+}
+
+.bento-card {
+    position: relative;
+    border-radius: var(--radius-xl);
+    padding: 2.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    transition: transform var(--duration-normal) var(--ease-apple),
+                box-shadow var(--duration-normal) var(--ease-apple),
+                border-color var(--duration-normal) ease;
+}
+
+.bento-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-xl);
+    border-color: rgba(212, 163, 39, 0.4);
+}
+
+.bento-card--large {
+    grid-column: span 2;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+}
+
+.bento-card__badge {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+    font-family: var(--font-sans);
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 0.3rem 0.75rem;
+    border-radius: var(--radius-full);
+    background: rgba(14, 59, 51, 0.08);
+    border: 1px solid rgba(14, 59, 51, 0.15);
+    color: var(--teal-800);
+}
+
+.bento-card__content {
+    flex: 1;
+    z-index: 2;
+}
+
+.bento-card__category {
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--gold-600);
+    display: block;
+    margin-bottom: 0.4rem;
+}
+
+.bento-card__title {
+    font-size: 1.55rem;
+    color: var(--teal-950);
+    margin-bottom: 0.75rem;
+}
+
+.bento-card--large .bento-card__title {
+    font-size: 1.9rem;
+}
+
+.bento-card__desc {
+    font-size: 0.92rem;
+    color: var(--ink-secondary);
+    line-height: 1.65;
+    margin-bottom: 1.25rem;
+}
+
+.bento-card__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-bottom: 1.5rem;
+}
+
+.bento-card__tags span {
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.25rem 0.65rem;
+    border-radius: var(--radius-full);
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid var(--border-medium);
+    color: var(--teal-900);
+}
+
+.bento-card__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--teal-700);
+    text-decoration: none;
+    transition: color var(--duration-fast) ease, transform var(--duration-fast) ease;
+}
+
+.bento-card__link:hover {
+    color: var(--gold-600);
+    transform: translateX(4px);
+}
+
+.bento-card__media {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding-top: 1rem;
+}
+
+.bento-card--large .bento-card__media {
+    flex: 0 0 45%;
+    padding-top: 0;
+}
+
+.bento-card__img {
     max-width: 100%;
-    height: auto;
+    height: 170px;
+    object-fit: contain;
+    filter: drop-shadow(0 12px 24px rgba(14, 59, 51, 0.15));
+    transition: transform var(--duration-slow) var(--ease-apple);
+}
+
+.bento-card--large .bento-card__img {
+    height: 220px;
+}
+
+.bento-card:hover .bento-card__img {
+    transform: scale(1.08) translateY(-4px);
+}
+
+/* ===================================================
+   Trust Pillars (Why Importers Choose Us)
+   =================================================== */
+.features-section {
+    padding: 4rem 1.5rem;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+.feature-card {
+    padding: 2.25rem 1.75rem;
+    border-radius: var(--radius-xl);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    transition: transform var(--duration-normal) var(--ease-apple), box-shadow var(--duration-normal) var(--ease-apple);
+}
+
+.feature-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
+    border-color: rgba(212, 163, 39, 0.35);
+}
+
+.feature-card__icon-wrap {
+    width: 54px;
+    height: 54px;
+    border-radius: var(--radius-lg);
+    background: linear-gradient(135deg, rgba(212, 163, 39, 0.15) 0%, rgba(39, 165, 136, 0.1) 100%);
+    border: 1px solid rgba(212, 163, 39, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.feature-card__icon-wrap img {
+    width: 28px;
+    height: 28px;
     object-fit: contain;
 }
 
+.feature-card__title {
+    font-size: 1.2rem;
+    color: var(--teal-950);
+}
+
+.feature-card__text {
+    font-size: 0.9rem;
+    color: var(--ink-secondary);
+    line-height: 1.65;
+}
 
 /* ===================================================
-	Responsive
-=================================================== */
-@media (max-width: 768px) {
-    .icon-scroll__wrapper {
-        margin: 1em 0.5em;
-        border-radius: 1em;
-    }
-    .icon-scroll__container {
-        gap: 1em;
-    }
-    .icon-scroll__item {
-        padding: 1em 0em;
+   About Story Spotlight
+   =================================================== */
+.about-spotlight {
+    padding: 5rem 1.5rem;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.about-spotlight__card {
+    padding: 3.5rem;
+    border-radius: var(--radius-xl);
+}
+
+.about-spotlight__grid {
+    display: grid;
+    grid-template-columns: 1.3fr 0.9fr;
+    gap: 3.5rem;
+    align-items: center;
+}
+
+.about-spotlight__content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.about-spotlight__title {
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+    color: var(--teal-950);
+}
+
+.about-spotlight__lead {
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: var(--teal-900);
+    line-height: 1.7;
+}
+
+.about-spotlight__body {
+    font-size: 0.95rem;
+    color: var(--ink-secondary);
+    line-height: 1.75;
+}
+
+.about-spotlight__actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.about-spotlight__visual {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 2rem 0;
+}
+
+.about-spotlight__emblem-ring {
+    position: absolute;
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    border: 1px dashed var(--gold-500);
+    opacity: 0.6;
+    animation: ring-rotate 40s linear infinite;
+}
+
+@keyframes ring-rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.about-spotlight__logo-emblem {
+    position: relative;
+    z-index: 2;
+    background: #ffffff;
+    padding: 1rem;
+    border-radius: 50%;
+    box-shadow: 0 16px 36px rgba(14, 59, 51, 0.18);
+}
+
+.about-spotlight__badge {
+    margin-top: 1.75rem;
+    padding: 0.85rem 1.5rem;
+    border-radius: var(--radius-lg);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    z-index: 2;
+}
+
+.about-spotlight__badge-year {
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--gold-600);
+}
+
+.about-spotlight__badge strong {
+    font-size: 0.95rem;
+    color: var(--teal-950);
+}
+
+.about-spotlight__badge small {
+    font-size: 0.78rem;
+    color: var(--ink-muted);
+}
+
+/* ===================================================
+   Shipping Logistics Marquee
+   =================================================== */
+.shipping-marquee {
+    padding: 3rem 1.5rem 4rem 1.5rem;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.shipping-marquee__header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.shipping-marquee__title {
+    font-size: 1.45rem;
+    color: var(--teal-900);
+}
+
+.shipping-marquee__wrapper {
+    overflow: hidden;
+    position: relative;
+    padding: 1.25rem 0;
+    border-radius: var(--radius-xl);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.shipping-marquee__track {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    width: max-content;
+    animation: marquee-scroll 34s linear infinite;
+}
+
+.shipping-marquee__wrapper:hover .shipping-marquee__track {
+    animation-play-state: paused;
+}
+
+.shipping-marquee__item {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+}
+
+.shipping-marquee__item img {
+    height: 38px;
+    width: auto;
+    object-fit: contain;
+    filter: grayscale(1) opacity(0.7);
+    transition: all var(--duration-fast) var(--ease-smooth);
+}
+
+.shipping-marquee__item:hover img {
+    filter: grayscale(0) opacity(1);
+    transform: translateY(-3px) scale(1.1);
+}
+
+/* ===================================================
+   CTA Banner
+   =================================================== */
+.cta-banner {
+    padding: 4rem 1.5rem 2rem 1.5rem;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.cta-banner__card {
+    position: relative;
+    padding: 4rem 2rem;
+    border-radius: var(--radius-xl);
+    text-align: center;
+    overflow: hidden;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.85) 0%, rgba(253, 244, 219, 0.5) 100%);
+    border: 1px solid rgba(212, 163, 39, 0.35);
+}
+
+.cta-banner__glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 450px;
+    height: 250px;
+    background: radial-gradient(ellipse at center, rgba(212, 163, 39, 0.2), transparent 70%);
+    filter: blur(50px);
+    pointer-events: none;
+}
+
+.cta-banner__content {
+    position: relative;
+    z-index: 2;
+    max-width: 680px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.cta-banner__title {
+    font-size: clamp(1.8rem, 3.2vw, 2.5rem);
+    color: var(--teal-950);
+}
+
+.cta-banner__text {
+    font-size: 1.05rem;
+    color: var(--ink-secondary);
+    line-height: 1.7;
+}
+
+.cta-banner__actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 0.75rem;
+}
+
+.cta-banner__btn {
+    padding: 0.95rem 2.2rem;
+    font-size: 1rem;
+}
+
+/* ===================================================
+   Responsive Breakpoints
+   =================================================== */
+@media (max-width: 1024px) {
+    .bento-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 
+    .bento-card--large {
+        grid-column: span 2;
+    }
 
-    .about {
-        flex-direction: column;
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-spotlight__grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
         text-align: center;
-        gap: 0em;
-        padding: 1em;
-        margin: 1em;
-        border-radius: 1em;
     }
-    .about__image-wrapper {
-        margin-top: 2rem;
+
+    .about-spotlight__actions {
+        justify-content: center;
     }
 }
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 6.5rem 1rem 3rem 1rem;
+        min-height: auto;
+    }
+
+    .hero__card {
+        padding: 2.5rem 1.5rem 2rem 1.5rem;
+    }
+
+    .hero__stats {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .hero__stat-divider {
+        display: none;
+    }
+
+    .hero__stat-item {
+        flex: 1 1 40%;
+    }
+
+    .bento-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .bento-card--large {
+        grid-column: span 1;
+        flex-direction: column;
+    }
+
+    .bento-card--large .bento-card__media {
+        flex: auto;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-spotlight__card {
+        padding: 2rem 1.5rem;
+    }
+
+    .cta-banner__card {
+        padding: 3rem 1.25rem;
+    }
+}
+

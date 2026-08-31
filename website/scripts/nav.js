@@ -1,117 +1,102 @@
-// Wait for the DOM to be fully loaded
+/**
+ * Maruti Nandan Exports — Navigation Interactivity
+ * Optimized for Smooth Performance & Accessibility
+ */
 document.addEventListener("DOMContentLoaded", () => {
     
     // ============================================
-    // Navbar shrink on scroll functionality
+    // 1. Header Shrink on Scroll
     // ============================================
-    const navbar = document.querySelector(".navbar_container");
-    const shrinkThreshold = 200; // Scroll threshold in pixels
-    
-    // Function to check scroll position and update navbar
-    const checkScrollPosition = () => {
+    const header = document.getElementById("siteHeader");
+    const shrinkThreshold = 60;
+    let lastScrollY = window.scrollY;
+    let ticking = false;
+
+    const updateHeaderState = () => {
+        if (!header) return;
         if (window.scrollY > shrinkThreshold) {
-            navbar.classList.add("navbar_container--shrink");
+            header.classList.add("site-header--shrink");
         } else {
-            navbar.classList.remove("navbar_container--shrink");
+            header.classList.remove("site-header--shrink");
         }
+        ticking = false;
     };
-    
-    // Check position on page load
-    checkScrollPosition();
-    
-    // Add scroll event listener
-    window.addEventListener("scroll", checkScrollPosition);
-    
-    // ============================================
-    // Hamburger menu functionality
-    // ============================================
-    const hamburger = document.querySelector(".navbar_hamburger");
-    const navLinks = document.querySelector(".navbar_nav");
 
-    if (hamburger && navLinks) {
-        hamburger.addEventListener("click", () => {
-            hamburger.classList.toggle("navbar_hamburger--active");
-            navLinks.classList.toggle("navbar_nav--active");
-        });
-    }
+    window.addEventListener("scroll", () => {
+        if (!ticking) {
+            window.requestAnimationFrame(updateHeaderState);
+            ticking = true;
+        }
+    }, { passive: true });
 
-    
-    // ============================================
-    // Mobile dropdown functionality
-    // ============================================
-    const dropdownItems = document.querySelectorAll('.navbar_nav__item--dropdown');
-    const isMobile = () => window.innerWidth <= 768;
-
-    dropdownItems.forEach(item => {
-        const dropdownLink = item.querySelector('.navbar_nav__link');
-        const dropdown = item.querySelector('.navbar_dropdown');
-
-        if (!dropdownLink || !dropdown) return;
-
-        const toggleDropdown = (e) => {
-            if (isMobile()) {
-                if (!item.classList.contains('dropdown-active')) {
-                    e.preventDefault();
-
-                    dropdownItems.forEach(otherItem => {
-                        if (otherItem !== item && otherItem.classList.contains('dropdown-active')) {
-                            otherItem.classList.remove('dropdown-active');
-                            otherItem.querySelector('.navbar_dropdown').style.display = 'none';
-                        }
-                    });
-
-                    item.classList.add('dropdown-active');
-                    dropdown.style.display = 'block';
-                }
-            }
-        };
-
-        dropdownLink.addEventListener('click', toggleDropdown);
-        dropdownLink.addEventListener('touchstart', toggleDropdown);
-    });
-
+    updateHeaderState();
 
     // ============================================
-    // Close dropdowns when clicking outside
+    // 2. Mobile Drawer & Backdrop Controls
     // ============================================
-    document.addEventListener('click', (e) => {
-        if (isMobile()) {
-            const isDropdownOrTrigger = e.target.closest('.navbar_nav__item--dropdown');
-            if (!isDropdownOrTrigger) {
-                dropdownItems.forEach(item => {
-                    item.classList.remove('dropdown-active');
-                    const dropdown = item.querySelector('.navbar_dropdown');
-                    if (dropdown) dropdown.style.display = 'none';
-                });
-            }
+    const hamburgerBtn = document.getElementById("navHamburgerBtn");
+    const drawerCloseBtn = document.getElementById("drawerCloseBtn");
+    const drawerBackdrop = document.getElementById("drawerBackdrop");
+    const mobileDrawer = document.getElementById("mobileDrawer");
+
+    const openDrawer = () => {
+        if (!mobileDrawer || !drawerBackdrop) return;
+        hamburgerBtn?.setAttribute("aria-expanded", "true");
+        drawerBackdrop.classList.add("is-active");
+        mobileDrawer.classList.add("is-active");
+        document.body.style.overflow = "hidden"; // Prevent body scroll
+    };
+
+    const closeDrawer = () => {
+        if (!mobileDrawer || !drawerBackdrop) return;
+        hamburgerBtn?.setAttribute("aria-expanded", "false");
+        drawerBackdrop.classList.remove("is-active");
+        mobileDrawer.classList.remove("is-active");
+        document.body.style.removeProperty("overflow");
+    };
+
+    hamburgerBtn?.addEventListener("click", () => {
+        const isExpanded = hamburgerBtn.getAttribute("aria-expanded") === "true";
+        if (isExpanded) {
+            closeDrawer();
+        } else {
+            openDrawer();
         }
     });
 
-    
-    // ============================================
-    // Reset styles on resize
-    // ============================================
-    window.addEventListener('resize', () => {
-        const isMobileView = isMobile();
-        dropdownItems.forEach(item => {
-            const dropdown = item.querySelector('.navbar_dropdown');
-            if (!dropdown) return;
+    drawerCloseBtn?.addEventListener("click", closeDrawer);
+    drawerBackdrop?.addEventListener("click", closeDrawer);
 
-            if (!isMobileView) {
-                item.classList.remove('dropdown-active');
-                dropdown.style.removeProperty('display');
-            } else if (!item.classList.contains('dropdown-active')) {
-                dropdown.style.display = 'none';
-            }
-        });
-        
-        // Also check scroll position when resizing
-        checkScrollPosition();
+    // Keyboard ESC key to close drawer
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && mobileDrawer?.classList.contains("is-active")) {
+            closeDrawer();
+        }
     });
 
-    
     // ============================================
-    // Google Translate Trigger
+    // 3. Mobile Accordion for Products
+    // ============================================
+    const accordionBtn = document.querySelector(".navbar__drawer-accordion-btn");
+    const accordionContent = document.querySelector(".navbar__drawer-accordion-content");
+
+    accordionBtn?.addEventListener("click", () => {
+        const isOpen = accordionContent?.classList.contains("is-open");
+        if (isOpen) {
+            accordionContent?.classList.remove("is-open");
+            accordionBtn.setAttribute("aria-expanded", "false");
+            const chevron = accordionBtn.querySelector(".navbar__chevron");
+            if (chevron) chevron.style.transform = "rotate(0deg)";
+        } else {
+            accordionContent?.classList.add("is-open");
+            accordionBtn.setAttribute("aria-expanded", "true");
+            const chevron = accordionBtn.querySelector(".navbar__chevron");
+            if (chevron) chevron.style.transform = "rotate(180deg)";
+        }
+    });
+
+    // ============================================
+    // 4. Google Translate Integration
     // ============================================
     const triggerGoogleTranslate = (lang) => {
         document.cookie = `googtrans=/en/${lang}; path=/; domain=${location.hostname}`;
@@ -119,7 +104,6 @@ document.addEventListener("DOMContentLoaded", () => {
         location.reload();
     };
 
-    // Translation links
     document.querySelectorAll('.translate-link').forEach(link => {
         link.addEventListener('click', function(e) {
             e.preventDefault();
@@ -128,17 +112,16 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    
-    // ============================================
-    // Search filter for languages
-    // ============================================
+    // Search filter for language dropdown
     const searchInput = document.getElementById('languageSearch');
     if (searchInput) {
-        searchInput.addEventListener('keyup', function () {
-            const filter = this.value.toLowerCase();
+        searchInput.addEventListener('input', function () {
+            const filter = this.value.toLowerCase().trim();
             const items = document.querySelectorAll('.navbar_dropdown__item');
 
             items.forEach(item => {
+                // Skip the search input row
+                if (item.contains(searchInput)) return;
                 const link = item.querySelector('.navbar_dropdown__link');
                 if (link) {
                     const text = link.textContent.toLowerCase();

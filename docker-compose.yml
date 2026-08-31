@@ -1,0 +1,11 @@
+services:
+  web:
+    build: .
+    container_name: mne-website-dev
+    ports:
+      - "8082:80"
+    volumes:
+      - ./website:/var/www/html
+    environment:
+      PHP_DISPLAY_ERRORS: "On"
+      PHP_ERROR_REPORTING: "E_ALL"
