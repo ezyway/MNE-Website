@@ -130,11 +130,12 @@ body.home {
     max-width: 820px;
     margin: 0 auto;
     padding: 3.5rem 3rem 2.75rem 3rem;
-    border-radius: var(--radius-xl);
+    border-radius: 2.25rem;
     text-align: center;
     animation: hero-card-enter 1s cubic-bezier(0.16, 1, 0.3, 1) both;
     animation-delay: 0.15s;
 }
+
 
 @keyframes hero-card-enter {
     from {
@@ -257,7 +258,8 @@ body.home {
     position: relative;
     z-index: 10;
     padding: 3.75rem 3rem;
-    border-radius: var(--radius-2xl);
+    border-radius: 2.25rem;
+    overflow: hidden;
     background: rgba(255, 255, 255, 0.78);
     backdrop-filter: blur(24px) saturate(190%);
     -webkit-backdrop-filter: blur(24px) saturate(190%);
@@ -266,6 +268,7 @@ body.home {
         0 24px 60px rgba(14, 59, 51, 0.08),
         inset 0 1px 0 rgba(255, 255, 255, 0.95);
 }
+
 
 /* ===================================================
    Marquee Accreditations & Certifications
@@ -625,9 +628,11 @@ body.home {
 }
 
 .about-spotlight__card {
-    padding: 3.5rem;
-    border-radius: var(--radius-xl);
+    padding: 3.75rem 3rem;
+    border-radius: 2.25rem;
+    overflow: hidden;
 }
+
 
 .about-spotlight__grid {
     display: grid;
@@ -823,12 +828,13 @@ body.home {
 .cta-banner__card {
     position: relative;
     padding: 4rem 2rem;
-    border-radius: var(--radius-xl);
+    border-radius: 2.25rem;
     text-align: center;
     overflow: hidden;
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.85) 0%, rgba(253, 244, 219, 0.5) 100%);
     border: 1px solid rgba(212, 163, 39, 0.35);
 }
+
 
 .cta-banner__glow {
     position: absolute;
