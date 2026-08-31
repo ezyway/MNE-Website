@@ -60,18 +60,20 @@
 	<header class="hero" id="heroSection">
 		<!-- Interactive Floating Commodity Cutouts -->
 		<div class="hero__field" aria-hidden="true">
-			<img class="hero__float" data-depth="1.4" style="left: 6%; top: 18%; width: 6.2em;" src="assets/images/products/all/cutout/whole_spices.png" alt="Whole Spices">
-			<img class="hero__float" data-depth="0.7" style="left: 14%; top: 70%; width: 4.8em;" src="assets/images/products/all/cutout/grains.png" alt="Grains">
-			<img class="hero__float" data-depth="1.1" style="left: 24%; top: 12%; width: 4.2em;" src="assets/icons/home/shipping_partners/3.png" alt="Shipping Partner">
-			<img class="hero__float" data-depth="0.5" style="left: 36%; top: 82%; width: 5.5em;" src="assets/images/products/all/cutout/pulses.png" alt="Pulses">
-			<img class="hero__float" data-depth="1.6" style="left: 60%; top: 10%; width: 5.2em;" src="assets/images/products/all/cutout/dry_fruits.png" alt="Dry Fruits">
-			<img class="hero__float" data-depth="0.8" style="left: 72%; top: 76%; width: 4.2em;" src="assets/icons/home/licences/4.png" alt="Certification">
-			<img class="hero__float" data-depth="1.3" style="left: 82%; top: 18%; width: 5.8em;" src="assets/images/products/all/cutout/makhana.png" alt="Makhana">
-			<img class="hero__float" data-depth="0.6" style="left: 90%; top: 62%; width: 4.5em;" src="assets/images/products/all/cutout/ground_spices.png" alt="Ground Spices">
-			<img class="hero__float" data-depth="1.0" style="left: 8%; top: 44%; width: 3.8em;" src="assets/icons/home/licences/9.png" alt="License Badge">
-			<img class="hero__float" data-depth="1.5" style="left: 86%; top: 40%; width: 3.8em;" src="assets/icons/home/shipping_partners/7.png" alt="Shipping Partner">
-			<img class="hero__float" data-depth="0.9" style="left: 48%; top: 22%; width: 3.2em;" src="assets/icons/home/licences/12.png" alt="Quality Certificate">
+			<img class="hero__float" data-depth="1.4" style="left: 5%; top: 16%; width: 5.2em;" src="assets/images/hero_floats/star_anise.png" alt="Star Anise">
+			<img class="hero__float" data-depth="0.7" style="left: 12%; top: 72%; width: 5.5em;" src="assets/images/hero_floats/cardamom.png" alt="Green Cardamom">
+			<img class="hero__float" data-depth="1.1" style="left: 22%; top: 10%; width: 4.8em;" src="assets/images/hero_floats/chilli.png" alt="Dry Red Chilli">
+			<img class="hero__float" data-depth="0.5" style="left: 34%; top: 82%; width: 5.8em;" src="assets/images/hero_floats/beans.png" alt="Kidney Beans">
+			<img class="hero__float" data-depth="1.6" style="left: 58%; top: 8%; width: 5.6em;" src="assets/images/hero_floats/cashew.png" alt="Cashew Nut">
+			<img class="hero__float" data-depth="0.8" style="left: 74%; top: 76%; width: 4.6em;" src="assets/images/hero_floats/clove.png" alt="Aromatic Clove">
+			<img class="hero__float" data-depth="1.3" style="left: 84%; top: 16%; width: 5.8em;" src="assets/images/hero_floats/makhana.png" alt="Gourmet Makhana">
+			<img class="hero__float" data-depth="0.6" style="left: 91%; top: 64%; width: 5.2em;" src="assets/images/hero_floats/almonds.png" alt="Almonds">
+			<img class="hero__float" data-depth="1.0" style="left: 7%; top: 46%; width: 4.5em;" src="assets/images/hero_floats/turmeric.png" alt="Golden Turmeric">
+			<img class="hero__float" data-depth="1.5" style="left: 88%; top: 38%; width: 4.8em;" src="assets/images/hero_floats/cinnamon.png" alt="Cinnamon Stick">
+			<img class="hero__float" data-depth="0.9" style="left: 46%; top: 18%; width: 4.2em;" src="assets/images/hero_floats/chickpea.png" alt="Kabuli Chickpea">
+			<img class="hero__float" data-depth="0.7" style="left: 65%; top: 86%; width: 4.5em;" src="assets/images/hero_floats/pistachio.png" alt="Pistachio">
 		</div>
+
 
 		<!-- Central Frosted Command Card -->
 		<div class="hero__card glass-panel">
