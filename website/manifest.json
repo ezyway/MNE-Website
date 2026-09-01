@@ -1,0 +1,22 @@
+{
+    "name": "Maruti Nandan Exports — Premium Indian Spice & Agro Exports",
+    "short_name": "MNE Exports",
+    "description": "Premier Indian exporter of whole spices, grains, pulses, dry fruits, and gourmet makhana to 25+ countries worldwide.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#0e3b33",
+    "theme_color": "#0e3b33",
+    "orientation": "any",
+    "icons": [
+        {
+            "src": "assets/logo.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "assets/logo.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}

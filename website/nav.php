@@ -1,7 +1,9 @@
+<?php require_once(__DIR__ . '/config.php'); ?>
 <!-- ============================================
      Navigation Bar Component
      Apple Frosted Glass System
      ============================================ -->
+<link rel="manifest" href="manifest.json">
 <link href="styles/nav.css" rel="stylesheet">
 <script src="scripts/nav.js" defer></script>
 
@@ -189,11 +191,11 @@
             <div class="navbar__drawer-footer">
                 <a href="contact.php" class="btn btn-primary" style="width: 100%;">Request Export Quote</a>
                 <div class="navbar__drawer-contacts">
-                    <a href="tel:+917435924700" class="navbar__drawer-contact-item">
-                        <span>📞 +91 74359 24700</span>
+                    <a href="tel:<?php echo PHONE_PRIMARY; ?>" class="navbar__drawer-contact-item">
+                        <span>📞 <?php echo PHONE_PRIMARY_DISPLAY; ?></span>
                     </a>
-                    <a href="mailto:mahekshial@gmail.com" class="navbar__drawer-contact-item">
-                        <span>✉️ mahekshial@gmail.com</span>
+                    <a href="mailto:<?php echo TRADE_EMAIL; ?>" class="navbar__drawer-contact-item">
+                        <span>✉️ <?php echo TRADE_EMAIL; ?></span>
                     </a>
                 </div>
             </div>
