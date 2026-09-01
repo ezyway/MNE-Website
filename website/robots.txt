@@ -1,0 +1,9 @@
+# Maruti Nandan Exports — robots.txt
+# https://marutinandanexports.com
+
+User-agent: *
+Allow: /
+Disallow: /template.php
+Disallow: /*.php$
+
+Sitemap: https://marutinandanexports.com/sitemap.xml

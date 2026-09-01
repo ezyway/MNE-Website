@@ -3,7 +3,7 @@
    Apple-Inspired Aesthetics & Modern Web Standards
    =================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,600&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Montserrat:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,600&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap');
 
 *,
 *::before,
@@ -267,6 +267,19 @@ button:focus-visible,
 input:focus-visible,
 select:focus-visible,
 textarea:focus-visible {
+	outline: 2px solid var(--teal-500);
+	outline-offset: 3px;
+	border-radius: 4px;
+}
+
+a:focus:not(:focus-visible),
+button:focus:not(:focus-visible),
+input:focus:not(:focus-visible),
+select:focus:not(:focus-visible),
+textarea:focus:not(:focus-visible) {
+	outline: none;
+}
+
 /* Reveal on Scroll Animations */
 .reveal-init {
 	opacity: 1;
@@ -381,9 +394,104 @@ textarea:focus-visible {
 	.about-banner__left,
 	.about-banner__right {
 		width: 100%;
-	}
-	.about-banner__right {
+	}	.about-banner__right {
 		display: none;
 	}
 }
+
+
+/* ===================================================
+   Shared Ambient Background & Floating Cutouts
+   (Consolidated from products.css, about.css, contact.css)
+   =================================================== */
+.ambient {
+	position: fixed;
+	inset: 0;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	pointer-events: none;
+	z-index: -1;
+}
+
+.ambient__blob {
+	position: absolute;
+	border-radius: 50%;
+	filter: blur(80px);
+	opacity: 0.55;
+	animation: ambient-drift 22s ease-in-out infinite alternate;
+}
+
+.ambient__blob--teal {
+	top: -10%;
+	left: 15%;
+	width: 620px;
+	height: 620px;
+	background: rgba(39, 165, 136, 0.28);
+}
+
+.ambient__blob--gold {
+	top: 35%;
+	right: 5%;
+	width: 580px;
+	height: 580px;
+	background: rgba(212, 163, 39, 0.22);
+	animation-delay: -7s;
+	animation-duration: 28s;
+}
+
+.ambient__blob--mint {
+	bottom: -15%;
+	left: 25%;
+	width: 700px;
+	height: 700px;
+	background: rgba(21, 92, 79, 0.2);
+	animation-delay: -14s;
+	animation-duration: 24s;
+}
+
+@keyframes ambient-drift {
+	0% { transform: translate(0, 0) scale(1); }
+	50% { transform: translate(60px, 40px) scale(1.08); }
+	100% { transform: translate(-40px, 70px) scale(0.94); }
+}
+
+.ambient__items {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: auto;
+}
+
+.ambient__float {
+	position: absolute;
+	cursor: grab;
+	user-select: none;
+	touch-action: none;
+	transition: filter 0.3s ease;
+	will-change: transform;
+}
+
+.ambient__float:active {
+	cursor: grabbing;
+}
+
+.ambient__float img {
+	width: 100%;
+	height: auto;
+	display: block;
+	object-fit: contain;
+	border-radius: var(--radius-lg);
+	filter: drop-shadow(0 8px 18px rgba(14, 59, 51, 0.15));
+	transition: transform 0.4s var(--ease-apple), filter 0.4s ease;
+	pointer-events: none;
+}
+
+.ambient__float:hover img {
+	transform: scale(1.08);
+	filter: drop-shadow(0 14px 26px rgba(212, 163, 39, 0.28));
+}
+
+
 

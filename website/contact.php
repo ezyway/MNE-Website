@@ -22,6 +22,79 @@
 
 	<!-- Favicon -->
 	<link rel="shortcut icon" type="image/png" href="assets/logo.png">
+	<meta name="theme-color" content="#0e3b33">
+
+	<!-- ===================================================
+         Structured Data (Schema.org)
+         =================================================== -->
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "FAQPage",
+		"mainEntity": [
+			{
+				"@type": "Question",
+				"name": "What is your typical turnaround time from contract signing to container loading?",
+				"acceptedAnswer": {
+					"@type": "Answer",
+					"text": "Ready-stock consignments can be processed, laboratory tested, packed, and stuffed into containers within 7 to 12 business days after LC/deposit confirmation."
+				}
+			},
+			{
+				"@type": "Question",
+				"name": "Do you provide third-party laboratory inspection certificates (SGS / Intertek / Geo-Chem)?",
+				"acceptedAnswer": {
+					"@type": "Answer",
+					"text": "Yes. In addition to internal QA and government Spices Board/APEDA certificates, we facilitate pre-shipment inspections by SGS, Intertek, or Geo-Chem upon buyer specification."
+				}
+			},
+			{
+				"@type": "Question",
+				"name": "Can you provide product samples before placing a full container order?",
+				"acceptedAnswer": {
+					"@type": "Answer",
+					"text": "Yes, we regularly dispatch sealed representative commodity samples worldwide via express couriers (DHL / FedEx / Aramex) along with detailed technical grade specifications."
+				}
+			},
+			{
+				"@type": "Question",
+				"name": "Do you offer private label and customized consumer packaging?",
+				"acceptedAnswer": {
+					"@type": "Answer",
+					"text": "Yes. We support custom OEM private branding in 200g, 500g, 1kg pouches, nitrogen-flushed jars, stand-up zipper bags, and bulk 25kg/50kg multi-wall paper or PP woven sacks."
+				}
+			},
+			{
+				"@type": "Question",
+				"name": "Which international payment terms do you support?",
+				"acceptedAnswer": {
+					"@type": "Answer",
+					"text": "We accept Irrevocable Letter of Credit (LC at sight), Telegraphic Transfer (TT with advance deposit and balance against BL copy), and CAD (Cash Against Documents)."
+				}
+			}
+		]
+	}
+	</script>
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "BreadcrumbList",
+		"itemListElement": [
+			{
+				"@type": "ListItem",
+				"position": 1,
+				"name": "Home",
+				"item": "https://marutinandanexports.com/"
+			},
+			{
+				"@type": "ListItem",
+				"position": 2,
+				"name": "Contact",
+				"item": "https://marutinandanexports.com/contact.php"
+			}
+		]
+	}
+	</script>
 
 	<!-- ===================================================
          Fonts & Stylesheets

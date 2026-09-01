@@ -9,16 +9,9 @@ body.home {
 }
 
 /* ===================================================
-   Ambient Background Glow Field & Fixed Cutouts
+   Homepage Ambient Overrides (extends global.css shared base)
    =================================================== */
 .ambient {
-    position: fixed;
-    inset: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: -1;
-    pointer-events: none;
-    overflow: hidden;
     background:
         radial-gradient(ellipse 80% 60% at 75% 2%, rgba(39, 165, 136, 0.14), transparent 60%),
         radial-gradient(ellipse 70% 50% at 10% 98%, rgba(212, 163, 39, 0.13), transparent 60%),
@@ -26,13 +19,9 @@ body.home {
 }
 
 .ambient__blob {
-    position: absolute;
-    border-radius: 50%;
     filter: blur(100px);
-    opacity: 0.55;
     will-change: transform;
     animation: ambient-drift 28s ease-in-out infinite alternate;
-    pointer-events: none;
 }
 
 .ambient__blob--teal {
@@ -76,9 +65,7 @@ body.home {
     z-index: 1;
 }
 
-
 .ambient__float {
-    position: absolute;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -86,27 +73,13 @@ body.home {
     background: transparent;
     border: none;
     box-shadow: none;
-    pointer-events: auto;
     cursor: default;
-    user-select: none;
-    will-change: transform;
 }
 
 .ambient__float img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
-    border-radius: var(--radius-lg);
-    filter: drop-shadow(0 8px 18px rgba(14, 59, 51, 0.15));
-    transition: transform 0.4s var(--ease-apple), filter 0.4s ease;
-    pointer-events: none;
 }
-
-.ambient__float:hover img {
-    transform: scale(1.08);
-    filter: drop-shadow(0 14px 26px rgba(212, 163, 39, 0.28));
-}
-
 
 
 /* ===================================================

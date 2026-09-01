@@ -22,6 +22,81 @@
 
 	<!-- Favicon -->
 	<link rel="shortcut icon" type="image/png" href="assets/logo.png">
+	<meta name="theme-color" content="#0e3b33">
+
+	<!-- ===================================================
+         Structured Data (Schema.org)
+         =================================================== -->
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "Organization",
+		"name": "Maruti Nandan Exports",
+		"url": "https://marutinandanexports.com",
+		"logo": "https://marutinandanexports.com/assets/logo.png",
+		"description": "Premier Indian exporter of whole spices, grounded spices, grains, pulses, dry fruits, and gourmet makhana to 25+ countries worldwide.",
+		"foundingLocation": {
+			"@type": "Place",
+			"name": "Jamnagar, Gujarat, India"
+		},
+		"address": {
+			"@type": "PostalAddress",
+			"streetAddress": "Office No. 410/411, Unicorn Prime, Ranjit Sagar Road",
+			"addressLocality": "Jamnagar",
+			"addressRegion": "Gujarat",
+			"postalCode": "361005",
+			"addressCountry": "IN"
+		},
+		"contactPoint": [
+			{
+				"@type": "ContactPoint",
+				"telephone": "+91-74359-24700",
+				"contactType": "sales",
+				"areaServed": "Worldwide",
+				"availableLanguage": ["English", "Hindi"]
+			},
+			{
+				"@type": "ContactPoint",
+				"telephone": "+91-96245-15033",
+				"contactType": "customer service",
+				"areaServed": "Worldwide"
+			}
+		],
+		"email": "mahekshial@gmail.com",
+		"sameAs": [
+			"https://www.linkedin.com/",
+			"https://www.instagram.com/",
+			"https://www.facebook.com/"
+		],
+		"knowsAbout": ["Spice Export", "Agricultural Export", "Basmati Rice Export", "Makhana Export", "Dry Fruits Export"],
+		"hasOfferCatalog": {
+			"@type": "OfferCatalog",
+			"name": "Indian Agricultural Export Products",
+			"itemListElement": [
+				{"@type": "OfferCatalog", "name": "Whole Spices", "itemListElement": []},
+				{"@type": "OfferCatalog", "name": "Ground Spices", "itemListElement": []},
+				{"@type": "OfferCatalog", "name": "Grains & Cereals", "itemListElement": []},
+				{"@type": "OfferCatalog", "name": "Pulses & Legumes", "itemListElement": []},
+				{"@type": "OfferCatalog", "name": "Dry Fruits", "itemListElement": []},
+				{"@type": "OfferCatalog", "name": "Gourmet Makhana", "itemListElement": []}
+			]
+		}
+	}
+	</script>
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "BreadcrumbList",
+		"itemListElement": [
+			{
+				"@type": "ListItem",
+				"position": 1,
+				"name": "Home",
+				"item": "https://marutinandanexports.com/"
+			}
+		]
+	}
+	</script>
 
 	<!-- ===================================================
          Fonts & Stylesheets
@@ -51,48 +126,48 @@
 		<!-- Interactive Free-Floating Product Field (Full Canvas & Interactive Physics) -->
 		<div class="page-ambient-field" id="pageAmbientField">
 			<div class="ambient__float" data-depth="1.4" style="left: 8%; top: 14%; width: 5.2em;">
-				<img src="assets/images/hero_floats/star_anise.png" alt="Star Anise">
+				<img src="assets/images/hero_floats/star_anise.png" alt="Star Anise" width="80" height="80">
 			</div>
 			<div class="ambient__float" data-depth="0.9" style="left: 28%; top: 22%; width: 4.8em;">
-				<img src="assets/images/hero_floats/cardamom.png" alt="Cardamom">
+				<img src="assets/images/hero_floats/cardamom.png" alt="Cardamom" width="80" height="80">
 			</div>
 			<div class="ambient__float" data-depth="1.2" style="left: 48%; top: 12%; width: 5.4em;">
-				<img src="assets/images/hero_floats/cinnamon.png" alt="Cinnamon">
+				<img src="assets/images/hero_floats/cinnamon.png" alt="Cinnamon" width="80" height="80">
 			</div>
 			<div class="ambient__float" data-depth="1.5" style="left: 72%; top: 18%; width: 5.0em;">
-				<img src="assets/images/hero_floats/chilli.png" alt="Red Chilli">
+				<img src="assets/images/hero_floats/chilli.png" alt="Red Chilli" width="80" height="80">
 			</div>
 			<div class="ambient__float" data-depth="0.7" style="left: 88%; top: 15%; width: 5.6em;">
-				<img src="assets/images/hero_floats/cashew.png" alt="Cashew">
+				<img src="assets/images/hero_floats/cashew.png" alt="Cashew" width="80" height="80">
 			</div>
 
 			<div class="ambient__float" data-depth="1.1" style="left: 14%; top: 46%; width: 5.2em;">
-				<img src="assets/images/hero_floats/makhana.png" alt="Makhana">
+				<img src="assets/images/hero_floats/makhana.png" alt="Makhana" width="80" height="80">
 			</div>
 			<div class="ambient__float" data-depth="0.8" style="left: 38%; top: 52%; width: 4.6em;">
-				<img src="assets/images/hero_floats/clove.png" alt="Clove">
+				<img src="assets/images/hero_floats/clove.png" alt="Clove" width="80" height="80">
 			</div>
 			<div class="ambient__float" data-depth="1.3" style="left: 64%; top: 44%; width: 5.5em;">
-				<img src="assets/images/hero_floats/almonds.png" alt="Almonds">
+				<img src="assets/images/hero_floats/almonds.png" alt="Almonds" width="80" height="80">
 			</div>
 			<div class="ambient__float" data-depth="1.0" style="left: 84%; top: 48%; width: 5.0em;">
-				<img src="assets/images/hero_floats/turmeric.png" alt="Turmeric">
+				<img src="assets/images/hero_floats/turmeric.png" alt="Turmeric" width="80" height="80">
 			</div>
 
 			<div class="ambient__float" data-depth="1.4" style="left: 6%; top: 76%; width: 5.4em;">
-				<img src="assets/images/hero_floats/chickpea.png" alt="Chickpea">
+				<img src="assets/images/hero_floats/chickpea.png" alt="Chickpea" width="80" height="80">
 			</div>
 			<div class="ambient__float" data-depth="0.8" style="left: 24%; top: 82%; width: 5.0em;">
-				<img src="assets/images/hero_floats/pistachio.png" alt="Pistachio">
+				<img src="assets/images/hero_floats/pistachio.png" alt="Pistachio" width="80" height="80">
 			</div>
 			<div class="ambient__float" data-depth="1.2" style="left: 50%; top: 78%; width: 5.2em;">
-				<img src="assets/images/hero_floats/beans.png" alt="Kidney Beans">
+				<img src="assets/images/hero_floats/beans.png" alt="Kidney Beans" width="80" height="80">
 			</div>
 			<div class="ambient__float" data-depth="0.7" style="left: 76%; top: 82%; width: 5.4em;">
-				<img src="assets/images/hero_floats/walnuts.png" alt="Walnuts">
+				<img src="assets/images/hero_floats/walnuts.png" alt="Walnuts" width="80" height="80">
 			</div>
 			<div class="ambient__float" data-depth="1.3" style="left: 90%; top: 74%; width: 5.2em;">
-				<img src="assets/images/hero_floats/star_anise.png" alt="Star Anise">
+				<img src="assets/images/hero_floats/star_anise.png" alt="Star Anise" width="80" height="80">
 			</div>
 		</div>
 	</div>
@@ -232,7 +307,7 @@
 						</a>
 					</div>
 					<div class="bento-card__media">
-						<img src="assets/images/products/all/whole_spices.png" alt="Whole Spices Assortment" class="bento-card__img" loading="lazy">
+						<img src="assets/images/products/all/whole_spices.png" alt="Whole Spices Assortment" class="bento-card__img" loading="lazy" width="280" height="220">
 					</div>
 				</div>
 
@@ -251,7 +326,7 @@
 						</a>
 					</div>
 					<div class="bento-card__media">
-						<img src="assets/images/products/all/ground_spices.png" alt="Ground Spices Powders" class="bento-card__img" loading="lazy">
+						<img src="assets/images/products/all/ground_spices.png" alt="Ground Spices Powders" class="bento-card__img" loading="lazy" width="280" height="220">
 					</div>
 				</div>
 
@@ -270,7 +345,7 @@
 						</a>
 					</div>
 					<div class="bento-card__media">
-						<img src="assets/images/products/all/grains.png" alt="Grains and Basmati Rice" class="bento-card__img" loading="lazy">
+						<img src="assets/images/products/all/grains.png" alt="Grains and Basmati Rice" class="bento-card__img" loading="lazy" width="280" height="220">
 					</div>
 				</div>
 
@@ -289,7 +364,7 @@
 						</a>
 					</div>
 					<div class="bento-card__media">
-						<img src="assets/images/products/all/pulses.png" alt="Pulses and Chickpeas" class="bento-card__img" loading="lazy">
+						<img src="assets/images/products/all/pulses.png" alt="Pulses and Chickpeas" class="bento-card__img" loading="lazy" width="280" height="220">
 					</div>
 				</div>
 
@@ -308,7 +383,7 @@
 						</a>
 					</div>
 					<div class="bento-card__media">
-						<img src="assets/images/products/all/dry_fruits.png" alt="Dry Fruits Assortment" class="bento-card__img" loading="lazy">
+						<img src="assets/images/products/all/dry_fruits.png" alt="Dry Fruits Assortment" class="bento-card__img" loading="lazy" width="280" height="220">
 					</div>
 				</div>
 
@@ -332,7 +407,7 @@
 						</a>
 					</div>
 					<div class="bento-card__media">
-						<img src="assets/images/products/all/makhana.png" alt="Gourmet Makhana Foxnuts" class="bento-card__img" loading="lazy">
+						<img src="assets/images/products/all/makhana.png" alt="Gourmet Makhana Foxnuts" class="bento-card__img" loading="lazy" width="280" height="220">
 					</div>
 				</div>
 
