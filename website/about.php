@@ -126,7 +126,7 @@
 	<!-- ===================================================
          Section 1: Our Heritage & Export Story
          =================================================== -->
-	<section class="about-section" aria-label="Company Heritage and Story">
+	<section id="main-content" class="about-section" aria-label="Company Heritage and Story">
 		<div class="section-glass-box glass-panel">
 			<div class="story-grid">
 				

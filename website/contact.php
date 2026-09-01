@@ -189,7 +189,7 @@
 	<!-- ===================================================
          Main Contact & Quotation Form Bento Section
          =================================================== -->
-	<section class="contact-section" aria-label="Contact Information and Inquiry Form">
+	<section id="main-content" class="contact-section" aria-label="Contact Information and Inquiry Form">
 		<div class="section-glass-box glass-panel">
 			<div class="contact-bento">
 				
@@ -284,7 +284,7 @@
 									<label for="firstName" class="form-label">First Name <span class="required">*</span></label>
 									<div class="input-wrap">
 										<img src="assets/icons/contact/user.png" alt="" class="input-icon" width="20" height="20">
-										<input type="text" id="firstName" name="firstName" class="form-input" placeholder="e.g. Alexander" required>
+										<input type="text" id="firstName" name="firstName" class="form-input" placeholder="e.g. Alexander" autocomplete="given-name" required>
 									</div>
 								</div>
 
@@ -293,7 +293,7 @@
 									<label for="lastName" class="form-label">Last Name <span class="required">*</span></label>
 									<div class="input-wrap">
 										<img src="assets/icons/contact/user.png" alt="" class="input-icon" width="20" height="20">
-										<input type="text" id="lastName" name="lastName" class="form-input" placeholder="e.g. Smith" required>
+										<input type="text" id="lastName" name="lastName" class="form-input" placeholder="e.g. Smith" autocomplete="family-name" required>
 									</div>
 								</div>
 							</div>
@@ -304,7 +304,7 @@
 									<label for="company" class="form-label">Company Name <span class="required">*</span></label>
 									<div class="input-wrap">
 										<img src="assets/icons/contact/company.png" alt="" class="input-icon" width="20" height="20">
-										<input type="text" id="company" name="company" class="form-input" placeholder="e.g. Global Foods Trading Ltd." required>
+										<input type="text" id="company" name="company" class="form-input" placeholder="e.g. Global Foods Trading Ltd." autocomplete="organization" required>
 									</div>
 								</div>
 
@@ -324,7 +324,7 @@
 									<label for="phone" class="form-label">Phone / WhatsApp Number <span class="required">*</span></label>
 									<div class="input-wrap">
 										<img src="assets/icons/contact/phone.png" alt="" class="input-icon" width="20" height="20">
-										<input type="tel" id="phone" name="phone" class="form-input" placeholder="+1 (555) 000-0000" required>
+										<input type="tel" id="phone" name="phone" class="form-input" placeholder="+1 (555) 000-0000" autocomplete="tel" required>
 									</div>
 								</div>
 
@@ -333,7 +333,7 @@
 									<label for="email" class="form-label">Corporate Email Address <span class="required">*</span></label>
 									<div class="input-wrap">
 										<img src="assets/icons/contact/email.png" alt="" class="input-icon" width="20" height="20">
-										<input type="email" id="email" name="email" class="form-input" placeholder="alex@globalfoods.com" required>
+										<input type="email" id="email" name="email" class="form-input" placeholder="alex@globalfoods.com" autocomplete="email" required>
 									</div>
 								</div>
 							</div>

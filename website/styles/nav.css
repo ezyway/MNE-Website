@@ -16,6 +16,32 @@ body {
 }
 
 /* =======================================================
+   Skip to Content Link (Accessibility)
+   ======================================================= */
+.skip-link {
+    position: fixed;
+    top: -100%;
+    left: 1rem;
+    z-index: 10000;
+    padding: 0.75rem 1.5rem;
+    background: var(--teal-800);
+    color: #ffffff;
+    font-family: var(--font-sans);
+    font-weight: 600;
+    font-size: 0.95rem;
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    box-shadow: var(--shadow-lg);
+    transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+    top: 1rem;
+    outline: 2px solid var(--gold-400);
+    outline-offset: 2px;
+}
+
+/* =======================================================
    Header & Floating Navbar Container
    ======================================================= */
 .site-header {

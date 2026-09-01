@@ -182,7 +182,7 @@
 	<!-- ===================================================
          Hero Section: Apple Frosted Command Card
          =================================================== -->
-	<header class="hero" id="heroSection">
+	<header class="hero" id="main-content">
 		<!-- Central Frosted Command Card -->
 		<div class="hero__card glass-panel">
 
