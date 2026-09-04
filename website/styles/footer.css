@@ -32,7 +32,7 @@
     margin: 0 auto;
     padding: 0 2rem 4rem 2rem;
     display: grid;
-    grid-template-columns: 1.4fr 1fr 1.2fr 1.1fr;
+    grid-template-columns: 1.4fr 1.2fr 1.1fr;
     gap: 3rem;
 }
 
@@ -378,6 +378,14 @@
     padding-right: 0.85rem;
 }
 
+/* When the footer scrolls into view, gracefully bow the FAB out instead of
+   riding it up over content or letting it overlap the footer's contact info. */
+.whatsapp-float--retreat {
+    opacity: 0;
+    transform: translateY(18px) scale(0.9);
+    pointer-events: none;
+}
+
 /* ===================================================
    Responsive Breakpoints
    =================================================== */
@@ -385,6 +393,10 @@
     .site-footer__container {
         grid-template-columns: 1fr 1fr;
         gap: 2.5rem;
+    }
+
+    .site-footer__col--brand {
+        grid-column: 1 / -1;
     }
 }
 

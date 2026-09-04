@@ -410,6 +410,24 @@ body.contact-page {
     line-height: 1.6;
 }
 
+.inquiry-context-note {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    margin-top: 0.85rem;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-full);
+    background: rgba(39, 165, 136, 0.1);
+    border: 1px solid rgba(39, 165, 136, 0.28);
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--teal-900);
+}
+
+.inquiry-context-note strong {
+    color: var(--gold-700);
+}
+
 .inquiry-form {
     display: flex;
     flex-direction: column;

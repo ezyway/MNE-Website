@@ -96,6 +96,47 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // ============================================
+    // 3.5 Desktop Dropdowns — Hover Intent with Grace Delay
+    // ============================================
+    // The dropdown panels float slightly below the nav links, so a slow mouse
+    // can pause in the gap between them. Instead of hiding the instant the
+    // pointer leaves the nav item (CSS :hover), we wait a short grace period
+    // so moving between the link and its panel never closes the menu.
+    const dropdownItems = document.querySelectorAll(".navbar__item--has-dropdown");
+    let dropdownCloseTimer = null;
+    const DROPDOWN_CLOSE_DELAY = 350;
+
+    const setDropdownState = (item, open) => {
+        item.classList.toggle("is-open", open);
+        const trigger = item.querySelector(".navbar__link--dropdown, .navbar__link--btn");
+        trigger?.setAttribute("aria-expanded", open ? "true" : "false");
+    };
+
+    dropdownItems.forEach((item) => {
+        const closeOthers = () => {
+            dropdownItems.forEach((other) => {
+                if (other !== item) setDropdownState(other, false);
+            });
+        };
+
+        const openDropdown = () => {
+            clearTimeout(dropdownCloseTimer);
+            closeOthers();
+            setDropdownState(item, true);
+        };
+
+        const scheduleClose = () => {
+            clearTimeout(dropdownCloseTimer);
+            dropdownCloseTimer = setTimeout(() => {
+                setDropdownState(item, false);
+            }, DROPDOWN_CLOSE_DELAY);
+        };
+
+        item.addEventListener("mouseenter", openDropdown);
+        item.addEventListener("mouseleave", scheduleClose);
+    });
+
+    // ============================================
     // 4. Google Translate Integration (Lazy-Loaded)
     // ============================================
     let googleTranslateLoaded = false;

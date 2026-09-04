@@ -512,16 +512,6 @@ function slugify($name)
 									<span><?php echo htmlspecialchars($spec); ?></span>
 								</div>
 								<p class="product-card__desc"><?php echo htmlspecialchars($descriptions[$i]); ?></p>
-								
-								<div class="product-card__footer">
-									<a href="https://wa.me/917435924700?text=Hello%20Maruti%20Nandan%20Exports,%20I%20want%20to%20inquire%20about%20FOB/CIF%20container%20pricing%20for%20<?php echo urlencode($prodName); ?>." target="_blank" rel="noopener noreferrer" class="btn btn-primary product-card__btn">
-										<span>Inquire Quote</span>
-										<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-									</a>
-									<a href="contact.php?item=<?php echo urlencode($prodName); ?>" class="product-card__specs-link" title="Full Container Specifications">
-										<span>Specs</span>
-									</a>
-								</div>
 							</div>
 						</div>
 					<?php endforeach; ?>

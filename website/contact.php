@@ -1,3 +1,20 @@
+<?php
+// Support deep links from product cards: contact.php?item=Cumin%20Seeds&category=wholeSpices
+$inquiryItem = isset($_GET["item"]) ? trim($_GET["item"]) : "";
+$inquiryCategory = isset($_GET["category"]) ? trim($_GET["category"]) : "";
+$categoryToOption = [
+    "wholeSpices" => "whole_spices",
+    "groundSpices" => "grounded_spices",
+    "grains" => "grains_rice",
+    "pulses" => "pulses",
+    "dryFruits" => "dry_fruits",
+    "makhana" => "makhana"
+];
+$preselectedCategory = isset($categoryToOption[$inquiryCategory]) ? $categoryToOption[$inquiryCategory] : "";
+$prefilledMessage = $inquiryItem !== ""
+    ? "Hello Maruti Nandan Exports, I would like to request an export quotation for: " . $inquiryItem . ".\n\n"
+    : "";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -269,12 +286,16 @@
 
 				<!-- Right Column: Interactive Quotation Form -->
 				<div class="contact-form-container">
-					<div class="contact-form-card glass-panel">
-						<div class="form-header">
-							<span class="eyebrow eyebrow--gold">Official B2B Inquiry Form</span>
-							<h3 class="form-title">Request Quotation or Sample</h3>
-							<p class="form-subtitle">Fill in your requirements below. Our commercial desk will prepare a tailored proforma or quotation.</p>
-						</div>
+					<div class="contact-form-card glass-panel">							<div class="form-header">
+								<span class="eyebrow eyebrow--gold">Official B2B Inquiry Form</span>
+								<h3 class="form-title">Request Quotation or Sample</h3>
+								<p class="form-subtitle">Fill in your requirements below. Our commercial desk will prepare a tailored proforma or quotation.</p>
+								<?php if ($inquiryItem !== "") : ?>
+									<div class="inquiry-context-note">
+										<strong>Inquiring about:</strong> <?php echo htmlspecialchars($inquiryItem); ?>
+									</div>
+								<?php endif; ?>
+							</div>
 
 						<form id="contactForm" class="inquiry-form" method="POST" action="contact.php">
 							
@@ -344,13 +365,13 @@
 									<label for="commodityCategory" class="form-label">Commodity of Interest <span class="required">*</span></label>
 									<div class="input-wrap">
 										<select id="commodityCategory" name="commodityCategory" class="form-select" required>
-											<option value="" disabled selected>Select Commodity Category</option>
-											<option value="whole_spices">Whole Spices (Cardamom, Cumin, Cloves, Star Anise, etc.)</option>
-											<option value="grounded_spices">Grounded Spices (Turmeric, Red Chilli, Coriander, etc.)</option>
-											<option value="grains_rice">Grains &amp; Basmati Rice (1121, 1509, Sugandha, Wheat)</option>
-											<option value="pulses">Pulses &amp; Legumes (Chickpeas, Kidney Beans, Lentils)</option>
-											<option value="dry_fruits">Premium Dry Fruits (Cashews, Almonds, Pistachios, Raisins)</option>
-											<option value="makhana">Gourmet Makhana / Foxnuts</option>
+											<option value="" disabled <?php echo $preselectedCategory === "" ? "selected" : ""; ?>>Select Commodity Category</option>
+											<option value="whole_spices" <?php echo $preselectedCategory === "whole_spices" ? "selected" : ""; ?>>Whole Spices (Cardamom, Cumin, Cloves, Star Anise, etc.)</option>
+											<option value="grounded_spices" <?php echo $preselectedCategory === "grounded_spices" ? "selected" : ""; ?>>Grounded Spices (Turmeric, Red Chilli, Coriander, etc.)</option>
+											<option value="grains_rice" <?php echo $preselectedCategory === "grains_rice" ? "selected" : ""; ?>>Grains &amp; Basmati Rice (1121, 1509, Sugandha, Wheat)</option>
+											<option value="pulses" <?php echo $preselectedCategory === "pulses" ? "selected" : ""; ?>>Pulses &amp; Legumes (Chickpeas, Kidney Beans, Lentils)</option>
+											<option value="dry_fruits" <?php echo $preselectedCategory === "dry_fruits" ? "selected" : ""; ?>>Premium Dry Fruits (Cashews, Almonds, Pistachios, Raisins)</option>
+											<option value="makhana" <?php echo $preselectedCategory === "makhana" ? "selected" : ""; ?>>Gourmet Makhana / Foxnuts</option>
 											<option value="multiple_consolidated">Multiple Consolidated Commodities</option>
 										</select>
 									</div>
@@ -374,7 +395,7 @@
 							<div class="form-group">
 								<label for="message" class="form-label">Cargo Specifications, Grade, Target Quantity &amp; Message</label>
 								<div class="input-wrap input-wrap--textarea">
-									<textarea id="message" name="message" class="form-textarea" rows="4" placeholder="Please specify quantity (e.g. 1x20ft FCL or 50 MT), moisture/purity parameters, customized packaging requirements, or sample dispatch address..."></textarea>
+									<textarea id="message" name="message" class="form-textarea" rows="4" placeholder="Please specify quantity (e.g. 1x20ft FCL or 50 MT), moisture/purity parameters, customized packaging requirements, or sample dispatch address..."><?php echo htmlspecialchars($prefilledMessage); ?></textarea>
 								</div>
 							</div>
 
