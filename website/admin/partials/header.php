@@ -87,6 +87,7 @@ if (!isset($pageTitle)) { $pageTitle = 'Admin'; }
             <a href="index.php" class="<?php echo basename($_SERVER['PHP_SELF']) === 'index.php' ? 'active' : ''; ?>">Dashboard</a>
             <a href="inquiries.php" class="<?php echo basename($_SERVER['PHP_SELF']) === 'inquiries.php' ? 'active' : ''; ?>">Inquiries</a>
             <a href="products.php" class="<?php echo basename($_SERVER['PHP_SELF']) === 'products.php' ? 'active' : ''; ?>">Products</a>
+            <a href="../index.php" target="_blank" rel="noopener">View Site ↗</a>
             <a href="logout.php">Logout (<?php echo h($_SESSION['admin_user'] ?? ''); ?>)</a>
         </nav>
     </header>
