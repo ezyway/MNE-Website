@@ -82,6 +82,15 @@ If PHP is installed locally:
 php -S localhost:8082 -t website
 ```
 
+## Admin Panel
+
+A small admin panel lives under `website/admin/` (protected, `noindex`):
+
+- First run: visit `/admin/setup.php` to create the administrator account (page disables itself after the first admin).
+- Login: `/admin/login.php` → redirects to the inquiry inbox (`/admin/inquiries.php`).
+- Inquiries submitted via the contact form are stored in SQLite (`website/data/inquiries.db`) and shown here with filters, search, status tracking, notes, CSV export, and reply links (email/WhatsApp).
+- The `website/data/` directory must be writable by the web server (PHP-FPM/Apache user).
+
 ## How Pages Are Wired
 
 Every page follows the same pattern (see `template.php`):
