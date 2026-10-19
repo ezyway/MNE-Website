@@ -399,24 +399,6 @@ body.products-page {
     line-height: 1.25;
 }
 
-.product-card__spec-pill {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.4rem;
-    padding: 0.35rem 0.75rem;
-    border-radius: var(--radius-md);
-    background: rgba(39, 165, 136, 0.09);
-    border: 1px solid rgba(39, 165, 136, 0.2);
-    font-size: 0.76rem;
-    font-weight: 700;
-    color: var(--teal-900);
-}
-
-.product-card__spec-pill svg {
-    color: var(--teal-600);
-    flex-shrink: 0;
-}
-
 .product-card__desc {
     font-size: 0.88rem;
     color: var(--ink-secondary);

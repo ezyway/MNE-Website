@@ -1,0 +1,16 @@
+# SQLite Database & WAL lock files
+website/data/*.db
+website/data/*.db-wal
+website/data/*.db-shm
+
+# Archives & temporary uploads
+*.zip
+website/upload.zip
+
+# Tooling, IDE & OS files
+.freebuff/
+.idea/
+.vscode/
+*.swp
+.DS_Store
+Thumbs.db
