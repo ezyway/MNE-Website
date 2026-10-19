@@ -298,7 +298,13 @@ $prefilledMessage = $inquiryItem !== ""
 							</div>
 
 						<form id="contactForm" class="inquiry-form" method="POST" action="contact.php">
-							
+
+							<!-- Honeypot (hidden from real users) -->
+							<div style="position:absolute; left:-9999px; top:-9999px;" aria-hidden="true">
+								<label for="website">Leave this field empty</label>
+								<input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+							</div>
+
 							<div class="form-row form-row--two-col">
 								<!-- First Name -->
 								<div class="form-group">

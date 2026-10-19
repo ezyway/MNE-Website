@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
 				return;
 			}
 
-			// Simulate submission with button loading state
+			// Real submission to the server (stored + visible in admin inbox)
 			const origBtnContent = submitBtn.innerHTML;
 			submitBtn.disabled = true;
 			submitBtn.innerHTML = `
@@ -76,13 +76,42 @@ document.addEventListener("DOMContentLoaded", () => {
 				<span>Processing Inquiry...</span>
 			`;
 
-			setTimeout(() => {
+			const payload = {
+				firstName, lastName, company, email, phone,
+				commodityCategory: category,
+				incoterm,
+				destinationPort: destination,
+				message,
+				website: (document.getElementById('website')?.value || '')
+			};
+
+			fetch('api/submit-inquiry.php', {
+				method: 'POST',
+				headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+				body: JSON.stringify(payload)
+			})
+			.then(async (res) => {
+				let json = null;
+				try { json = await res.json(); } catch (e) { json = null; }
+				if (!res.ok || !json || !json.success) {
+					const msg = (json && (json.error || (json.errors && json.errors.join(' ')))) || 'Something went wrong. Please try again or email us directly.';
+					throw new Error(msg);
+				}
+				return json;
+			})
+			.then(() => {
 				submitBtn.disabled = false;
 				submitBtn.innerHTML = origBtnContent;
 				feedback.className = "form-feedback form-feedback--success";
 				feedback.innerText = `Thank you, ${firstName}! Your quotation request for ${company} has been received. Our trade desk will contact you within 4 hours.`;
 				contactForm.reset();
-			}, 1200);
+			})
+			.catch((err) => {
+				submitBtn.disabled = false;
+				submitBtn.innerHTML = origBtnContent;
+				feedback.className = "form-feedback form-feedback--error";
+				feedback.innerText = err.message || 'Submission failed. Please try again.';
+			});
 		});
 	}
 
